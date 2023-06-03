@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$primary: #abcd12;
+$font-family-base: 'Inter', sans-serif;
+
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
