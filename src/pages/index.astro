@@ -1,9 +1,32 @@
 ---
+import Achievement from "../components/Achievement.astro";
+import CommunityCard from "../components/CommunityCard.astro";
+import Event from "../components/Event.astro";
+import Hero from "../components/Hero.astro";
+import ShowcaseProducts from "../components/ShowcaseProducts.astro";
+import UserReview from "../components/UserReview.astro";
+import WeeklyMeeting from "../components/WeeklyMeeting.astro";
+import WhyUs from "../components/WhyUs.astro";
 import Layout from "../layouts/Layout.astro";
 
 ---
 
 <Layout title='Home Page'>
-	<h3>Halo, ini Home Page Kevin</h3>
-	<a href="/about" class="btn btn-primary">About</a>
+
+    <Hero />
+
+    <WhyUs />
+
+    <CommunityCard />
+
+    <WeeklyMeeting />
+
+    <Achievement />
+
+    <Event />
+    
+    <ShowcaseProducts />
+
+    <UserReview />
+   
 </Layout>
