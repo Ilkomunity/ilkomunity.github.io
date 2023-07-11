@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 $primary: #0F55A8;
+
+$custom-colors: (
+  "footer-blue": #2C40F0,
+  "primary-p50": #E7E8FD
+);
+
 $font-family-base: 'Plus Jakarta Sans', sans-serif;
+$navbar-nav-link-padding-x:         2rem;
 
 @import "../../node_modules/bootstrap/scss/_functions";
 @import "../../node_modules/bootstrap/scss/_variables";
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
