@@ -1,0 +1,90 @@
+---
+import members_ico from "../Assets/Icons/WhyUs - Members.svg";
+import achievements_ico from "../Assets/Icons/WhyUs - Achievements.svg";
+import collaborations_ico from "../Assets/Icons/WhyUs - Collaborations.svg";
+import events_ico from "../Assets/Icons/WhyUs - Events.svg";
+---
+
+<style>
+    #WhyUs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #WhyUs-card {
+        background-image: url("../Assets/Icons/Bg-Ellips-tl.svg"),
+            url("../Assets/Icons/Bg-Ellips-br.svg");
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
+        background-color: #fcfcfc;
+        width: 20.625rem;
+        height: 22.875rem;
+    }
+
+    #WhyUs-head-container {
+        width: 28.7rem;
+    }
+
+    .custom-font p {
+        font-size: 16px;
+        width: 282px;
+    }
+</style>
+<section class="mt-5">
+    <div class="row">
+        <div class="col-xxl-4 col-xl-3 col-md-5 mx-5 m-5">
+            <div id="WhyUs-head-container" class="w-WhyUs px-4">
+                <h1 class="display-1 fw-bold" style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;">Why Us?</h1>
+                <p class="fs-4 fw-normal w-auto">
+                    Ilkomunity memfasilitasi delapan komunitas IT di IPB
+                    University untuk berbagi pengetahuan dan pengalaman. misi
+                    kami : Eksplorasi dan Belajar bersama di ilkomunity
+                </p>
+            </div>
+        </div>
+
+        <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs order-first">
+            <div class="w-WhyUs pt-7 px-4 custom-font">
+                <img src={members_ico} alt="" />
+                <h3>200+ Members</h3>
+                <p>
+                    Lebih dari 200 anggota dari beragam departemen serta alumni
+                    bergabung dan berkembang bersama di ilkomunity
+                </p>
+            </div>
+        </div>
+        <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs order-first">
+            <div class="w-WhyUs pt-7 px-4 custom-font">
+                <img src={collaborations_ico} alt="" />
+                <h3>10+ Collaborations</h3>
+                <p>
+                    Ilkommunity telah menjalinkan kerjasama dengan lebih dari 10
+                    media partner, memberikan kontribusi positif bagi semua
+                    pihak yang terlibat
+                </p>
+            </div>
+        </div>
+
+        <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs">
+            <div class="w-WhyUs pt-7 px-4 custom-font">
+                <img src={achievements_ico} alt="" />
+                <h3>40+ Achievements</h3>
+                <p>
+                    Lebih dari 40 anggota Ilkomunity telah berhasil meraih
+                    prestasi gemilang dalam berbagai kompetisi dibidang IT.
+                </p>
+            </div>
+        </div>
+        <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs">
+            <div class="w-WhyUs pt-7 px-4 custom-font">
+                <img src={events_ico} alt="" />
+                <h3>5+ Events</h3>
+                <p>
+                    Setiap tahunnya ilkomunity rutin menyelenggarakan berbagai
+                    acara seperti kompetisi, seminar hingga pelatihan
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
