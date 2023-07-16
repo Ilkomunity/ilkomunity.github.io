@@ -25,18 +25,113 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
         width: 28.7rem;
     }
 
+    #WhyUs-rect-container{
+        width: 624px;
+        height: 1000px;
+    }
+
     .custom-font p {
         font-size: 16px;
         width: 282px;
     }
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: none;
+        width: 624px;
+        height: 673px;
+        border-radius: 300px 60px;
+        opacity: 0.20000000298023224;
+        background: var(
+            --grad-c,
+            linear-gradient(
+                180deg,
+                rgba(190, 212, 255, 0.8) 0%,
+                rgba(246, 190, 255, 0.8) 29.48%,
+                rgba(212, 203, 255, 0.78) 55.52%,
+                rgba(250, 160, 246, 0.8) 82.08%,
+                rgba(208, 172, 254, 0.8) 98.23%
+            )
+        );
+        transform: translateY(3rem);
+    }
+    @media (min-width: 1600px) {
+        .WhyUs-rect-top,
+        .WhyUs-rect-mid,
+        .WhyUs-rect-bot1,
+        .WhyUs-rect-bot2 {
+            display: block;
+        }
+        .WhyUs-rect-top {
+            top: 1rem;
+            transform: translateX(17rem);
+            z-index: -99;
+        }
+
+        .WhyUs-rect-mid {
+            top: 3rem;
+            transform: translateX(14rem);
+            z-index: -99;
+        }
+        .WhyUs-rect-bot1 {
+            top: 5rem;
+            transform: translateX(11rem);
+            z-index: -99;
+        }
+
+        .WhyUs-rect-bot2 {
+            top: 7rem;
+            transform: translateX(8rem);
+            z-index: -99;
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        #WhyUs-rect-container {
+            transform: translateY(5rem);
+        }
+        .WhyUs-rect-top,
+        .WhyUs-rect-mid,
+        .WhyUs-rect-bot1,
+        .WhyUs-rect-bot2 {
+            display: block;
+        }
+        .WhyUs-rect-top {
+            top: 2rem;
+            transform: translateX(17rem);
+            z-index: -99;
+        }
+
+        .WhyUs-rect-mid {
+            top: 4rem;
+            transform: translateX(14rem);
+            z-index: -99;
+        }
+        .WhyUs-rect-bot1 {
+            top: 6rem;
+            transform: translateX(11rem);
+            z-index: -99;
+        }
+
+        .WhyUs-rect-bot2 {
+            top: 8rem;
+            transform: translateX(8rem);
+            z-index: -99;
+        }
+    }
 </style>
-<section class="mt-5">
+<section class="container my-5">
     <div class="row">
-        <div class="col-xxl-4 col-xl-3 col-md-5 mx-5 m-5">
+        <div class="justify-content-cxxl-end col-cxxl-4 my-5">
             <div id="WhyUs-head-container" class="w-WhyUs px-4">
-                <h1 class="display-1 fw-bold" style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;">Why Us?</h1>
-                <p class="fs-4 fw-normal w-auto">
+                <h1
+                    class="display-1 fw-bold"
+                    style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;"
+                >
+                    Why Us?
+                </h1>
+                <p class="fs-4 fw-normal w-inherit">
                     Ilkomunity memfasilitasi delapan komunitas IT di IPB
                     University untuk berbagi pengetahuan dan pengalaman. misi
                     kami : Eksplorasi dan Belajar bersama di ilkomunity
@@ -44,7 +139,11 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
             </div>
         </div>
 
-        <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs order-first">
+        <div
+            id="WhyUs-card"
+            class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs order-first"
+            style="gap: 10rem;"
+        >
             <div class="w-WhyUs pt-7 px-4 custom-font">
                 <img src={members_ico} alt="" />
                 <h3>200+ Members</h3>
@@ -54,7 +153,10 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
                 </p>
             </div>
         </div>
-        <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs order-first">
+        <div
+            id="WhyUs-card"
+            class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs order-first"
+        >
             <div class="w-WhyUs pt-7 px-4 custom-font">
                 <img src={collaborations_ico} alt="" />
                 <h3>10+ Collaborations</h3>
@@ -85,6 +187,17 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
                     acara seperti kompetisi, seminar hingga pelatihan
                 </p>
             </div>
+        </div>
+
+        <div
+            id="WhyUs-rect-container"
+            class="d-flex flex-column align-items-end position-absolute end-0"
+            style="z-index: -99; overflow-x: hidden; top: 30%;"
+        >
+            <div class="WhyUs-rect-top position-absolute"></div>
+            <div class="WhyUs-rect-mid position-absolute"></div>
+            <div class="WhyUs-rect-bot2 position-absolute"></div>
+            <div class="WhyUs-rect-bot1 position-absolute"></div>
         </div>
     </div>
 </section>
