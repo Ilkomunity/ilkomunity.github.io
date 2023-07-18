@@ -4,7 +4,9 @@ $primary: #0F55A8;
 
 $custom-colors: (
   "footer-blue": #2C40F0,
-  "primary-p50": #E7E8FD
+  "primary-p50": #E7E8FD,
+  "a500": #8D098F,
+  "b300": #EDA20F, 
 );
 
 $font-family-base: 'Plus Jakarta Sans', sans-serif;
@@ -16,3 +18,68 @@ $navbar-nav-link-padding-x:         2rem;
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.custom-rounded {
+  border-top-left-radius: 130px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.module-border-wrap {
+  background: linear-gradient(to right, red, purple);
+
+}
+
+
+
+.box:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-64deg, #e70feb 0%, #0f18ed 100% );
+  transform: translate3d(0px, 0px, 0) scale(1);
+  filter: blur(6px);
+  opacity: 45%;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.card {
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
+}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
