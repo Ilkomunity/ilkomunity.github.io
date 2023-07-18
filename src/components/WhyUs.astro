@@ -17,22 +17,28 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
         background-position: top left, bottom right;
         background-repeat: no-repeat;
         background-color: #fcfcfc;
-        width: 20.625rem;
-        height: 22.875rem;
+        width: 100%;
+        max-width: 20.625rem;
     }
 
     #WhyUs-head-container {
-        width: 28.7rem;
+        width: 100%;
+        max-width: 28.7rem;
     }
 
-    #WhyUs-rect-container{
+    #WhyUs-rect-container {
         width: 624px;
         height: 1000px;
     }
 
+    .custom-font{
+    }
+    
     .custom-font p {
+        width: 100%;
+        max-width: 282px;
         font-size: 16px;
-        width: 282px;
+        line-height: normal;
     }
     .WhyUs-rect-top,
     .WhyUs-rect-mid,
@@ -88,13 +94,16 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
     }
     @media (min-width: 1200px) and (max-width: 1599px) {
         #WhyUs-rect-container {
-            transform: translateY(5rem);
+            transform: translateY(8rem);
         }
+
         .WhyUs-rect-top,
         .WhyUs-rect-mid,
         .WhyUs-rect-bot1,
         .WhyUs-rect-bot2 {
             display: block;
+            width: 584px;
+            height: 573px;
         }
         .WhyUs-rect-top {
             top: 2rem;
@@ -146,7 +155,7 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
         >
             <div class="w-WhyUs pt-7 px-4 custom-font">
                 <img src={members_ico} alt="" />
-                <h3>200+ Members</h3>
+                <h3 class="pb-1 fs-4 fw-bold">200+ Members</h3>
                 <p>
                     Lebih dari 200 anggota dari beragam departemen serta alumni
                     bergabung dan berkembang bersama di ilkomunity
@@ -159,7 +168,7 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
         >
             <div class="w-WhyUs pt-7 px-4 custom-font">
                 <img src={collaborations_ico} alt="" />
-                <h3>10+ Collaborations</h3>
+                <h3 class="pb-1 fs-4 fw-bold">10+ Collaborations</h3>
                 <p>
                     Ilkommunity telah menjalinkan kerjasama dengan lebih dari 10
                     media partner, memberikan kontribusi positif bagi semua
@@ -171,7 +180,7 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
         <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs">
             <div class="w-WhyUs pt-7 px-4 custom-font">
                 <img src={achievements_ico} alt="" />
-                <h3>40+ Achievements</h3>
+                <h3 class="pb-1 fs-4 fw-bold">40+ Achievements</h3>
                 <p>
                     Lebih dari 40 anggota Ilkomunity telah berhasil meraih
                     prestasi gemilang dalam berbagai kompetisi dibidang IT.
@@ -181,7 +190,7 @@ import events_ico from "../Assets/Icons/WhyUs - Events.svg";
         <div id="WhyUs-card" class="col-5 mx-5 m-5 rounded-WhyUs shadow-WhyUs">
             <div class="w-WhyUs pt-7 px-4 custom-font">
                 <img src={events_ico} alt="" />
-                <h3>5+ Events</h3>
+                <h3 class="pb-1 fs-4 fw-bold">5+ Events</h3>
                 <p>
                     Setiap tahunnya ilkomunity rutin menyelenggarakan berbagai
                     acara seperti kompetisi, seminar hingga pelatihan
