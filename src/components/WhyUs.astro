@@ -3,10 +3,10 @@ import members_ico from "../Assets/Icons/WhyUs - Members.svg";
 import achievements_ico from "../Assets/Icons/WhyUs - Achievements.svg";
 import collaborations_ico from "../Assets/Icons/WhyUs - Collaborations.svg";
 import events_ico from "../Assets/Icons/WhyUs - Events.svg";
-import './../styles/WhyUs.css'
+import './../styles/WhyUs.scss'
 ---
-<section class="container-xl my-5">
-  <div class="row justify-content-xxl-start justify-content-xl-start justify-content-lg-center">
+<section class="container-md my-5">
+  <div id="WhyUs-wrapper" class="row justify-content-xxl-start justify-content-xl-start justify-content-lg-center">
     <div class="col-cxxl-4 col-xl-3 col-lg-9 col-md-8 my-5">
       <div id="WhyUs-head-container" class="w-WhyUs px-4">
         <h1
@@ -26,7 +26,7 @@ import './../styles/WhyUs.css'
 
     <div
       id="WhyUs-card"
-      class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-3 mx-5 m-5 rounded-WhyUs order-first"
+      class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-1 mx-5 m-5 rounded-WhyUs order-first"
     >
       <div class="w-WhyUs pt-7 px-4 custom-font">
         <img src={members_ico} alt="" />
@@ -37,7 +37,7 @@ import './../styles/WhyUs.css'
         </p>
       </div>
     </div>
-    <div id="WhyUs-card" class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-3 mx-5 m-5 rounded-WhyUs order-first">
+    <div id="WhyUs-card" class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-1 mx-5 m-5 rounded-WhyUs order-first">
       <div class="w-WhyUs pt-7 px-4 custom-font">
         <img src={collaborations_ico} alt="" />
         <h3 class="pb-1 fs-4 fw-bold">10+ Collaborations</h3>
@@ -48,7 +48,7 @@ import './../styles/WhyUs.css'
       </div>
     </div>
 
-    <div id="WhyUs-card" class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-3 mx-5 m-5 rounded-WhyUs">
+    <div id="WhyUs-card" class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-1 mx-5 m-5 rounded-WhyUs">
       <div class="w-WhyUs pt-7 px-4 custom-font">
         <img src={achievements_ico} alt="" />
         <h3 class="pb-1 fs-4 fw-bold">40+ Achievements</h3>
@@ -58,7 +58,7 @@ import './../styles/WhyUs.css'
         </p>
       </div>
     </div>
-    <div id="WhyUs-card" class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-3 mx-5 m-5 rounded-WhyUs">
+    <div id="WhyUs-card" class="col-xxl-3 col-xl-3 col-md-4 col-sm-4 col-1 mx-5 m-5 rounded-WhyUs">
       <div class="w-WhyUs pt-7 px-4 custom-font">
         <img src={events_ico} alt="" />
         <h3 class="pb-1 fs-4 fw-bold">5+ Events</h3>

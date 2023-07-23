@@ -61,7 +61,6 @@
 }
 
 @media (min-width: 1400px) {
-
     .WhyUs-rect-top,
     .WhyUs-rect-mid,
     .WhyUs-rect-bot1,
@@ -94,7 +93,8 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1500px) {
+@media (min-width: 1199px) and (max-width: 1500px) {
+
     #WhyUs-head-container h1 {
         width: max-content;
         font-size: 4rem;
@@ -143,21 +143,87 @@
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+        width: 584px;
+        height: 573px;
+    }
+
+    .WhyUs-rect-top {
+        top: 10rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 12rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 14rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 16rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }   
+
     #WhyUs-card {
         flex: 0 0 auto;
         max-width: 19rem !important ; 
         width: 100% !important ;
     }
     #WhyUs-head-container{
-        margin-left: 3.5rem !important;
+        margin-left: unset !important;
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 991px) {
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+        width: 33.51563rem;
+        height: 573px;
+    }
+    .WhyUs-rect-top {
+        top: 2rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 4rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 6rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 8rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }
+
     #WhyUs-card {
         flex: 0 0 auto;
         max-width: 17.6rem !important ; 
         width: 100% !important ;
+        margin: 0 1rem 0 2rem !important;
     }
 
     #WhyUs-head-container{
@@ -165,16 +231,62 @@
     }
 
     .custom-font img {
-        width: 96px;
-        height: 96px;
+        width: 6.6375rem;
     }
 
     .custom-font h3 {
         font-size: 1.28613rem;
     }
+
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px){
+    #WhyUs-wrapper{
+        justify-content: center;
+    }
+
+    #WhyUs-head-container {
+        padding: 0 0 0 3rem !important;
+    }
+
+
+    #WhyUs-card {
+        flex: 0 0 auto;
+        max-width: 15rem !important ; 
+        width: 100% !important ;
+        margin: 0 1rem 0 2rem !important;
+    }
+
+    .custom-font p {
+        font-size: 0.75rem !important;
+    }
+
+    .custom-font h3 {
+        font-size: 1rem !important;
+    }
+
+    .custom-font img {
+        width: 5.6375rem !important;
+    }
+}
+
+
+@media (max-width: 575px) {
+    #WhyUs-wrapper{
+        justify-content: center;
+    }
+
+    #WhyUs-head-container {
+        width: auto;
+        max-width: none;
+    }
+
+    #WhyUs-card {
+        flex: 0 0 auto;
+        max-width: 14rem !important ; 
+        width: 100% !important ;
+        margin: 2rem 2rem 2rem 1rem !important;
+    }
 
     .custom-font img {
         width: 81px;
@@ -182,10 +294,10 @@
     }
 
     .custom-font p {
-        font-size: 0.75rem;
+        font-size: 0.75rem !important;
     }
 
     .custom-font h3 {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 }
