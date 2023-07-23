@@ -8,6 +8,7 @@ import iwdc from '../../public/logo_iwdc.png'
 import mad from '../../public/logo_mad.png'
 import csi from '../../public/logo_csi.png'
 import weeklymeeting from '../../public/WeeklyMeeting.png'
+
 ---
 
 <div class="col">
@@ -16,17 +17,22 @@ import weeklymeeting from '../../public/WeeklyMeeting.png'
         <h4 class="text-weekly-meeting-primary mt-3" style="background : #EDA20F; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; background-repeat: no-repeat;">Stay connected! <br> Check out our Community Meeting Schedule.</h4>
     </div>
     <!-- carousel -->
-    <div id="carouselExampleCaptions" class="carousel slide mx-auto mt-5" style="height: 40.875rem; width: 80%;">
+    <div id="carouselExampleCaptions" class="carousel slide mx-auto mt-5 mb-5" data-bs-ride="carousel" style="width: 80%;">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
         </div>
         <div class="carousel-inner border border-primary" style="border-radius: 2.5rem 12.5rem 0rem 0rem; background: white;">
           <div class="carousel-item active">
             <div class="row align-items-start">
                 <div class="col">
-                    <img src={weeklymeeting} class="col" alt="gambar weekly meeting" style="height: 40%;">
+                    <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
                 </div>
                 <div class="col">
                     <div class="container ms-3">
@@ -42,41 +48,159 @@ import weeklymeeting from '../../public/WeeklyMeeting.png'
                     </div>
                 </div>
             </div>
-            <!-- <div class="" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); border-color: red;">
-                <img src={agriux} class="mx-3 my-3" alt="agriux" style="width: 6.25rem" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" />
-                <img src={daming} class="mx-3 my-3" alt="daming" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" />
-                <img src={csi} class="mx-3 my-3" alt="csi" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"/>
-                <img src={gary} class="mx-3 my-3" alt="gary" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"/>
-                <img src={agribot} class="mx-3 my-3" alt="agribot" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"/>
-                <img src={iwdc} class="mx-3 my-3" alt="iwdc" style="width: 6.25rem" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"/>
-                <img src={cp} class="mx-3 my-3" alt="cp" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"/>
-                <img src={mad} class="mx-3 my-3" alt="mad" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"/>
-            </div> -->
           </div>
           <div class="carousel-item">
-            <img src={weeklymeeting} class="col" alt="gambar weeekly meeting">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3">
+                      <div class="mt-5 mb-4">
+                          <img src={daming} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5 pe-5">
+                          <h5 class="fw-bold fs-1">Data Mining IPB (DAMING)</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">Localhost (Lt.4 FMIPA) <br> Sabtu, 13:00 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
           </div>
           <div class="carousel-item">
-            <img src={weeklymeeting} class="col" alt="gambar weekly meeting">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3 pe-5">
+                      <div class="mt-5 mb-4">
+                          <img src={csi} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5 pe-5">
+                          <h5 class="fw-bold fs-1">Cyber Security IPB (CSI)</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">Gedung GPK Lt.2 <br> Jumat, 17:00 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3 pe-5">
+                      <div class="mt-5 mb-4">
+                          <img src={gary} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5 pe-5">
+                          <h5 class="fw-bold fs-1">Game Reality IPB (GARY)</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">Localhost (Lt.4 FMIPA) <br> Sabtu, 10:00 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3">
+                      <div class="mt-5 mb-4">
+                          <img src={agribot} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5">
+                          <h5 class="fw-bold fs-1">Agribot</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">Localhost (Lt.4 FMIPA) <br> Rabu, 19:30 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3">
+                      <div class="mt-5 mb-4">
+                          <img src={iwdc} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5">
+                          <h5 class="fw-bold fs-1">IPB Web Development Community (IWDC)</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">RKU 2.01 (FMIPA) <br> Kamis, 18:30 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3">
+                      <div class="mt-5 mb-4">
+                          <img src={cp} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5 pe-5">
+                          <h5 class="fw-bold fs-1">Competitive Programming (CP)</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">Localhost (Lt.4 FMIPA) <br> Senin, 19:00 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row align-items-start">
+              <div class="col">
+                  <img src={weeklymeeting} class="col img-fluid img-size-md img-size-lg" alt="gambar weekly meeting" style="width: 37.75rem; height: 31.5rem; object-fit: cover;">
+              </div>
+              <div class="col">
+                  <div class="container ms-3">
+                      <div class="mt-5 mb-4">
+                          <img src={mad} alt="daminglogo" style="width: 30%;">
+                      </div>
+                      <div class="mb-5 pe-5">
+                          <h5 class="fw-bold fs-1">Mobile Apps Development (MAD)</h5>
+                      </div>
+                      <div class="">
+                          <p class="fw-semibold fs-2">Localhost (Lt.4 FMIPA) <br> Selasa, 18:30 WIB</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
           </div>
         </div>
         <div class="" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); border-color: red; border-radius: 0rem 0rem 2.5rem 2.5rem;">
-          <img src={agriux} class="mx-3 my-3" alt="agriux" style="width: 6.25rem" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" />
-          <img src={daming} class="mx-3 my-3" alt="daming" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" />
-          <img src={csi} class="mx-3 my-3" alt="csi" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"/>
-          <img src={gary} class="mx-3 my-3" alt="gary" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"/>
-          <img src={agribot} class="mx-3 my-3" alt="agribot" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"/>
-          <img src={iwdc} class="mx-3 my-3" alt="iwdc" style="width: 6.25rem" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"/>
-          <img src={cp} class="mx-3 my-3" alt="cp" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"/>
-          <img src={mad} class="mx-3 my-3" alt="mad" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"/>
+          <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <img src={agriux} class="carousel-icon active mx-3 my-3" alt="agriux" style="width: 6.25rem" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" />
+            <img src={daming} class="carousel-icon mx-3 my-3" alt="daming" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" />
+            <img src={csi} class="carousel-icon mx-3 my-3" alt="csi" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"/>
+            <img src={gary} class="carousel-icon mx-3 my-3" alt="gary" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"/>
+            <img src={agribot} class="carousel-icon mx-3 my-3" alt="agribot" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"/>
+            <img src={iwdc} class="carousel-icon mx-3 my-3" alt="iwdc" style="width: 6.25rem" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"/>
+            <img src={cp} class="carousel-icon mx-3 my-3" alt="cp" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"/>
+            <img src={mad} class="carousel-icon mx-3 my-3" alt="mad" style="width: 6.25rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"/>
+          </div>
       </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -88,3 +212,86 @@ import weeklymeeting from '../../public/WeeklyMeeting.png'
         </button>
       </div>
 </div>
+
+<script>
+   // Function to handle highlighting of carousel icons
+   function highlightIcon(index) {
+    const carouselIcons = document.querySelectorAll(".carousel-icon");
+    carouselIcons.forEach((icon) => {
+      icon.classList.remove("active");
+    });
+    carouselIcons[index].classList.add("active");
+  }
+
+  // Get all carousel icons (buttons) and add event listeners to handle clicks
+  const carouselIcons = document.querySelectorAll(".carousel-icon");
+  carouselIcons.forEach((icon, index) => {
+    icon.addEventListener("click", () => {
+      highlightIcon(index);
+    });
+  });
+
+  // Get the previous and next buttons
+  const prevButton = document.querySelector(".carousel-control-prev");
+  const nextButton = document.querySelector(".carousel-control-next");
+
+  // Add event listeners to handle clicks on previous and next buttons
+  prevButton.addEventListener("click", () => {
+    // Find the current active icon and get its index
+    const activeIndex = Array.from(carouselIcons).findIndex((icon) => icon.classList.contains("active"));
+
+    // Calculate the previous icon index
+    const prevIndex = activeIndex === 0 ? carouselIcons.length - 1 : activeIndex - 1;
+
+    // Highlight the previous icon
+    highlightIcon(prevIndex);
+  });
+
+  nextButton.addEventListener("click", () => {
+    // Find the current active icon and get its index
+    const activeIndex = Array.from(carouselIcons).findIndex((icon) => icon.classList.contains("active"));
+
+    // Calculate the next icon index
+    const nextIndex = activeIndex === carouselIcons.length - 1 ? 0 : activeIndex + 1;
+
+    // Highlight the next icon
+    highlightIcon(nextIndex);
+  });
+
+  // Listen for the "slid.bs.carousel" event when the carousel slide changes automatically
+  document.querySelector('#carouselExampleCaptions').addEventListener('slid.bs.carousel', function(event) {
+    // Get the index of the currently active slide
+    const activeSlideIndex = event.to;
+
+    // Highlight the corresponding icon based on the activeSlideIndex
+    highlightIcon(activeSlideIndex);
+  });
+</script>
+
+<style>
+  /* CSS to darken inactive icons and highlight the selected icon */
+  .carousel-icon {
+      filter: brightness(0.5); /* Initially darken the icons */
+  }
+  .carousel-icon.active {
+      filter: brightness(1); /* Highlight the selected icon */
+  }
+
+  /* CSS for large screens (1440px and above) */
+@media (min-width: 1440px) {
+    .img-size-lg {
+        width: 37.75rem;
+        height: 31.5rem;
+        object-fit: cover;
+    }
+}
+
+/* CSS for medium screens (768px to 1439px) */
+@media (max-width: 1439px) {
+    .img-size-md {
+        width: 19.875rem;
+        height: 31.5rem;
+        object-fit: cover;
+    }
+}
+</style>
