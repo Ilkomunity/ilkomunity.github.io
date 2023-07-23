@@ -1,75 +1,121 @@
-<div class="px-5 py-5">
-    <h1 class = "text-center fw-bold">
-        <span class="text-event-purple">Join Our</span>
-        <span class="text-event-orange">Exciting Events!</span>
-    </h1>
-    
-    <h4 class="my-4 text-center fw-bold">
-        <span class="text-event-purple">Experience the thrill of participating in</span>
-        <span class="text-event-orange">our engaging events</span><span class="text-event-purple">, where<br> knowledge and fun come together.</span>
-    </h4>
+---
+import event1 from "../images/event1.png";
+import event2 from "../images/event2.png";
+import event3 from "../images/event3.png";
+import event4 from "../images/event4.png";
+---
 
-    <div class="mx-5 my-5">
-        <div class="row justify-content-center">
-            <div class="col">
-                <div class="card">
-                    <img src="https://source.unsplash.com/random/300x200" class="card-img-top" alt="...">
-                    <p class="px-3 pt-3 fw-bold">Saung desain</p>
-                    <small class="px-3 pb-3">Seminar UI/UX Design yang akan membahas seputar Industri sekarang</small>
-                    <p class="lead px-3 pt-3 fw-bold">More Info
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </p>
-                </div>
-            </div>
+<div class="px-5 py-5" style="background-color: #e9eafd;">
+  <h1 class="text-center fw-bold">
+    <span class="text-event-purple">Join Our</span>
+    <span class="text-event-orange">Exciting Events!</span>
+  </h1>
 
-            <div class="col">
-                <div class="card">
-                    <img src="https://source.unsplash.com/random/300x200" class="card-img-top" alt="...">
-                    <p class="px-3 pt-3 fw-bold">Saung desain</p>
-                    <small class="px-3 pb-3">Seminar UI/UX Design yang akan membahas seputar Industri sekarang</small>
-                    <p class="lead px-3 pt-3 fw-bold">More Info
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </p>
-                </div>
-            </div>
+  <h4 class="my-4 text-center fw-bold">
+    <span class="text-event-purple"
+      >Experience the thrill of participating in</span
+    >
+    <span class="text-event-orange">our engaging events</span><span
+      class="text-event-purple"
+      >, where<br /> knowledge and fun come together.</span
+    >
+  </h4>
 
-            <div class="col">
-                <div class="card">
-                    <img src="https://source.unsplash.com/random/300x200" class="card-img-top" alt="...">
-                    <p class="px-3 pt-3 fw-bold">Saung desain</p>
-                    <small class="px-3 pb-3">Seminar UI/UX Design yang akan membahas seputar Industri sekarang</small>
-                    <p class="lead px-3 pt-3 fw-bold">More Info
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card">
-                    <img src="https://source.unsplash.com/random/300x200" class="card-img-top" alt="...">
-                    <p class="px-3 pt-3 fw-bold">Saung desain</p>
-                    <small class="px-3 pb-3">Seminar UI/UX Design yang akan membahas seputar Industri sekarang</small>
-                    <p class="lead px-3 pt-3 fw-bold">More Info
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </p>
-                </div>
-            </div>
+  <div id="eventCard" class="mx-5 my-5">
+    <div class="row justify-content-center">
+      <div class="col">
+        <div class="card border-0 event-box">
+          <img
+            src={event1}
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 10px 40px 10px 10px;"
+          />
+          <p class="px-3 pt-3 fw-bold" style="font-size: 1rem;">Saung desain</p>
+          <p class="px-3" style="font-size: 0.75rem;">
+            Seminar UI/UX Design yang akan membahas seputar Industri sekarang
+          </p>
+          <a href="#" class="px-3 py-1 text-decoration-none text-dark d-flex">
+            <p class="lead fw-bold">More Info</p>
+            <i
+              class="bi bi-arrow-right"
+              style="margin-left: 8px;
+              margin-top: 3px;"></i>
+          </a>
         </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-0 event-box">
+          <img
+            src={event2}
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 10px 40px 10px 10px;"
+          />
+          <p class="px-3 pt-3 fw-bold" style="font-size: 1rem;">Saung desain</p>
+          <p class="px-3" style="font-size: 0.75rem;">
+            Seminar UI/UX Design yang akan membahas seputar Industri sekarang
+          </p>
+          <a href="#" class="px-3 py-1 text-decoration-none text-dark d-flex">
+            <p class="lead fw-bold">More Info</p>
+            <i
+              class="bi bi-arrow-right"
+              style="margin-left: 8px;
+              margin-top: 3px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-0 event-box">
+          <img
+            src={event3}
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 10px 40px 10px 10px;"
+          />
+          <p class="px-3 pt-3 fw-bold" style="font-size: 1rem;">Saung desain</p>
+          <p class="px-3" style="font-size: 0.75rem;">
+            Seminar UI/UX Design yang akan membahas seputar Industri sekarang
+          </p>
+          <a href="#" class="px-3 py-1 text-decoration-none text-dark d-flex">
+            <p class="lead fw-bold">More Info</p>
+            <i
+              class="bi bi-arrow-right"
+              style="margin-left: 8px;
+              margin-top: 3px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-0 event-box">
+          <img
+            src={event4}
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 10px 40px 10px 10px;"
+          />
+          <p class="px-3 pt-3 fw-bold" style="font-size: 1rem;">Saung desain</p>
+          <p class="px-3" style="font-size: 0.75rem;">
+            Seminar UI/UX Design yang akan membahas seputar Industri sekarang
+          </p>
+          <a href="#" class="px-3 py-1 text-decoration-none text-dark d-flex">
+            <p class="lead fw-bold">More Info</p>
+            <i
+              class="bi bi-arrow-right"
+              style="margin-left: 8px;
+              margin-top: 3px;"></i>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="text-center">
-        <button class="btn btn-lg btn-event-button text-white fw-bold">See More</button>
-    </div>
-
-
-
+  <div class="text-center">
+    <button class="btn btn-lg btn-event-button text-white fw-bold"
+      >See More</button
+    >
+  </div>
 </div>
-

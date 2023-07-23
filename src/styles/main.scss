@@ -19,3 +19,72 @@ $navbar-nav-link-padding-x:         2rem;
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.event-box
+{
+  border-radius: 10px 40px 10px 10px;
+  z-index: 0;
+}
+.event-box::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background: linear-gradient(-64deg, #e70feb 0%, #0f18ed 100% );
+  transition: 0.5s;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.event-box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.event-box img
+{
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-box:hover::before {
+  opacity: 0.3;
+}
+
+.event-box:has(a:hover) img {
+  transform-origin: top center;
+  transform: scaleY(1.05);
+  transition: 0.5s linear;
+}
+
+.event-box:has(a:hover) p,a {
+  transform: translateY(5px);
+  transition: 0.5s linear;
+}
+
+.event-box:has(a:hover) a p{
+  background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  transition: 0.5s linear;
+}
+
+.event-box:has(a:hover) a i{
+  transform: translate(15px, 5px);
+  background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: 0.5s linear;
+}
