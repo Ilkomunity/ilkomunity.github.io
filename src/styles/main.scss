@@ -88,3 +88,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   background-clip: text;
   transition: 0.5s linear;
 }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .event-box img
+  {
+    height: 280px;
+    object-fit: fill;
+  }
+}
