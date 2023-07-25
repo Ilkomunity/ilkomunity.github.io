@@ -19,6 +19,36 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 5,
+  8: $spacer * 6.5,
+  9: $spacer * 7
+);
+
+$customGutter: 100px; // Adjust this value as per your requirement
+.g-custom > [class^="col-"] {
+  padding-right: $customGutter / 2;
+  padding-left: $customGutter / 2;
+}
+
+.mx-custom {
+  margin-left: map-get($spacers, 6);
+  margin-right: map-get($spacers, 6);
+}
+
+.px-custom {
+  padding-left: map-get($spacers, 6);
+  padding-right: map-get($spacers, 6);
+}
+
 .custom-rounded {
   border-top-left-radius: 130px;
   border-top-right-radius: 30px;
@@ -67,13 +97,27 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .card {
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
 }
       
+.card-bg-image {
+  background-image: url(/card-circle.svg);
+  background-size: auto; 
+  background-repeat: no-repeat;
+}
+
+body {
+  background-image: url("oval-base1.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
       
       
       
