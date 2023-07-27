@@ -1,5 +1,4 @@
-.event-box
-{
+.event-box {
   border-radius: 10px 40px 10px 10px;
   z-index: 0;
 }
@@ -10,7 +9,14 @@
   position: absolute;
   top: -4px;
   left: -4px;
-  background: linear-gradient(180deg, #BED4FFCC, #F6BEFFCC, #D4CBFFC8, #FAA0F6CC, #D0ACFECC);
+  background: linear-gradient(
+    180deg,
+    #bed4ffcc,
+    #f6beffcc,
+    #d4cbffc8,
+    #faa0f6cc,
+    #d0acfecc
+  );
   transition: 0.5s;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
@@ -30,8 +36,7 @@
   border-radius: inherit;
 }
 
-.event-box img
-{
+.event-box img {
   height: 200px;
   object-fit: cover;
 }
@@ -46,32 +51,77 @@
   transition: 0.5s linear;
 }
 
-.event-box:has(a:hover) p,a {
+.event-box:has(a:hover) p,
+a {
   transform: translateY(5px);
   transition: 0.5s linear;
 }
 
-.event-box:has(a:hover) a p{
-  background: linear-gradient(90deg, #0F18ED, #E70FEB);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  background-clip: text; 
-  transition: 0.5s linear;
-}
-
-.event-box:has(a:hover) a i{
-  transform: translate(15px, 5px);
-  background: linear-gradient(90deg, #0F18ED, #E70FEB);
+.event-box:has(a:hover) a p {
+  background: linear-gradient(90deg, #0f18ed, #e70feb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: 0.5s linear;
 }
 
+.event-box:has(a:hover) a i {
+  transform: translate(15px, 5px);
+  background: linear-gradient(90deg, #0f18ed, #e70feb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: 0.5s linear;
+}
+
+@media (max-width: 576px) {
+  .event-box {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .event-box img
-  {
+  .event-box {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .event-box img {
     height: 280px;
     object-fit: fill;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #eventSection h1 {
+    font-size: 2.25rem;
+  }
+  #eventSection h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .event-box {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .event-box img {
+    height: 280px;
+    object-fit: fill;
+  }
+}
+
+@media (min-width: 992px) {
+  #eventSection h1 {
+    font-size: 3rem;
+  }
+  #eventSection h4 {
+    font-size: 1.75rem;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .event-box img {
+    max-height: 200px;
   }
 }
