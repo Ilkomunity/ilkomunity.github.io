@@ -34,7 +34,7 @@
     height: 1000px;
 }
 
-.custom-font p {
+.WhyUs--custom-font p {
     width: 100%;
     max-width: 282px;
     font-size: 16px;
@@ -187,6 +187,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    #WhyUs-wrapper{
+        justify-content: space-between !important;
+    }
+
     .WhyUs-rect-top,
     .WhyUs-rect-mid,
     .WhyUs-rect-bot1,
@@ -230,11 +234,11 @@
         margin-left: 1.44rem !important;
     }
 
-    .custom-font img {
+    .WhyUs--custom-font img {
         width: 6.6375rem;
     }
 
-    .custom-font h3 {
+    .WhyUs--custom-font h3 {
         font-size: 1.28613rem;
     }
 
@@ -254,18 +258,18 @@
         flex: 0 0 auto;
         max-width: 15rem !important ; 
         width: 100% !important ;
-        margin: 0 1rem 0 2rem !important;
+        margin: 0 1rem 0 1rem !important;
     }
 
-    .custom-font p {
+    .WhyUs--custom-font p {
         font-size: 0.75rem !important;
     }
 
-    .custom-font h3 {
+    .WhyUs--custom-font h3 {
         font-size: 1rem !important;
     }
 
-    .custom-font img {
+    .WhyUs--custom-font img {
         width: 5.6375rem !important;
     }
 }
@@ -273,7 +277,13 @@
 
 @media (max-width: 575px) {
     #WhyUs-wrapper{
-        justify-content: center;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 0.5fr));
+        justify-items: center;
+    }
+
+    #WhyUs-mobile-grid{
+        grid-column: span 2;
     }
 
     #WhyUs-head-container {
@@ -284,20 +294,20 @@
     #WhyUs-card {
         flex: 0 0 auto;
         max-width: 14rem !important ; 
-        width: 100% !important ;
-        margin: 2rem 2rem 2rem 1rem !important;
+        width: 80% !important ;
+        margin: unset!important;
     }
 
-    .custom-font img {
-        width: 81px;
-        height: 81px;
+    .WhyUs--custom-font img {
+        width: 100%;
+        max-width: 80px;
     }
 
-    .custom-font p {
-        font-size: 0.75rem !important;
+    .WhyUs--custom-font p {
+        font-size: 0.678rem !important;
     }
 
-    .custom-font h3 {
+    .WhyUs--custom-font h3 {
         font-size: 1rem !important;
     }
 }
