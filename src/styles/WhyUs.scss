@@ -1,0 +1,313 @@
+#WhyUs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#WhyUs-card {
+    background-image: url("../Assets/Icons/Bg-Ellips-tl.svg"),
+        url("../Assets/Icons/Bg-Ellips-br.svg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-color: #fcfcfc;
+    box-shadow: -2px 1px 8px rgba(15, 24, 237, .5);
+}
+
+#WhyUs-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(15, 24, 237, .5) 0%, rgb(231, 15, 235, .5) 100%);
+    border-radius: inherit;
+    box-shadow: inherit;
+}
+
+#WhyUs-head-container {
+    width: 100%;
+    max-width: 28.7rem;
+}
+
+#WhyUs-rect-container {
+    width: 624px;
+    height: 1000px;
+}
+
+.WhyUs--custom-font p {
+    width: 100%;
+    max-width: 282px;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.WhyUs-rect-top,
+.WhyUs-rect-mid,
+.WhyUs-rect-bot1,
+.WhyUs-rect-bot2 {
+    display: none;
+    width: 624px;
+    height: 673px;
+    border-radius: 300px 60px;
+    opacity: 0.20000000298023224;
+    background: var(--grad-c,
+            linear-gradient(180deg,
+                rgba(190, 212, 255, 0.8) 0%,
+                rgba(246, 190, 255, 0.8) 29.48%,
+                rgba(212, 203, 255, 0.78) 55.52%,
+                rgba(250, 160, 246, 0.8) 82.08%,
+                rgba(208, 172, 254, 0.8) 98.23%));
+    transform: translateY(3rem);
+}
+
+@media (min-width: 1400px) {
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+    }
+
+    .WhyUs-rect-top {
+        top: 1rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 3rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 5rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 7rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }
+}
+
+@media (min-width: 1199px) and (max-width: 1500px) {
+
+    #WhyUs-head-container h1 {
+        width: max-content;
+        font-size: 4rem;
+    }
+
+    #WhyUs-head-container p {
+        width: 21rem;
+    }
+
+    #WhyUs-rect-container {
+        transform: translateY(8rem);
+    }
+
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+        width: 584px;
+        height: 573px;
+    }
+
+    .WhyUs-rect-top {
+        top: 2rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 4rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 6rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 8rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+        width: 584px;
+        height: 573px;
+    }
+
+    .WhyUs-rect-top {
+        top: 10rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 12rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 14rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 16rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }   
+
+    #WhyUs-card {
+        flex: 0 0 auto;
+        max-width: 19rem !important ; 
+        width: 100% !important ;
+    }
+    #WhyUs-head-container{
+        margin-left: unset !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #WhyUs-wrapper{
+        justify-content: space-between !important;
+    }
+
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+        width: 33.51563rem;
+        height: 573px;
+    }
+    .WhyUs-rect-top {
+        top: 2rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 4rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 6rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 8rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }
+
+    #WhyUs-card {
+        flex: 0 0 auto;
+        max-width: 17.6rem !important ; 
+        width: 100% !important ;
+        margin: 0 1rem 0 2rem !important;
+    }
+
+    #WhyUs-head-container{
+        margin-left: 1.44rem !important;
+    }
+
+    .WhyUs--custom-font img {
+        width: 6.6375rem;
+    }
+
+    .WhyUs--custom-font h3 {
+        font-size: 1.28613rem;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    #WhyUs-wrapper{
+        justify-content: center;
+    }
+
+    #WhyUs-head-container {
+        padding: 0 0 0 3rem !important;
+    }
+
+
+    #WhyUs-card {
+        flex: 0 0 auto;
+        max-width: 15rem !important ; 
+        width: 100% !important ;
+        margin: 0 1rem 0 1rem !important;
+    }
+
+    .WhyUs--custom-font p {
+        font-size: 0.75rem !important;
+    }
+
+    .WhyUs--custom-font h3 {
+        font-size: 1rem !important;
+    }
+
+    .WhyUs--custom-font img {
+        width: 5.6375rem !important;
+    }
+}
+
+
+@media (max-width: 575px) {
+    #WhyUs-wrapper{
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 0.5fr));
+        justify-items: center;
+    }
+
+    #WhyUs-mobile-grid{
+        grid-column: span 2;
+    }
+
+    #WhyUs-head-container {
+        width: auto;
+        max-width: none;
+    }
+
+    #WhyUs-card {
+        flex: 0 0 auto;
+        max-width: 14rem !important ; 
+        width: 80% !important ;
+        margin: unset!important;
+    }
+
+    .WhyUs--custom-font img {
+        width: 100%;
+        max-width: 80px;
+    }
+
+    .WhyUs--custom-font p {
+        font-size: 0.678rem !important;
+    }
+
+    .WhyUs--custom-font h3 {
+        font-size: 1rem !important;
+    }
+}
