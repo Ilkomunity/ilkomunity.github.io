@@ -1,0 +1,75 @@
+@media screen and (min-width: 768px) {
+  .slider-card {
+    transform: none;
+    /* Remove the transform scale */
+  }
+}
+
+/* Styles for screen sizes equal to or greater than 576px */
+@media screen and (min-width: 576px) {
+  .slider .owl-item.active.center .slider-card {
+    transform: none;
+    /* Apply the transform scale only for this selector */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+}
+
+.slider {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+.slider-card {
+  background: #fff;
+  padding: 0px 0px;
+  margin: 50px 15px 40px 15px;
+  border-bottom-left-radius: 10.3px;
+  border-bottom-right-radius: 31px;
+  border-top-left-radius: 155px;
+  border-top-right-radius: 31px;
+  border: #ffffff00 15px solid;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%) border-box;
+  box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+.slider-card img {
+  border-top-left-radius: 140px;
+  border-top-right-radius: 16px;
+}
+
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  font-size: 30px !important;
+  z-index: 1;
+}
+
+.owl-nav .owl-next {
+  position: absolute;
+  top: calc(50% - 25px);
+
+  font-size: 30px !important;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .slider .owl-item.active.center .slider-card {
+    transform: scale(1.15);
+  }
+
+  .slider-card {
+    margin: 50px 15px 90px 15px;
+  }
+}
