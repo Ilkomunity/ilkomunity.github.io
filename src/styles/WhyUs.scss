@@ -285,6 +285,42 @@
         z-index: -99;
     }
 
+    #WhyUs-rect-container{
+        top: 30% !important;
+    }
+
+    .WhyUs-rect-top,
+    .WhyUs-rect-mid,
+    .WhyUs-rect-bot1,
+    .WhyUs-rect-bot2 {
+        display: block;
+        width: 29.25rem;
+        height: 31.54688rem;
+    }
+    .WhyUs-rect-top {
+        top: 2rem;
+        transform: translateX(17rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-mid {
+        top: 4rem;
+        transform: translateX(14rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot1 {
+        top: 6rem;
+        transform: translateX(11rem);
+        z-index: -99;
+    }
+
+    .WhyUs-rect-bot2 {
+        top: 8rem;
+        transform: translateX(8rem);
+        z-index: -99;
+    }
+
     #WhyUs-head-container {
         padding: 0 0 0 3rem !important;
     }
