@@ -12,6 +12,21 @@
   border-bottom-right-radius: 0px;
 }
 
+.custom-color {
+	background-color: #7479F5; /* Replace with your desired color */
+}
+
+.custom-btn {
+	color: #ffffff; /* Replace with your desired color */
+	border-radius: 15px;
+  }
+
+/* Change the font color on hover */
+.custom-btn:hover {
+	color: #ffffff; /* Replace with your desired hover color */
+  }
+
+
 @media screen and (min-width: 768px) {
 	.slider-card {
 	  transform: none; /* Remove the transform scale */
@@ -67,9 +82,7 @@ body {
 	border-bottom-right-radius: 20px;
 	border-top-left-radius: 130px;
 	border-top-right-radius: 20px;
-    box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
     transform: scale(0.9);
-
     transition: all 0.3s;
 
 .slider-card img{
@@ -78,35 +91,4 @@ body {
 }
 }
 
-.owl-nav {
-	.owl-prev {
-		position: absolute;
-		top:calc(50% - 25px);
-		left:0;
-		font-size: 30px !important;
-		z-index:1;
-	}
-	.owl-next {
-		position: absolute;
-		top:calc(50% - 25px);
-		right:0;
-		font-size: 30px !important;
-		z-index:1;
-	}
-}
-.owl-dots {
-	text-align: center;
-	.owl-dot {
-		height: 10px;
-	width: 10px;
-	border-radius: 10px;
-	background: #ccc !important;
-	margin-left: 3px;
-	margin-right: 3px;
-	outline: none;
-		&.active {
-			background: #f44336 !important;
-		}
-	}
-}
 
