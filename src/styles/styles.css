@@ -26,7 +26,6 @@ body {
   position: relative;
 }
 
-
 .slider-card {
   background: #fff;
   padding: 0px 0px;
@@ -38,7 +37,6 @@ body {
   border: #ffffff00 15px solid;
   background: linear-gradient(white, white) padding-box,
     linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%) border-box;
-  box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
   transform: scale(0.9);
   transition: all 0.3s;
 }
@@ -52,6 +50,7 @@ body {
   position: absolute;
   top: calc(50% - 25px);
   left: 0;
+  opacity: 1;
   font-size: 30px !important;
   z-index: 1;
 }
@@ -59,9 +58,28 @@ body {
 .owl-nav .owl-next {
   position: absolute;
   top: calc(50% - 25px);
-
+  right: 0;
+  opacity: 1;
   font-size: 30px !important;
   z-index: 1;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dots .owl-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ccc !important;
+  margin-left: 3px;
+  margin-right: 3px;
+  outline: none;
+}
+
+.owl-dots .owl-dot.active {
+  background: #f44336 !important;
 }
 
 @media screen and (min-width: 1024px) {
