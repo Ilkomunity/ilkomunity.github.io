@@ -9,13 +9,16 @@
   position: absolute;
   top: -4px;
   left: -4px;
-  background: linear-gradient(
-    180deg,
-    #bed4ffcc,
-    #f6beffcc,
-    #d4cbffc8,
-    #faa0f6cc,
-    #d0acfecc
+  background: var(
+    --grad-c,
+    linear-gradient(
+      180deg,
+      #bed4ffcc,
+      #f6beffcc,
+      #d4cbffc8,
+      #faa0f6cc,
+      #d0acfecc
+    )
   );
   transition: 0.5s;
   width: calc(100% + 8px);
@@ -41,33 +44,47 @@
   object-fit: cover;
 }
 
+.upcoming-event {
+  background: var(--grad-a, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.past-event {
+  background: var(--grad-b, linear-gradient(90deg, #ede40f 0%, #eda20f 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .event-box:hover::before {
   opacity: 1;
 }
 
-.event-box:has(a:hover) img {
+.event-box:has(.event-link:hover) img {
   transform-origin: top center;
   transform: scaleY(1.05);
   transition: 0.5s linear;
 }
 
-.event-box:has(a:hover) p,
-a {
+.event-box:has(.event-link:hover) p,
+.event-box:has(.event-link:hover) a {
   transform: translateY(5px);
   transition: 0.5s linear;
 }
 
-.event-box:has(a:hover) a p {
-  background: linear-gradient(90deg, #0f18ed, #e70feb);
+.event-box:has(.event-link:hover) .event-link p {
+  background: var(--grad-a, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: 0.5s linear;
 }
 
-.event-box:has(a:hover) a i {
+.event-box:has(.event-link:hover) .event-link i {
   transform: translate(15px, 5px);
-  background: linear-gradient(90deg, #0f18ed, #e70feb);
+  background: var(--grad-a, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -123,5 +140,6 @@ a {
   }
   .event-box img {
     max-height: 200px;
+    object-fit: fill;
   }
 }
