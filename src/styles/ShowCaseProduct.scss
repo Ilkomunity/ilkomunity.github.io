@@ -73,14 +73,15 @@ $customGutter: 100px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   margin-top: 46px;
   margin-bottom: -100px;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 2;
 }
 
 .card1:hover {
-  transform: translateY(-50px);
+  transform: translateY(-100px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
   background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+  z-index: 2;
 }
 
 .card1-bg-image {
@@ -121,6 +122,7 @@ body {
   overflow: hidden;
   z-index: 0;
   margin-bottom: 16px;
+  z-index: 1;
 }
 
 .card2:hover {
@@ -136,7 +138,6 @@ body {
   background-repeat: no-repeat, no-repeat;
   position: relative;
 }
-
 
 $primary: #0F55A8;
 
@@ -157,10 +158,10 @@ $font-family-base: 'Plus Jakarta Sans', sans-serif;
   font-size: 24px; 
   font-family: $font-family-base;
   font-weight: bold;
-  background-color: var(--aa-300, #E70FEB);
+  background-color: var(--primary-p-100, #7479F5);
   color: #ffffff;
   border: none;
-  border-radius: 48px;
+  border-radius: 8px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -241,6 +242,7 @@ $font-family-base: 'Plus Jakarta Sans', sans-serif;
   line-height: normal;
   margin: 0;
   color: var(--white, #FFF);
+  margin: 10px;
 }
 
 .caption-right {
