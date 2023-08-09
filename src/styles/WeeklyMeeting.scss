@@ -1,0 +1,26 @@
+.carousel-border {
+  position: relative;
+  background: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%);
+  padding: 10px;
+}
+
+.img-border {
+  background: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%);
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 0rem 0rem 1.5rem 0rem;
+}
+
+.img-fluid {
+  border-radius: 0rem 0rem 1.5rem 0rem;
+}
+
+.icon-bawah {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+  border-image-source: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%);
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+}
