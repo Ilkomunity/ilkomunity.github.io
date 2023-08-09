@@ -1,24 +1,37 @@
 ---
 const { title } = Astro.props;
-import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar.astro';
-import '../styles/main.scss';
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import "../styles/main.scss";
 import '../styles/event.scss';
+import "../styles/CommunityCard.scss";
+import "../styles/Achievement.scss";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml+png" href="/favicon.png" />
-		<script src="https://kit.fontawesome.com/35218c3b5c.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml+png" href="/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/35218c3b5c.js"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"></script>
+    <script src="../scripts/owl.carousel.min.js"></script>
+    <script src="../scripts/script.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
     <Navbar />
-		<slot>No content derived</slot>
-	<Footer />
-	</body>
+    <slot>No content derived</slot>
+    <Footer />
+  </body>
 </html>
