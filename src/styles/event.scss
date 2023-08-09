@@ -1,0 +1,145 @@
+.event-box {
+  border-radius: 10px 40px 10px 10px;
+  z-index: 0;
+}
+
+.event-box::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background: var(
+    --grad-c,
+    linear-gradient(
+      180deg,
+      #bed4ffcc,
+      #f6beffcc,
+      #d4cbffc8,
+      #faa0f6cc,
+      #d0acfecc
+    )
+  );
+  transition: 0.5s;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.event-box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.event-box img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.upcoming-event {
+  background: var(--grad-a, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.past-event {
+  background: var(--grad-b, linear-gradient(90deg, #ede40f 0%, #eda20f 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.event-box:hover::before {
+  opacity: 1;
+}
+
+.event-box:has(.event-link:hover) img {
+  transform-origin: top center;
+  transform: scaleY(1.05);
+  transition: 0.5s linear;
+}
+
+.event-box:has(.event-link:hover) p,
+.event-box:has(.event-link:hover) a {
+  transform: translateY(5px);
+  transition: 0.5s linear;
+}
+
+.event-box:has(.event-link:hover) .event-link p {
+  background: var(--grad-a, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: 0.5s linear;
+}
+
+.event-box:has(.event-link:hover) .event-link i {
+  transform: translate(15px, 5px);
+  background: var(--grad-a, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: 0.5s linear;
+}
+
+@media (max-width: 576px) {
+  .event-box {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .event-box {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .event-box img {
+    height: 280px;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #eventSection h1 {
+    font-size: 2.25rem;
+  }
+  #eventSection h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .event-box {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .event-box img {
+    height: 280px;
+    object-fit: fill;
+  }
+}
+
+@media (min-width: 992px) {
+  #eventSection h1 {
+    font-size: 3rem;
+  }
+  #eventSection h4 {
+    font-size: 1.75rem;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .event-box img {
+    max-height: 200px;
+    object-fit: fill;
+  }
+}
