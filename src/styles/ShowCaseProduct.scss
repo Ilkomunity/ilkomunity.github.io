@@ -100,7 +100,7 @@ $customGutter: 100px;
 
   .card1-bg-image {
     background: var(--aa-400, #A20BA5);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     padding: 10px;
@@ -281,6 +281,28 @@ $customGutter: 100px;
 
   .ShowCaseProduct--custom-font h3 {
     font-size: 23px;
+  }
+
+  .carousel-inner {
+    overflow-y: hidden;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);  
+  }
+  .carousel-control-prev span,
+  .carousel-control-next span {
+    width: 1.5rem;
+    height: 1.5rem;
+    max-width: 10%;
+  }
+  
+  .cards-wrapper {
+    overflow: visible;
+    display:flex;
+    position: relative;
   }
 }
 
@@ -505,6 +527,28 @@ $customGutter: 100px;
   .ShowCaseProduct--custom-font h3 {
     font-size: 23px;
   }
+
+  .carousel-inner {
+    overflow-y: hidden;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);  
+  }
+  .carousel-control-prev span,
+  .carousel-control-next span {
+    width: 1.5rem;
+    height: 1.5rem;
+    max-width: 10%;
+  }
+  
+  .cards-wrapper {
+    overflow: visible;
+    display: flex;
+    position: relative;
+  }
 }
 
 /* Style Mobile */
@@ -540,7 +584,7 @@ $customGutter: 100px;
     z-index: 2;
     overflow: visible;
     height: auto;
-    margin-bottom: -53px;
+    margin-bottom: -60px;
     position: absolute;
   }
 
@@ -727,5 +771,27 @@ $customGutter: 100px;
 
   .ShowCaseProduct--custom-font h3 {
     font-size: 23px;
+  }
+
+  .carousel-inner {
+    overflow-y: hidden;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);  
+  }
+  .carousel-control-prev span,
+  .carousel-control-next span {
+    width: 1.5rem;
+    height: 1.5rem;
+    max-width: 10%;
+  }
+  
+  .cards-wrapper {
+    overflow: visible;
+    display:flex;
+    position: relative;
   }
 }
