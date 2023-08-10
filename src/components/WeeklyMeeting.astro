@@ -1,20 +1,30 @@
 ---
-import agribot from '../../logo-agribot.svg'
-import agriux from '../../logo-agriux.svg'
-import cp from '../../logo-cp.svg'
-import daming from '../../logo-daming.svg'
-import gary from '../../logo-gary.svg'
-import iwdc from '../../logo-iwdc.svg'
-import mad from '../../logo-mad.svg'
-import csi from '../../logo-csi.svg'
-import agriuxweeklymeeting from '../../AgriuxWeeklyMeeting.png'
-import agribotweeklymeeting from '../../AgribotWeeklyMeeting.png'
-import cpweeklymeeting from '../../CpWeeklyMeeting.png'
-import csiweeklymeeting from '../../CsiWeeklyMeeting.png'
-import damingweeklymeeting from '../../DamingWeeklyMeeting.png'
-import garyweeklymeeting from '../../GaryWeeklyMeeting.png'
-import iwdcweeklymeeting from '../../IwdcWeeklyMeeting.png'
-import madweeklymeeting from '../../MadWeeklyMeeting.png'
+// import agribot from '../../logo-agribot.svg'
+// import agriux from '../../logo-agriux.svg'
+// import cp from '../../logo-cp.svg'
+// import daming from '../../logo-daming.svg'
+// import gary from '../../logo-gary.svg'
+// import iwdc from '../../logo-iwdc.svg'
+// import mad from '../../logo-mad.svg'
+// import csi from '../../logo-csi.svg'
+// import agriuxweeklymeeting from '../../AgriuxWeeklyMeeting.png'
+// import agribotweeklymeeting from '../../AgribotWeeklyMeeting.png'
+// import cpweeklymeeting from '../../CpWeeklyMeeting.png'
+// import csiweeklymeeting from '../../CsiWeeklyMeeting.png'
+// import damingweeklymeeting from '../../DamingWeeklyMeeting.png'
+// import garyweeklymeeting from '../../GaryWeeklyMeeting.png'
+// import iwdcweeklymeeting from '../../IwdcWeeklyMeeting.png'
+// import madweeklymeeting from '../../MadWeeklyMeeting.png'
+// const jadwals = await getCollection('communities');
+import {getEntryBySlug } from 'astro:content';
+const UX = await getEntryBySlug('communities', "ux");
+const daming = await getEntryBySlug('communities', "daming");
+const csi = await getEntryBySlug('communities', "csi");
+const gary = await getEntryBySlug('communities', "gary");
+const agribot = await getEntryBySlug('communities', "agribot");
+const iwdc = await getEntryBySlug('communities', "iwdc");
+const cp = await getEntryBySlug('communities', "cp");
+const mad = await getEntryBySlug('communities', "mad");
 ---
 
 <div class="col">
@@ -30,17 +40,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
                 <div class="col">
                     <div class="img-border">
-                        <img src={agriuxweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                        <img src={UX.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                     </div>
                 </div>
                 <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                     <div class="container mx-1 mx-md-3">
                       <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                         <div class="mb-auto mt-5">
-                          <img src={agriux} alt="agriuxlogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">AgriUX</h5>
+                          <img src={UX.data.logo} alt="agriuxlogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{UX.data.nama}</h5>
                         </div>
-                        <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">RKU 2.01 (FMIPA) <br> Rabu, 18:30 WIB</p>
+                          <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{UX.data.ruangan} ({UX.data.detailRuangan}) <br> {UX.data.hari}, {UX.data.jam} WIB</p>
                         </div>        
                     </div>
                 </div>
@@ -50,17 +60,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                 <div class="img-border">
-                  <img src={damingweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={daming.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                 </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={daming} alt="daminglogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">Data Mining IPB (DAMING)</h5>
+                          <img src={daming.data.logo} alt="daminglogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{daming.data.nama}</h5>
                       </div>
-                        <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">Localhost (Lt.4 FMIPA) <br> Sabtu, 13:00 WIB</p>
+                        <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{daming.data.ruangan} ({daming.data.detailRuangan}) <br> {daming.data.hari}, {daming.data.jam} WIB</p>
                     </div>
                   </div>
               </div>
@@ -70,17 +80,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                 <div class="img-border">
-                  <img src={csiweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={csi.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                 </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={csi} alt="csilogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">Cyber Security IPB (CSI)</h5>
+                          <img src={csi.data.logo} alt="csilogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{csi.data.nama}</h5>
                       </div>
-                          <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">Gedung GPK Lt.2 <br> Jumat, 17:00 WIB</p>
+                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{csi.data.ruangan} ({csi.data.detailRuangan}) <br> {csi.data.hari}, {csi.data.jam} WIB</p>
                       </div>
                   </div>
               </div>
@@ -90,17 +100,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                 <div class="img-border">
-                  <img src={garyweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={gary.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                 </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={gary} alt="garylogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">Game Reality IPB (GARY)</h5>
+                          <img src={gary.data.logo} alt="garylogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{gary.data.nama}</h5>
                       </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">Localhost (Lt.4 FMIPA) <br> Sabtu, 10:00 WIB</p>
+                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{gary.data.ruangan} ({gary.data.detailRuangan}) <br> {gary.data.hari}, {gary.data.jam} WIB</p>
                   </div>
                 </div>
               </div>
@@ -110,17 +120,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                   <div class="img-border">
-                  <img src={agribotweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={agribot.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                   </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={agribot} alt="agribotlogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">Agribot</h5>
+                          <img src={agribot.data.logo} alt="agribotlogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{agribot.data.nama}</h5>
                       </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">Localhost (Lt.4 FMIPA) <br> Rabu, 19:30 WIB</p>
+                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{agribot.data.ruangan} ({agribot.data.detailRuangan}) <br> {agribot.data.hari}, {agribot.data.jam} WIB</p>
                   </div>
                 </div>
               </div>
@@ -130,17 +140,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                 <div class="img-border">
-                  <img src={iwdcweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={iwdc.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                   </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={iwdc} alt="iwdclogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">IPB Web Development Community (IWDC)</h5>
+                          <img src={iwdc.data.logo} alt="iwdclogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{iwdc.data.nama}</h5>
                       </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">RKU 2.01 (FMIPA) <br> Kamis, 18:30 WIB</p>
+                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{iwdc.data.ruangan} ({iwdc.data.detailRuangan}) <br> {iwdc.data.hari}, {iwdc.data.jam} WIB</p>
                   </div>
                 </div>
               </div>
@@ -150,17 +160,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                 <div class="img-border">
-                  <img src={cpweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={cp.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                   </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={cp} alt="cplogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">Competitive Programming (CP)</h5>
+                          <img src={cp.data.logo} alt="cplogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{cp.data.nama}</h5>
                       </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">Localhost (Lt.4 FMIPA) <br> Senin, 19:00 WIB</p>
+                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{cp.data.ruangan} ({cp.data.detailRuangan}) <br> {cp.data.hari}, {cp.data.jam} WIB</p>
                   </div>
                 </div>
               </div>
@@ -170,17 +180,17 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
             <div class="row align-items-start">
               <div class="col">
                 <div class="img-border">
-                  <img src={madweeklymeeting} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                  <img src={mad.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
                   </div>
               </div>
               <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                 <div class="container mx-1 mx-md-3">
                   <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
                       <div class="mb-auto mt-5">
-                          <img src={mad} alt="madlogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">Mobile Apps Development (MAD)</h5>
+                          <img src={mad.data.logo} alt="madlogo" class="img-atas">
+                          <h5 class="fw-bold fs-1 mt-4">{mad.data.nama}</h5>
                       </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-2">Localhost (Lt.4 FMIPA) <br> Selasa, 18:30 WIB</p>
+                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{mad.data.ruangan} ({mad.data.detailRuangan}) <br> {mad.data.hari}, {mad.data.jam} WIB</p>
                   </div>
                 </div>
               </div>
@@ -190,14 +200,14 @@ import madweeklymeeting from '../../MadWeeklyMeeting.png'
     
         <div class="icon-bawah" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); border-color: red; border-radius: 0rem 0rem 2.5rem 2.5rem;">
           <div class="d-flex flex-wrap justify-content-center align-items-center">
-            <img src={agriux} class="logo-bawah carousel-icon active mx-3 my-3" alt="agriux" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" />
-            <img src={daming} class="logo-bawah carousel-icon mx-3 my-3" alt="daming" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" />
-            <img src={csi} class="logo-bawah carousel-icon mx-3 my-3" alt="csi" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"/>
-            <img src={gary} class="logo-bawah carousel-icon mx-3 my-3" alt="gary" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"/>
-            <img src={agribot} class="logo-bawah carousel-icon mx-3 my-3" alt="agribot" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"/>
-            <img src={iwdc} class="logo-bawah carousel-icon mx-3 my-3" alt="iwdc" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"/>
-            <img src={cp} class="logo-bawah carousel-icon mx-3 my-3" alt="cp" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"/>
-            <img src={mad} class="logo-bawah carousel-icon mx-3 my-3" alt="mad" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"/>
+            <img src={UX.data.logo} class="logo-bawah carousel-icon active mx-3 my-3" alt="agriux" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" />
+            <img src={daming.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="daming" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" />
+            <img src={csi.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="csi" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"/>
+            <img src={gary.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="gary" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"/>
+            <img src={agribot.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="agribot" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"/>
+            <img src={iwdc.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="iwdc" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"/>
+            <img src={cp.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="cp" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"/>
+            <img src={mad.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="mad" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"/>
           </div>
       </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="height: 80%;">
