@@ -1,0 +1,112 @@
+---
+import "../styles/Hero.scss";
+import pv_komun1 from "../Assets/Icons/Hero-komun-pv-UX.svg";
+import pv_komun2 from "../Assets/Icons/Hero-komun-pv-CSI.svg";
+import pv_komun3 from "../Assets/Icons/Hero-komun-pv-Agribot.svg";
+import hero_trophy from "../Assets/Icons/Hero-trophy.svg";
+import hero_git from "../Assets/Icons/Hero-Github.svg";
+import hero_html from "../Assets/Icons/Hero-HTML.svg";
+import hero_figma from "../Assets/Icons/Hero-Figma.svg";
+
+---
+
+<section id="Hero-container" class="pt-4 pb-5">
+  <div
+    id="Hero-content-container"
+    class="d-flex justify-content-between rounded-Hero-main-container mx-5 pb-8"
+  >
+    <div id="Hero-Typography" class="">
+      <div id="Hero-header" class="ps-9 pt-7">
+        <h1 class="display-1 fw-bold" style="color: #FFFFFF;">Ilkomunity</h1>
+        <h3 class="fw-bold pt-4" style="color: #FFFFFF;">
+          The best place to
+          <span
+            style="background: var(--grad-b, linear-gradient(90deg, #EDE40F 0%, #EDA20F 100%)); -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;"
+            >learn</span
+          >
+          and
+          <span
+            style="background: var(--grad-b, linear-gradient(90deg, #EDE40F 0%, #EDA20F 100%)); -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;"
+            >grow</span
+          > together
+        </h3>
+        <p class="pb-3" style="color: #FFFFFF;">
+          Consists of 8 communities that are ready to develop into the nation's
+          successors.
+        </p>
+      </div>
+
+      <div
+        id="Hero-detail-container"
+        class="rounded-Hero-detail-container mx-9 mt-4 py-4"
+      >
+        <div
+          id="Hero-detail-wrapper"
+          class="d-flex justify-content-around rounded-Hero-detail mx-3"
+        >
+          <div
+            id="Hero-detail"
+            class="d-flex flex-column align-items-center my-3"
+          >
+            <div class="d-flex align-items-center">
+              <img style="transform: translateX(0);" src={pv_komun1} />
+              <img style="transform: translateX(-10px);" src={pv_komun2} />
+              <img style="transform: translateX(-20px);" src={pv_komun3} />
+              <p
+                class="fw-bold"
+                style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: translateX(-10px);"
+              >
+                5+
+              </p>
+            </div>
+
+            <h2 class="fw-bold fs-4 pt-2">8</h2>
+            <p class="fs-6">Communities</p>
+          </div>
+
+          <div
+            id="Hero-detail"
+            class="d-flex flex-column align-items-center my-3"
+          >
+            <img src={hero_trophy} />
+            <h2 class="fw-bold fs-4 pt-2">40+</h2>
+            <p class="fs-6">Achievements</p>
+          </div>
+          <div
+            id="Hero-detail"
+            class="d-flex flex-column align-items-center  my-3"
+          >
+            <div>
+              <img style="transform: translateX(10px);" src={hero_git} />
+              <img style="transform: translateX(-5px);" src={hero_html} />
+              <img style="transform: translateX(-15px);" src={hero_figma} />
+            </div>
+            <h2 class="fw-bold fs-4 pt-2">60+</h2>
+            <p class="fs-6">Portofolios</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Hero-Image" class="pt-7">
+      <div
+        id="Hero-Image-wrapper"
+        class="d-flex justify-content-center align-items-center mx-4"
+      >
+        <div id="Hero-Image-gradient" class="">
+          <div id="Hero-Main">
+            <div></div>
+            <!-- <h2 style="display: none;">tes</h2> -->
+            <!-- <img src={image_main}> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
