@@ -1,0 +1,209 @@
+#Hero-container {
+    background-color: #E7E8FD;
+    background-image: url('../Assets/Icons/Hero-BG-Shape-1-tr.svg'), url('../Assets/Icons/Hero-BG-Shape-2-bl.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+#Hero-content-container {
+    background-image: url('../Assets/Icons/Hero-BG-Oval-1-tl.svg'), url('../Assets/Icons/Hero-BG-Oval-2-br.svg'), linear-gradient(31deg, #0F18ED 0%, #8213EC 35.01%, #9F12EC 66.79%, #E70FEB 100%);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+#Hero-header {
+    max-width: 33.9rem;
+    width: 100%;
+}
+
+#Hero-header p {
+    margin-bottom: unset;
+}
+
+#Hero-detail-container {
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(20px);
+    max-width: 41.9375rem;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+#Hero-detail-wrapper {
+    background: white;
+}
+
+#Hero-detail h2,
+p {
+    margin-bottom: unset !important;
+}
+
+#Hero-Image {
+    position: relative;
+    z-index: 2;
+    max-width: 34.875rem;
+    width: 100%;
+}
+
+#Hero-Image-wrapper {
+    position: relative;
+    max-height: 25.11rem;
+    height: 100%;
+    border-radius: 6.82rem 1.705rem;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    z-index: 3;
+}
+
+#Hero-Image-gradient {
+    position: relative;
+    max-width: 31.92613rem;
+    width: 100%;
+    height: 22.97488rem;
+    border-radius: 6.82rem 1.705rem;
+    background: linear-gradient(225deg, #FF9F35 0%, #ED9C41 14.87%, #FF5A88 53.88%, #FF1FCB 86.13%);
+    background-clip: padding-box;
+    background-size: auto;
+}
+
+#Hero-Main {
+    background-image: url(../Assets/Icons/Hero-Pic-Main-Desktop.png);
+    max-width: 31.92613rem;
+    border-radius: 6.82rem 1.705rem;
+    height: 27.5rem;
+    width: 100%;
+    position: absolute;
+    top: -70px;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    #Hero-Image {
+        width: 80%;
+    }
+
+    #Hero-detail-container {
+        margin: 2rem 4rem ! important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    #Hero-content-container {
+        flex-direction: column;
+    }
+
+    #Hero-header {
+        padding: 0 0 0 5rem !important;
+    }
+
+    #Hero-Typography {
+        order: 2;
+    }
+
+    #Hero-detail-container {
+        margin: 1.5rem 3rem 0 2rem !important;
+        padding: 0.8rem !important;
+        width: 90%;
+    }
+
+    #Hero-Image-wrapper {
+        margin: 0 3rem 2rem 3rem !important;
+    }
+
+    #Hero-Image {
+        order: 1;
+        align-self: center;
+    }
+
+    #Hero-detail img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #Hero-content-container {
+        background-image: url('../Assets/Icons/Hero-BG-Oval-1-tl-tab.svg'), url('../Assets/Icons/Hero-BG-Oval-2br-tab.svg'), linear-gradient(31deg, #0F18ED 0%, #8213EC 35.01%, #9F12EC 66.79%, #E70FEB 100%);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+
+    #Hero-Main {
+        top: -40px;
+        height: 25.5rem;
+        background-position-x: center;
+    }
+}
+
+@media (max-width:576px) {
+    #Hero-content-container {
+        flex-direction: column;
+    }
+
+    #Hero-Typography {
+        order: 2;
+    }
+
+    #Hero-header {
+        padding: 1.5rem 0 0 3rem !important;
+        width: 80%;
+    }
+
+    #Hero-detail-container {
+        margin: 1rem 1rem 0 1rem !important;
+        padding: 0.4rem !important;
+        width: 90%;
+    }
+
+    #Hero-Image-wrapper {
+        width: 90%;
+        padding: .8rem 0 !important;
+    }
+
+    #Hero-Image-gradient {
+        width: 90%;
+    }
+
+    #Hero-detail img {
+        max-width: 1.5rem;
+        width: 100%;
+    }
+
+    #Hero-detail h2 {
+        font-size: 1.125rem !important;
+    }
+
+    #Hero-detail p {
+        font-size: .6rem !important;
+    }
+
+    #Hero-Main {
+        background-position-x: left;
+    }
+}
+
+@media (max-width: 500px) {
+    #Hero-detail-container {
+        margin: 0 auto !important;
+        padding: 0.4rem !important;
+        width: 90%;
+    }
+
+    #Hero-detail {
+        margin: 0 !important;
+    }
+
+    #Hero-detail:first-child{
+        margin: 0 0 0 10px !important;
+    }
+
+    #Hero-detail h2 {
+        font-size: .8rem !important;
+    }
+
+    #Hero-detail p {
+        font-size: .5rem !important;
+    }
+    #Hero-detail img {
+        width: 25%;
+    }
+}
