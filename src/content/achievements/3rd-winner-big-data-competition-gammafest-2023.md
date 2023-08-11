@@ -4,5 +4,5 @@ competition: "Big Data Competition"
 event: "GAMMAFEST 2023"
 team: "Team Name"
 imageSrc: "achievement-3.png"
-publishedDate: 2023-10-08
+publishDate: 2023-08-10
 ---

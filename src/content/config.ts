@@ -8,8 +8,8 @@ const achievementsCollection = defineCollection({
         imageSrc: z.string(),
         event: z.string(),
         team: z.string(),
-        publishedDate: z.date(),
+        publishDate: z.date(),
     })
 });
 
-export const collections = {'achievement': achievementsCollection};
+export const collections = {'achievements': achievementsCollection};
