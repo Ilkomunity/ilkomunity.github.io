@@ -5,6 +5,7 @@ const jadwalCommunities = defineCollection({
         foto: z.string(),
         logo: z.string(),
         nama: z.string(),
+        singkatan: z.string(),
         hari: z.string(),
         detailRuangan: z.string(),
         ruangan: z.string(),

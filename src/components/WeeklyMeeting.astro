@@ -1,30 +1,6 @@
 ---
-// import agribot from '../../logo-agribot.svg'
-// import agriux from '../../logo-agriux.svg'
-// import cp from '../../logo-cp.svg'
-// import daming from '../../logo-daming.svg'
-// import gary from '../../logo-gary.svg'
-// import iwdc from '../../logo-iwdc.svg'
-// import mad from '../../logo-mad.svg'
-// import csi from '../../logo-csi.svg'
-// import agriuxweeklymeeting from '../../AgriuxWeeklyMeeting.png'
-// import agribotweeklymeeting from '../../AgribotWeeklyMeeting.png'
-// import cpweeklymeeting from '../../CpWeeklyMeeting.png'
-// import csiweeklymeeting from '../../CsiWeeklyMeeting.png'
-// import damingweeklymeeting from '../../DamingWeeklyMeeting.png'
-// import garyweeklymeeting from '../../GaryWeeklyMeeting.png'
-// import iwdcweeklymeeting from '../../IwdcWeeklyMeeting.png'
-// import madweeklymeeting from '../../MadWeeklyMeeting.png'
-// const jadwals = await getCollection('communities');
-import {getEntryBySlug } from 'astro:content';
-const UX = await getEntryBySlug('communities', "ux");
-const daming = await getEntryBySlug('communities', "daming");
-const csi = await getEntryBySlug('communities', "csi");
-const gary = await getEntryBySlug('communities', "gary");
-const agribot = await getEntryBySlug('communities', "agribot");
-const iwdc = await getEntryBySlug('communities', "iwdc");
-const cp = await getEntryBySlug('communities', "cp");
-const mad = await getEntryBySlug('communities', "mad");
+import { getCollection } from 'astro:content';
+const komun = await getCollection('communities');
 ---
 
 <div class="col">
@@ -36,179 +12,40 @@ const mad = await getEntryBySlug('communities', "mad");
     <div id="carouselExampleCaptions" class="carousel slide mx-auto mt-5 mb-5" data-bs-ride="carousel" style="width: 80%;">
         <div class="carousel-border" style="border-radius: 2.5rem 12.5rem 2.5rem 2.5rem;">
             <div class="carousel-inner" style="border-radius: 2.5rem 12.5rem 0rem 0rem; background: white;">
-          <div class="carousel-item active">
-            <div class="row align-items-start">
-                <div class="col">
-                    <div class="img-border">
-                        <img src={UX.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                    <div class="container mx-1 mx-md-3">
-                      <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                        <div class="mb-auto mt-5">
-                          <img src={UX.data.logo} alt="agriuxlogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{UX.data.nama}</h5>
-                        </div>
-                          <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{UX.data.ruangan} ({UX.data.detailRuangan}) <br> {UX.data.hari}, {UX.data.jam} WIB</p>
-                        </div>        
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                <div class="img-border">
-                  <img src={daming.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={daming.data.logo} alt="daminglogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{daming.data.nama}</h5>
+            {
+              komun.map((jadwal,index) => (
+              <div class={`carousel-item ${index === 0 ? ' active' : ''}`}>
+                  <div class="row align-items-start">
+                      <div class="col">
+                          <div class="img-border">
+                              <img src={jadwal.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
+                          </div>
                       </div>
-                        <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{daming.data.ruangan} ({daming.data.detailRuangan}) <br> {daming.data.hari}, {daming.data.jam} WIB</p>
-                    </div>
-                  </div>
-              </div>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                <div class="img-border">
-                  <img src={csi.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={csi.data.logo} alt="csilogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{csi.data.nama}</h5>
-                      </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{csi.data.ruangan} ({csi.data.detailRuangan}) <br> {csi.data.hari}, {csi.data.jam} WIB</p>
+                      <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
+                          <div class="container mx-1 mx-md-3">
+                              <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
+                                  <div class="mb-auto mt-5">
+                                      <img src={jadwal.data.logo} alt="jadwallogo" class="img-atas">
+                                      <h5 class="fw-bold fs-1 mt-4">{jadwal.data.nama}</h5>
+                                  </div>
+                                  <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{jadwal.data.ruangan} ({jadwal.data.detailRuangan}) <br> {jadwal.data.hari}, {jadwal.data.jam} WIB</p>
+                              </div>        
+                          </div>
                       </div>
                   </div>
               </div>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                <div class="img-border">
-                  <img src={gary.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={gary.data.logo} alt="garylogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{gary.data.nama}</h5>
-                      </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{gary.data.ruangan} ({gary.data.detailRuangan}) <br> {gary.data.hari}, {gary.data.jam} WIB</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                  <div class="img-border">
-                  <img src={agribot.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                  </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={agribot.data.logo} alt="agribotlogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{agribot.data.nama}</h5>
-                      </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{agribot.data.ruangan} ({agribot.data.detailRuangan}) <br> {agribot.data.hari}, {agribot.data.jam} WIB</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                <div class="img-border">
-                  <img src={iwdc.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                  </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={iwdc.data.logo} alt="iwdclogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{iwdc.data.nama}</h5>
-                      </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{iwdc.data.ruangan} ({iwdc.data.detailRuangan}) <br> {iwdc.data.hari}, {iwdc.data.jam} WIB</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                <div class="img-border">
-                  <img src={cp.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                  </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={cp.data.logo} alt="cplogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{cp.data.nama}</h5>
-                      </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{cp.data.ruangan} ({cp.data.detailRuangan}) <br> {cp.data.hari}, {cp.data.jam} WIB</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row align-items-start">
-              <div class="col">
-                <div class="img-border">
-                  <img src={mad.data.foto} class="img-fluid" alt="gambar weekly meeting" style="height: 34.5rem; width: 100%; object-fit: cover;">
-                  </div>
-              </div>
-              <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
-                <div class="container mx-1 mx-md-3">
-                  <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
-                      <div class="mb-auto mt-5">
-                          <img src={mad.data.logo} alt="madlogo" class="img-atas">
-                          <h5 class="fw-bold fs-1 mt-4">{mad.data.nama}</h5>
-                      </div>
-                      <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{mad.data.ruangan} ({mad.data.detailRuangan}) <br> {mad.data.hari}, {mad.data.jam} WIB</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </div>
-        </div>
+              ))
+            }
+        </div> 
     
         <div class="icon-bawah" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); border-color: red; border-radius: 0rem 0rem 2.5rem 2.5rem;">
           <div class="d-flex flex-wrap justify-content-center align-items-center">
-            <img src={UX.data.logo} class="logo-bawah carousel-icon active mx-3 my-3" alt="agriux" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" />
-            <img src={daming.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="daming" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" />
-            <img src={csi.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="csi" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"/>
-            <img src={gary.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="gary" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"/>
-            <img src={agribot.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="agribot" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"/>
-            <img src={iwdc.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="iwdc" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"/>
-            <img src={cp.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="cp" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"/>
-            <img src={mad.data.logo} class="logo-bawah carousel-icon mx-3 my-3" alt="mad" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"/>
-          </div>
+          {
+            komun.map((logo,index) => (
+            <img src={logo.data.logo} class={`logo-bawah carousel-icon mx-3 my-3${index === 0 ? ' active' : ''}`} alt={logo.slug} data-bs-target="#carouselExampleCaptions" data-bs-slide-to={index} />
+            ))
+          }
+            </div>
       </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="height: 80%;">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
