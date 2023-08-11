@@ -282,28 +282,6 @@ $customGutter: 100px;
   .ShowCaseProduct--custom-font h3 {
     font-size: 23px;
   }
-
-  .carousel-inner {
-    overflow-y: hidden;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);  
-  }
-  .carousel-control-prev span,
-  .carousel-control-next span {
-    width: 1.5rem;
-    height: 1.5rem;
-    max-width: 10%;
-  }
-  
-  .cards-wrapper {
-    overflow: visible;
-    display:flex;
-    position: relative;
-  }
 }
 
 /* Style Tab */
@@ -526,28 +504,6 @@ $customGutter: 100px;
 
   .ShowCaseProduct--custom-font h3 {
     font-size: 23px;
-  }
-
-  .carousel-inner {
-    overflow-y: hidden;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);  
-  }
-  .carousel-control-prev span,
-  .carousel-control-next span {
-    width: 1.5rem;
-    height: 1.5rem;
-    max-width: 10%;
-  }
-  
-  .cards-wrapper {
-    overflow: visible;
-    display: flex;
-    position: relative;
   }
 }
 
@@ -772,26 +728,39 @@ $customGutter: 100px;
   .ShowCaseProduct--custom-font h3 {
     font-size: 23px;
   }
+}
 
+$bootstrap-url: "https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css";
+
+@import url("#{$bootstrap-url}");
+
+#carouselExampleControls {
+  // Custom styling for the carousel container if needed
   .carousel-inner {
     overflow-y: hidden;
+    display: flex; /* Menampilkan slide dalam satu baris */
+    flex-direction: row; /* Tampilan horizontal */
+    transition: transform 0.5s; /* Efek transisi slide */
   }
+
   .carousel-control-prev,
   .carousel-control-next {
     border-radius: 50%;
     top: 50%;
-    transform: translateY(-50%);  
+    transform: translateY(-50%);
+    z-index: 1; /* Untuk mengatasi tumpukan dengan konten slide */
+    span {
+      width: 1.5rem;
+      height: 1.5rem;
+      max-width: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
-  .carousel-control-prev span,
-  .carousel-control-next span {
-    width: 1.5rem;
-    height: 1.5rem;
-    max-width: 10%;
-  }
-  
-  .cards-wrapper {
-    overflow: visible;
-    display:flex;
-    position: relative;
-  }
+}
+
+.cards-wrapper {
+  overflow: hidden; /* Menghilangkan konten yang melebihi batas carousel */
+  position: relative;
 }
