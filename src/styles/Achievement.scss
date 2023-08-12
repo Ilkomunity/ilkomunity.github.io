@@ -1,0 +1,94 @@
+.custom-rounded-achievement {
+  border-top-left-radius: 130px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 20px;
+}
+
+.custom-rounded-achievement-img {
+  border-top-left-radius: 130px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.custom-color {
+	background-color: #7479F5; /* Replace with your desired color */
+}
+
+.custom-btn {
+	color: #ffffff; /* Replace with your desired color */
+	border-radius: 15px;
+  }
+
+/* Change the font color on hover */
+.custom-btn:hover {
+	color: #ffffff; /* Replace with your desired hover color */
+  }
+
+
+@media screen and (min-width: 768px) {
+	.slider-card {
+	  transform: none; /* Remove the transform scale */
+	}
+  }
+  
+  /* Styles for screen sizes equal to or greater than 576px */
+  @media screen and (min-width: 576px) {
+	.slider .owl-item.active.center .slider-card {
+	  transform: none; /* Apply the transform scale only for this selector */
+	}
+  }
+
+// Mixin
+@mixin phone {
+	@media (max-width: 599px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: 600px) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media (min-width: 900px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: #fff;
+}
+
+.slider {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.slider-card {
+	background: #fff;
+    padding: 0px 0px;
+    margin: 50px 15px 40px 15px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 130px;
+	border-top-right-radius: 20px;
+    transform: scale(0.9);
+    transition: all 0.3s;
+
+.slider-card img{
+	border-top-left-radius: 130px;
+  	border-top-right-radius: 20px;
+}
+}
+
+
