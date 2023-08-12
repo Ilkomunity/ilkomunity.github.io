@@ -2,11 +2,12 @@ $grad-a: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%);
 $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%);
 $border-width: 10px;
 
+
 .custom-box {
   border-radius: 20px 50px;
   background: $grad-c;
   position: relative;
-  width: 75%;
+  width: 90%;
   justify-content: center;
   text-align: center;
   z-index: 0;
@@ -32,107 +33,57 @@ $border-width: 10px;
   }
 }
 
-.wrapper {
-  max-width: 90rem;
-  width: 100%;
-  position: relative;
-  .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // overflow-x: hidden;
-    gap: 1rem;
-    .user-custom-box {
-      border: #ffffff00 5px solid;
-      background: linear-gradient(white, white) padding-box,
-        $grad-c border-box; 
+
+.dekstop-style {
+  #carouselExampleIndicators {
+    .carousel-indicators {
+      bottom: -60px;
+      
+    }
+    .carousel-indicators [data-bs-target] {
+      width: 80px;
+      height: 8px;
+      border-radius: 20%;
+      background-image: $grad-a;
+    
+    }
+    .carousel-wrapper {
       display: flex;
-      flex-direction: column;
-      border-radius: 70px 20px 40px 20px;
-      align-items: center;
+      flex-direction: row;
       justify-content: center;
-      gap: 0.94rem;
+      align-items: center;
+      gap: 2rem;
     
-    
-      .author-pic {
-        width: 198px;
-        height: 175px;
-        object-fit: cover;
-        border-radius: 65px 15px 0px 0px;
-      }
-    
-      .author-name {
-        font-weight: 600;
-        font-size: 1rem;
-      }
-      .author-job {
-        font-weight: 600;
-        font-size: 0.75rem;
-        margin-bottom: 1.25rem;
+      .user-custom-box {
+        border: #ffffff00 5px solid;
+        background: linear-gradient(white, white) padding-box,
+          $grad-c border-box; 
+        display: flex;
+        flex-direction: column;
+        border-radius: 70px 20px 40px 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 0.94rem;
+      
+      
+        .author-pic {
+          width: 185px;
+          height: 175px;
+          object-fit: cover;
+          border-radius: 65px 15px 0px 0px;
+        }
+      
+        .author-name {
+          font-weight: 600;
+          font-size: 1rem;
+        }
+        .author-job {
+          font-weight: 600;
+          font-size: 0.75rem;
+          margin-bottom: 1.25rem;
+        }
       }
     }
-    .user-custom-box:hover,
-    .user-custom-box:focus {
-      border: #ffffff00 5px solid;
-      background: linear-gradient(white, white) padding-box,
-        $grad-a border-box;
-    }
   }
-}
-
-
-
-.icon-arrow {
-  top: 50%;
-  height: 80px;
-  width: 80px;
-  cursor: pointer;
-  position: absolute;
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-}
-
-#arrow-left {
-  transform: scaleX(-1);
-  left: -22px;
-}
-#arrow-right {
-  right: -100px;
-}
-
-
-@media (min-width: 992px) {
-  .slider-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .user-custom-box {
-    width: calc(20% - 1rem); /* Show 5 boxes per row on desktop */
-  }
-}
-
-@media (max-width: 991px) and (min-width: 576px) {
-  .slider-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .user-custom-box {
-    width: calc(33.33% - 1rem); /* Show 3 boxes per row on tablet */
-  }
-}
-
-@media (max-width: 575px) {
-  .slider-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .user-custom-box {
-    width: calc(50% - 1rem); /* Show 2 boxes per row on mobile */
-  }
+  
 }

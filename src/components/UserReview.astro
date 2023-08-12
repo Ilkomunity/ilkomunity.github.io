@@ -4,8 +4,8 @@ import "../styles/UserReview.scss";
 ---
 
 <div class="heading text-center">
-  <h1 class="fw-bold" style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;"
+  <h1 class="fw-bold mt-5 mt-xl-7 mb-6 mb-xl-5" style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; font-size: 3rem;"
   >
     What People Say
   </h1>
@@ -15,8 +15,8 @@ import "../styles/UserReview.scss";
   <div class="container ">
     <div class="d-flex flex-column">
       <div class="content d-flex justify-content-center align-items-center">
-        <div class="custom-box">
-            <div class="user-text fs-5">
+        <div class="custom-box mb-6 mb-xl-7">
+            <div class="user-text fs-4">
               <p>
                 Menurut saya Ilkomunity ini sangat membantu saya dalam memberikan motivasi dan semangat lebih untuk 
                 mendalami bidang yang saya inginkan, yaitu Back End. Dengan adanya Ilkomunity, saya bisa belajar dan 
@@ -25,89 +25,255 @@ import "../styles/UserReview.scss";
               <span class="author">Dwinanda - Back End Dev Tokopedia</span>
           </div>
       </div>
-      </div>
-      <div class="testimonial-section ">
-        <div class="wrapper">
-          <div>
-            <img src="Arrow Right.svg" alt="" class="icon-arrow" id="arrow-left">
+    </div>
+
+    <div class="testimonial-section">
+      <div class="dekstop-style mb-7">
+        <div id="carouselExampleIndicators" class="carousel slide" >
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div class="carousel " >
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-wrapper">
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
+                  </div>
+                  <span class="author-name">Dwinanda Rizkiansyah</span>
+                  <span class="author-job">Back End Dev Tokopedia</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
+                  </div>
+                  <span class="author-name">Muhammad Tegar S</span>
+                  <span class="author-job">Penetration Tester Shopee</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
+                  </div>
+                  <span class="author-name">Andhika R Lazuardi</span>
+                  <span class="author-job">Data Scientist Telkom</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
+                  </div>
+                  <span class="author-name">Ahmad Mbappe</span>
+                  <span class="author-job">UI/UX Designer Satpol PP</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
+                  </div>
+                  <span class="author-name">Maulana Trumpida</span>
+                  <span class="author-job">Front End Dev Warteg Bahari</span>
+                </div>
               </div>
-              <span class="author-name">Dwinanda Rizkiansyah</span>
-              <span class="author-job">Back End Dev Tokopedia</span>
             </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
+            <div class="carousel-item">
+              <div class="carousel-wrapper">
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
+                  </div>
+                    <span class="author-name">Dwinanda Rizkiansyah</span>
+                    <span class="author-job">Back End Dev Tokopedia</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
+                  </div>
+                  <span class="author-name">Muhammad Tegar S</span>
+                  <span class="author-job">Penetration Tester Shopee</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
+                  </div>
+                  <span class="author-name">Andhika R Lazuardi</span>
+                  <span class="author-job">Data Scientist Telkom</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
+                  </div>
+                  <span class="author-name">Ahmad Mbappe</span>
+                  <span class="author-job">UI/UX Designer Satpol PP</span>
+                </div>
+                <div class="user-custom-box">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
+                  </div>
+                  <span class="author-name">Maulana Trumpida</span>
+                  <span class="author-job">Front End Dev Warteg Bahari</span>
+                </div>
               </div>
-              <span class="author-name">Muhammad Tegar S</span>
-              <span class="author-job">Penetration Tester Shopee</span>
             </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
-              </div>
-              <span class="author-name">Andhika R Lazuardi</span>
-              <span class="author-job">Data Scientist Telkom</span>
-            </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
-              </div>
-              <span class="author-name">Ahmad Mbappe</span>
-              <span class="author-job">UI/UX Designer Satpol PP</span>
-            </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
-              </div>
-              <span class="author-name">Maulana Trumpida</span>
-              <span class="author-job">Front End Dev Warteg Bahari</span>
-            </div>
-            <!-- <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
-              </div>
-              <span class="author-name">Dwinanda Rizkiansyah</span>
-              <span class="author-job">Back End Dev Tokopedia</span>
-            </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
-              </div>
-              <span class="author-name">Muhammad Tegar S</span>
-              <span class="author-job">Penetration Tester Shopee</span>
-            </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
-              </div>
-              <span class="author-name">Andhika R Lazuardi</span>
-              <span class="author-job">Data Scientist Telkom</span>
-            </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
-              </div>
-              <span class="author-name">Ahmad Mbappe</span>
-              <span class="author-job">UI/UX Designer Satpol PP</span>
-            </div>
-            <div class="user-custom-box">
-              <div class="d-flex justify-content-center align-items-center">
-                <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
-              </div>
-              <span class="author-name">Maulana Trumpida</span>
-              <span class="author-job">Front End Dev Warteg Bahari</span>
-            </div> -->
           </div>
-          <div class="..." >
-            <img src="Arrow Right.svg" alt="" class="icon-arrow" id="arrow-right">
-          </div>
+          <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <img src="Arrow Left.svg" alt="..."  aria-hidden="true"></img>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <img src="Arrow Right.svg" alt="..." aria-hidden="true"></img>
+            <span class="visually-hidden">Next</span>
+          </a>
         </div>
       </div>
+
+    </div>
+
+      <!-- <div class="testimonial-section ">
+        <div class="dekstop-style">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-wrapper">
+                  <div class="user-custom-box">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
+                    </div>
+                    <span class="author-name">Dwinanda Rizkiansyah</span>
+                    <span class="author-job">Back End Dev Tokopedia</span>
+                  </div>
+                  <div class="user-custom-box">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
+                    </div>
+                    <span class="author-name">Muhammad Tegar S</span>
+                    <span class="author-job">Penetration Tester Shopee</span>
+                  </div>
+                  <div class="user-custom-box">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
+                    </div>
+                    <span class="author-name">Andhika R Lazuardi</span>
+                    <span class="author-job">Data Scientist Telkom</span>
+                  </div>
+                  <div class="user-custom-box">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
+                    </div>
+                    <span class="author-name">Ahmad Mbappe</span>
+                    <span class="author-job">UI/UX Designer Satpol PP</span>
+                  </div>
+                  <div class="user-custom-box">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
+                    </div>
+                    <span class="author-name">Maulana Trumpida</span>
+                    <span class="author-job">Front End Dev Warteg Bahari</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-wrapper">
+                    <div class="user-custom-box">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
+                      </div>
+                      <span class="author-name">Dwinanda Rizkiansyah</span>
+                      <span class="author-job">Back End Dev Tokopedia</span>
+                    </div>
+                    <div class="user-custom-box">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
+                      </div>
+                      <span class="author-name">Muhammad Tegar S</span>
+                      <span class="author-job">Penetration Tester Shopee</span>
+                    </div>
+                    <div class="user-custom-box">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
+                      </div>
+                      <span class="author-name">Andhika R Lazuardi</span>
+                      <span class="author-job">Data Scientist Telkom</span>
+                    </div>
+                    <div class="user-custom-box">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
+                      </div>
+                      <span class="author-name">Ahmad Mbappe</span>
+                      <span class="author-job">UI/UX Designer Satpol PP</span>
+                    </div>
+                    <div class="user-custom-box">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
+                      </div>
+                      <span class="author-name">Maulana Trumpida</span>
+                      <span class="author-job">Front End Dev Warteg Bahari</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <img src="Arrow Left.svg" alt="..."  aria-hidden="true"></img>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <img src="Arrow Right.svg" alt="..." aria-hidden="true"></img>
+                <span class="visually-hidden">Next</span>
+              </a>
+                </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="wrapper">
+          <div class="carousel slide">
+            <div class="carousel-inner">
+              <div class="user-custom-box">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="testimoni-dwinanda.jpg" alt="Dwinanda" class="author-pic">
+                </div>
+                <span class="author-name">Dwinanda Rizkiansyah</span>
+                <span class="author-job">Back End Dev Tokopedia</span>
+              </div>
+              <div class="user-custom-box">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="testimoni-tegar.jpg" alt="Tegar" class="author-pic">
+                </div>
+                <span class="author-name">Muhammad Tegar S</span>
+                <span class="author-job">Penetration Tester Shopee</span>
+              </div>
+              <div class="user-custom-box">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="testimoni-andika.jpg" alt="Andika" class="author-pic">
+                </div>
+                <span class="author-name">Andhika R Lazuardi</span>
+                <span class="author-job">Data Scientist Telkom</span>
+              </div>
+              <div class="user-custom-box">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="testimoni-mbape.jpg" alt="Mbape" class="author-pic">
+                </div>
+                <span class="author-name">Ahmad Mbappe</span>
+                <span class="author-job">UI/UX Designer Satpol PP</span>
+              </div>
+              <div class="user-custom-box">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="testimoni-trump.jpg" alt="Trump" class="author-pic">
+                </div>
+                <span class="author-name">Maulana Trumpida</span>
+                <span class="author-job">Front End Dev Warteg Bahari</span>
+              </div>
+            </div>
+            </div>
+          <a class="arrow-btn" id="arrow-left">
+            <img src="Arrow Left.svg" alt="...">
+          </a>
+          <a class="arrow-btn" id="arrow-right">
+            <img src="Arrow Right.svg" alt="...">
+          </a>
+        </div> -->
+      <!-- </div> -->
     </div>
   </div>
 </section>
+
