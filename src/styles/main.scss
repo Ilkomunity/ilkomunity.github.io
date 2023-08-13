@@ -10,6 +10,10 @@ $custom-colors: (
   "p100": #7479F5,
   "footer-subtext": #4F4E4E,
   "n90": #85868E,
+  "n80": #94959C,
+  "a50": #FDE7FD,
+  "p300": #0F18ED,
+  "n300": #575863,
 );
 
 $font-family-base: 'Plus Jakarta Sans', sans-serif;
@@ -29,10 +33,35 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 #logo:hover {
   content: url('/logo-navbar-solid.svg');
 }
-      
-      
-      
-      
-      
+
+@media (max-width: 991px) {
+  .dropdown-menu.bg-a50 {
+    border: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .extra-text {
+    display: block; /* Show the extra text */
+  }
+}
+
+@media (min-width: 992px) {
+  .extra-text {
+    display: none; /* Show the extra text */
+  }
+}
+
+#footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#footer-links a {
+  flex-basis: calc(25% - 1rem); /* Adjust as needed */
+  box-sizing: border-box;
+}
+
       
       
