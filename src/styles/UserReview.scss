@@ -1,0 +1,206 @@
+$grad-a: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%);
+$grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%);
+$tablet-width: 992px;
+$mobile-width: 768px;
+$border-width: 10px;
+
+
+.custom-box {
+  border-radius: 20px 50px;
+  background: $grad-c;
+  position: relative;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+  padding: 1.25rem;
+
+  .user-text p {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .user-text span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    .user-text p {
+      font-size: 1.25rem;
+    }
+    .user-text span {
+      margin-top: 2.5rem
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      .user-text p {
+        font-size: 1rem;
+      }
+      .user-text span {
+        font-size: 1.25rem;
+        margin-top: 2.5rem
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: calc(100% - #{$border-width} * 2);
+    width: calc(100% - #{$border-width} * 2);
+    position: absolute;
+    top: #{$border-width};
+    left: #{$border-width};
+    background: #fff;
+    border-radius: calc(20px - #{$border-width}) calc(50px - #{$border-width});
+    z-index: -1;
+  }
+}
+
+
+
+.content-wrapper {
+  margin-bottom: 126px;
+
+  @media screen and (max-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: row;
+  // max-width: 1440px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+
+  @media screen and (max-width: 1200px) {
+    gap: 1.5%;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    gap: 1.25rem;
+  }
+  
+
+
+  .user-custom-box {
+    border: #ffffff00 5px solid;
+    background: linear-gradient(white, white) padding-box,
+      $grad-c border-box; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 70px 20px 40px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.94rem;
+    text-align: center;
+  
+  
+    .author-pic {
+      width: 185px;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 65px 15px 0px 0px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .author-pic {
+        width: 166px;
+      }
+      gap: 0.8rem
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      .author-pic {
+        width: 166px;
+      }
+    }
+  
+    .author-name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .author-job {
+      font-weight: 600;
+      font-size: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+#carouselDesktop {
+  .carousel-indicators {
+    bottom: -50px;
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 80px;
+    height: 8px;
+    border-radius: 5px;;
+    background-image: $grad-a;
+    border-top: none;
+    border-bottom: none;
+  }
+  .carousel-control-prev {
+    left: -110px;
+  }
+  .carousel-control-next {
+    right: -110px;
+  }
+}
+
+#carouselTablet {
+  .carousel-indicators {
+    bottom: -50px;
+    
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 40px;
+    height: 8px;
+    border-radius: 5px;;
+    background-image: $grad-a;
+    border-top: none;
+    border-bottom: none;
+  }
+  .carousel-control-prev {
+    left: -60px;
+  }
+  .carousel-control-next {
+    right: -60px;
+  }
+}
+#carouselMobile {
+  .carousel-indicators {
+    bottom: -60px;
+    
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 40px;
+    height: 8px;
+    border-radius: 5px;;
+    background-image: $grad-a;
+    border-top: none;
+    border-bottom: none;
+  }
+  .carousel-control-prev {
+    left: -20px;
+    // visibility: hidden;
+  }
+  .carousel-control-next {
+    right: -20px;
+  }
+}
+
+
