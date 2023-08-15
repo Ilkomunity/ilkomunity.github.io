@@ -1,0 +1,48 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  eventDate: Date;
+  isUpcoming: boolean;
+  image: string;
+  slug: string;
+};
+
+const { title, description, eventDate, isUpcoming, image, slug } = Astro.props;
+---
+
+<div class="col-12 col-md-6 col-lg-3 d-flex">
+  <a
+    href="#"
+    class="card border-0 event-box my-4 my-md-3 my-lg-0 flex-fill text-decoration-none text-dark"
+  >
+    <img
+      src={image}
+      class="card-img-top"
+      alt="..."
+      style="border-radius: 10px 40px 10px 10px;"
+    />
+    <p class="px-3 pt-3 mb-2 fw-bold" style="font-size: 1.25rem;">
+      {title}
+    </p>
+    <p class="px-3 mb-2" style="font-size: 0.75rem;">
+      {description}
+    </p>
+
+    {isUpcoming ? (
+      <p class="upcoming-event fw-semibold px-3 ms-auto" style="font-size: 0.75rem;"> Upcoming Event </p>
+    ) : (
+      <p class="past-event fw-semibold px-3 ms-auto" style="font-size: 0.75rem;"> Past Event </p>
+    )}
+
+    <div
+      class="event-link px-3 py-0 text-decoration-none text-dark d-flex mt-auto"
+    >
+      <p class="fw-semibold" style="font-size: 1.25rem;">More Info</p>
+      <i
+        class="fa-solid fa-arrow-right-long"
+        style="margin-left: 10px;
+          margin-top: 8px;"></i>
+    </div>
+  </a>
+</div>
