@@ -108,7 +108,8 @@ $customGutter: 100px;
   .my-button {
     display: inline-flex;
     padding: 12px 28px;
-    align-items: center; 
+    align-items: center;
+    border-radius: 15px;
     gap: 12px;
     font-size: 24px; 
     font-family: $font-family-base;
@@ -116,7 +117,7 @@ $customGutter: 100px;
     background-color: var(--primary-p-100, #7479F5);
     color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
