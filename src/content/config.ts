@@ -36,8 +36,32 @@ const eventsCollection = defineCollection({
   }),
 });
 
+const portofolioCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string(),
+        author: z.string(),
+        category: z.string(),
+        date: z.date(),
+        link: z.string(),
+        image: z.string(),
+    }),
+});
+
+const reviewCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        name: z.string(),
+        occupation: z.string(),
+        review: z.string(),
+        image: z.string(),
+    }),
+});
+
 export const collections = {
     'communities': communitiesCollection,
     'achievements': achievementsCollection,
     'events': eventsCollection,
+    'portofolios': portofolioCollection,
+    'reviews': reviewCollection,
 };
