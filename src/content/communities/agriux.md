@@ -1,5 +1,5 @@
 ---
-foto: "../../agriux-weeklymeeting.png"
+foto: "../../AgriuxWeeklyMeeting.png"
 logo: "../../logo-agriux.svg"
 nama: "AgriUX"
 singkatan: "Agri UX"

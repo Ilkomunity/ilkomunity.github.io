@@ -1,5 +1,5 @@
 ---
-foto: "../../mad-weeklymeeting.png"
+foto: "../../MadWeeklyMeeting.png"
 logo: "../../logo-mad.svg"
 nama: "Mobile Apps Development IPB"
 singkatan: "MAD"

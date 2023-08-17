@@ -80,13 +80,13 @@ $customGutter: 100px;
 }
       
 .card-bg-image {
-  background-image: url('../assets/icons/community-card-cardcircle.svg');
+  background-image: url(/card-circle.svg);
   background-size: auto; 
   background-repeat: no-repeat;
 }
 
 body {
-  background-image: url('../assets/icons/bg-ovalbase.svg');
+  background-image: url("oval-base1.svg");
   background-size: auto;
   background-repeat: no-repeat;
 }

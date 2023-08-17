@@ -1,5 +1,5 @@
 ---
-foto: "../../agribot-weeklymeeting.png"
+foto: "../../AgribotWeeklyMeeting.png"
 logo: "../../logo-agribot.svg"
 nama: "Agribot"
 singkatan: "Agribot"
