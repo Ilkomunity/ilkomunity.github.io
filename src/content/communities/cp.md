@@ -1,5 +1,5 @@
 ---
-foto: "../../CpWeeklyMeeting.png"
+foto: "../../cp-weeklymeeting.png"
 logo: "../../logo-cp.svg"
 nama: "Competitive Programming IPB"
 singkatan: "CP"
