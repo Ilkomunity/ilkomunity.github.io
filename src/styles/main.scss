@@ -100,6 +100,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+.background-image {
+  background-image: url(/home-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
 #logo {
   content: url('/logo-navbar-color.svg');
 }
