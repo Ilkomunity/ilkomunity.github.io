@@ -1,6 +1,6 @@
 import {z, defineCollection} from 'astro:content';
 
-const jadwalCommunities = defineCollection({
+const communitiesCollection = defineCollection({
     schema: z.object({
         foto: z.string(),
         logo: z.string(),
@@ -37,7 +37,7 @@ const eventsCollection = defineCollection({
 });
 
 export const collections = {
-    'communities': jadwalCommunities,
+    'communities': communitiesCollection,
     'achievements': achievementsCollection,
     'events': eventsCollection,
 };
