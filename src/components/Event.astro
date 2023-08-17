@@ -39,10 +39,16 @@ const formattedToday = today.toISOString().split('T')[0];
               const formattedEventDate = event.data.eventDate.toISOString().split('T')[0];
               const isUpcoming = (formattedEventDate >= formattedToday);
 
+              // Truncate description and add ellipses
+              const truncatedDescription =
+                event.data.description.length > 70
+                  ? event.data.description.slice(0, 70) + '...'
+                  : event.data.description;
+
               return (
                 <EventCard
                   title={event.data.title}
-                  description={event.data.description}
+                  description={truncatedDescription}
                   eventDate={event.data.eventDate}
                   isUpcoming={isUpcoming}
                   image={event.data.image}
