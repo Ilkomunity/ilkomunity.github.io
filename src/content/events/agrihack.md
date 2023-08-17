@@ -1,7 +1,7 @@
 ---
 title: "Agrihack"
-description: "Temukanlah flag di dalam website ini."
-eventDate: 2023-08-01
+description: "Agrihack merupakan kompetisi keamanan siber berbentuk CTF yang terbuka bagi seluruh KM IPB."
+eventDate: 2022-11-27
 image: "/../../event-4.png"
 isHighlighted: true
 ---

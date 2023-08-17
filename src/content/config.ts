@@ -1,13 +1,12 @@
 import {z, defineCollection} from 'astro:content';
 
-const jadwalCommunities = defineCollection({
+const communitiesCollection = defineCollection({
     schema: z.object({
         foto: z.string(),
         logo: z.string(),
         nama: z.string(),
         singkatan: z.string(),
         hari: z.string(),
-        detailRuangan: z.string(),
         ruangan: z.string(),
         jam: z.string(),
     })
@@ -36,8 +35,32 @@ const eventsCollection = defineCollection({
   }),
 });
 
+const portofolioCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string(),
+        author: z.string(),
+        category: z.string(),
+        date: z.date(),
+        link: z.string(),
+        image: z.string(),
+    }),
+});
+
+const reviewCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        name: z.string(),
+        occupation: z.string(),
+        review: z.string(),
+        image: z.string(),
+    }),
+});
+
 export const collections = {
-    'communities': jadwalCommunities,
+    'communities': communitiesCollection,
     'achievements': achievementsCollection,
     'events': eventsCollection,
+    'portofolios': portofolioCollection,
+    'reviews': reviewCollection,
 };
