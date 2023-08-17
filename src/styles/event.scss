@@ -114,15 +114,6 @@
   }
 }
 
-@media (max-width: 991.98px) {
-  #eventSection h1 {
-    font-size: 2.25rem;
-  }
-  #eventSection h3 {
-    font-size: 1.25rem;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 991.98px) {
   .event-box {
     max-width: 400px;
@@ -135,11 +126,8 @@
 }
 
 @media (min-width: 992px) {
-  #eventSection h1 {
-    font-size: 3rem;
-  }
+
   #eventSection h3 {
-    font-size: 1.75rem;
     max-width: 75%;
     margin: 0 auto;
   }
