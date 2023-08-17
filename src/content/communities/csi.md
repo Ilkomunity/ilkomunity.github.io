@@ -1,5 +1,5 @@
 ---
-foto: "../../csi-weeklymeeting.png"
+foto: "../../CsiWeeklyMeeting.png"
 logo: "../../logo-csi.svg"
 nama: "Cyber Security IPB"
 singkatan: "CSI"

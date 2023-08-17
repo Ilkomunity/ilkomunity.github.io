@@ -293,7 +293,7 @@ $customGutter: 100px;
 }
 
 body {
-  background-image: url('../assets/icons/bg-ovalbase.svg');
+  background-image: url("oval-base1.svg");
   background-size: auto;
   background-repeat: no-repeat;
 }
@@ -333,7 +333,7 @@ body {
   
   .card2-bg-image {
     background: var(--aa-500, #8D098F);
-    background-image: url('../assets/icons/bg-ellipse-l.svg'), url('../assets/icons/bg-ellipse-r.svg');
+    background-image: url("EllipseL.svg"), url("EllipseR.svg");
     background-position: 0% 100%, 100% 0%;
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat;
