@@ -101,11 +101,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 #logo {
-  content: url('/logo-navbar-color.svg');
+  content: url('../assets/icons/navbar-logo-navbar-color.svg');
 }
 
 #logo:hover {
-  content: url('/logo-navbar-solid.svg');
+  content: url('../assets/icons/navbar-logo-navbar-solid.svg');
 }
 
 @media (max-width: 991px) {

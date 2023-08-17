@@ -1,5 +1,5 @@
 ---
-foto: "../../IwdcWeeklyMeeting.png"
+foto: "../../iwdc-weeklymeeting.png"
 logo: "../../logo-iwdc.svg"
 nama: "IPB Web Development Community"
 singkatan: "IWDC"

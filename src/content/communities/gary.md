@@ -1,5 +1,5 @@
 ---
-foto: "../../GaryWeeklyMeeting.png"
+foto: "../../gary-weeklymeeting.png"
 logo: "../../logo-gary.svg"
 nama: "Game Reality"
 singkatan: "GARY"

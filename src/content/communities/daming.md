@@ -1,5 +1,5 @@
 ---
-foto: "../../DamingWeeklyMeeting.png"
+foto: "../../daming-weeklymeeting.png"
 logo: "../../logo-daming.svg"
 nama: "Data Mining IPB"
 singkatan: "Daming" 

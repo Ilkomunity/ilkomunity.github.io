@@ -1,12 +1,12 @@
 #Hero-container {
     background-color: #E7E8FD;
-    background-image: url('../Assets/Icons/Hero-BG-Shape-1-tr.svg'), url('../Assets/Icons/Hero-BG-Shape-2-bl.svg');
+    background-image: url('../assets/icons/hero-bg-shape-1-tr.svg'), url('../assets/icons/hero-bg-shape-2-bl.svg');
     background-repeat: no-repeat;
     background-position: top left, bottom right;
 }
 
 #Hero-content-container {
-    background-image: url('../Assets/Icons/Hero-BG-Oval-1-tl.svg'), url('../Assets/Icons/Hero-BG-Oval-2-br.svg'), linear-gradient(31deg, #0F18ED 0%, #8213EC 35.01%, #9F12EC 66.79%, #E70FEB 100%);
+    background-image: url('../assets/icons/hero-bg-oval-1-tl.svg'), url('../assets/icons/hero-bg-oval-2-br.svg'), linear-gradient(31deg, #0F18ED 0%, #8213EC 35.01%, #9F12EC 66.79%, #E70FEB 100%);
     background-repeat: no-repeat;
     background-position: top left, bottom right;
 }
@@ -68,7 +68,7 @@ p {
 }
 
 #Hero-Main {
-    background-image: url(../Assets/Icons/Hero-Pic-Main-Desktop.png);
+    background-image: url(../assets/icons/hero-pic-main-desktop.png);
     max-width: 31.92613rem;
     border-radius: 6.82rem 1.705rem;
     height: 27.5rem;
@@ -122,7 +122,7 @@ p {
     }
 
     #Hero-content-container {
-        background-image: url('../Assets/Icons/Hero-BG-Oval-1-tl-tab.svg'), url('../Assets/Icons/Hero-BG-Oval-2br-tab.svg'), linear-gradient(31deg, #0F18ED 0%, #8213EC 35.01%, #9F12EC 66.79%, #E70FEB 100%);
+        background-image: url('../assets/icons/hero-bg-oval-1-tl-tab.svg'), url('../assets/icons/hero-bg-oval-2br-tab.svg'), linear-gradient(31deg, #0F18ED 0%, #8213EC 35.01%, #9F12EC 66.79%, #E70FEB 100%);
         background-repeat: no-repeat;
         background-position: top left, bottom right;
     }
