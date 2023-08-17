@@ -7,7 +7,6 @@ const communitiesCollection = defineCollection({
         nama: z.string(),
         singkatan: z.string(),
         hari: z.string(),
-        detailRuangan: z.string(),
         ruangan: z.string(),
         jam: z.string(),
     })

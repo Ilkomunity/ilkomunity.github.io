@@ -2,9 +2,8 @@
 foto: "../../AgriuxWeeklyMeeting.png"
 logo: "../../logo-agriux.svg"
 nama: "AgriUX"
-singkatan: "Agri UX"
+singkatan: "AgriUX"
 hari: "Rabu"
-ruangan: "ruang kelas"
-detailRuangan: "FMIPA"
-jam: "19:00"
+ruangan: "RKU 2.01 (FMIPA)"
+jam: "18:30"
 ---

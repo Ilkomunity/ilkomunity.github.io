@@ -1,10 +1,9 @@
 ---
 foto: "../../MadWeeklyMeeting.png"
 logo: "../../logo-mad.svg"
-nama: "Mobile Apps Development IPB"
+nama: "Mobile Apps Development"
 singkatan: "MAD"
-hari: "Sabtu"
-ruangan: "Localhost"
-detailRuangan: "LT 4 FMIPA"
-jam: "15:00"
+hari: "Selasa"
+ruangan: "Localhost (Lt.4 FMIPA)"
+jam: "18:30"
 ---
