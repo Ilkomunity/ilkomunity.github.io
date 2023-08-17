@@ -8,6 +8,7 @@ import "../styles/CommunityCard.scss";
 import "../styles/Achievement.scss";
 import '../styles/WeeklyMeeting.scss';
 import '../styles/ShowCaseProduct.scss';
+import Toast from "../components/Toast.astro";
 ---
 
 <html lang="en">
@@ -29,12 +30,14 @@ import '../styles/ShowCaseProduct.scss';
       crossorigin="anonymous"></script>
     <script src="../scripts/owl.carousel.min.js"></script>
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/toast.js"></script>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <Navbar />
+    <Toast />
     <slot>No content derived</slot>
     <Footer />
   </body>

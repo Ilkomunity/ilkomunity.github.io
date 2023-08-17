@@ -18,6 +18,7 @@ $custom-colors: (
   "a50": #FDE7FD,
   "p300": #0F18ED,
   "n300": #575863,
+  "danger-d200": #F7343E
 );
 
 $font-family-base: 'Plus Jakarta Sans', sans-serif;
@@ -48,6 +49,13 @@ $display-font-sizes: (
   6: 2.5rem,
 );
 
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+  "toast-top": 15%
+);
+
 $utilities: () !default;
 $utilities: map-merge((
   "shadow": (
@@ -74,7 +82,8 @@ $utilities: map-merge((
       WhyUs: 7.5rem 1.5rem 1.5rem 1.5rem,
       Hero-main-container: 12.5rem 2.5rem,
       Hero-detail-container: 7.5rem 2.5rem,
-      Hero-detail: 6.25rem 2.5rem
+      Hero-detail: 6.25rem 2.5rem,
+      Toast-radius: 1rem
     )
   ),
   "width": (
@@ -99,6 +108,14 @@ $grid-breakpoints: map-merge($grid-breakpoints, $custom-grid-breakpoints);
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.background-image {
+  background-image: url(/home-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
 
 #logo {
   content: url('../assets/icons/navbar-logo-navbar-color.svg');

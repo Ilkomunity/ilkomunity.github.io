@@ -97,7 +97,7 @@
 
     #WhyUs-head-container h1 {
         width: max-content;
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     #WhyUs-head-container p {
@@ -181,8 +181,13 @@
         max-width: 19rem !important ; 
         width: 100% !important ;
     }
+
     #WhyUs-head-container{
         margin-left: unset !important;
+    }
+
+    #WhyUs-head-container h1 {
+        font-size: 3.375rem;
     }
 }
 
@@ -234,12 +239,20 @@
         margin-left: 1.44rem !important;
     }
 
+    #WhyUs-head-container h1 {
+        font-size: 3.375rem;
+    }
+
     .WhyUs--custom-font img {
         width: 6.6375rem;
     }
 
     .WhyUs--custom-font h3 {
         font-size: 1.28613rem;
+    }
+
+    .WhyUs--custom-font p {
+        font-size: 0.9rem;
     }
 
 }
@@ -325,6 +338,9 @@
         padding: 0 0 0 3rem !important;
     }
 
+    #WhyUs-head-container h1 {
+        font-size: 3rem;
+    }
 
     #WhyUs-card {
         flex: 0 0 auto;
@@ -334,7 +350,7 @@
     }
 
     .WhyUs--custom-font p {
-        font-size: 0.75rem !important;
+        font-size: 0.675rem !important;
     }
 
     .WhyUs--custom-font h3 {
@@ -353,7 +369,6 @@
         grid-template-columns: repeat(2, minmax(0, 0.5fr));
         justify-items: center;
     }
-
 
     .WhyUs-rect-top,
     .WhyUs-rect-mid,
@@ -396,6 +411,14 @@
         max-width: none;
     }
 
+    #WhyUs-head-container h1 {
+        font-size: 3rem;
+    }
+
+    #WhyUs-head-container p {
+        font-size: 2rem;
+    }
+
     #WhyUs-card {
         flex: 0 0 auto;
         max-width: 14rem !important ; 
@@ -409,7 +432,7 @@
     }
 
     .WhyUs--custom-font p {
-        font-size: 0.678rem !important;
+        font-size: 0.675rem !important;
     }
 
     .WhyUs--custom-font h3 {
