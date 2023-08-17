@@ -91,6 +91,11 @@
   transition: 0.5s linear;
 }
 
+.custom-btn {
+	color: #ffffff; /* Replace with your desired color */
+	border-radius: 15px;
+  }
+
 @media (max-width: 576px) {
   .event-box {
     max-width: 300px;
@@ -113,7 +118,7 @@
   #eventSection h1 {
     font-size: 2.25rem;
   }
-  #eventSection h4 {
+  #eventSection h3 {
     font-size: 1.25rem;
   }
 }
@@ -133,7 +138,7 @@
   #eventSection h1 {
     font-size: 3rem;
   }
-  #eventSection h4 {
+  #eventSection h3 {
     font-size: 1.75rem;
     max-width: 75%;
     margin: 0 auto;
