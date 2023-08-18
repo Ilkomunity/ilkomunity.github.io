@@ -5,8 +5,8 @@ const komun = await getCollection('communities');
 
 <div class="col">
     <div class="text-center">
-        <h3 class="text-primary mt-3" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; background-repeat: no-repeat;">Weekly Meeting</h3>
-        <h4 class="mt-3" style="background : #EDA20F; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; background-repeat: no-repeat;">Stay connected! <br> Check out our Community Meeting Schedule.</h4>
+        <h1 class="text-primary mt-3 display-5 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; background-repeat: no-repeat;">Weekly Meeting</h3>
+        <h3 class="text-b-b300 mt-3 fs-3 fw-bold">Stay connected! <br> Check out our Community Meeting Schedule.</h4>
     </div>
     <!-- carousel -->
     <div id="carouselExampleCaptions" class="carousel slide mx-auto mt-5 mb-5" data-bs-ride="carousel" style="width: 80%;">
@@ -28,7 +28,7 @@ const komun = await getCollection('communities');
                                       <img src={jadwal.data.logo} alt="jadwallogo" class="img-atas">
                                       <h5 class="fw-bold fs-1 mt-4">{jadwal.data.nama}</h5>
                                   </div>
-                                  <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{jadwal.data.ruangan} ({jadwal.data.detailRuangan}) <br> {jadwal.data.hari}, {jadwal.data.jam} WIB</p>
+                                  <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{jadwal.data.ruangan} <br> {jadwal.data.hari}, {jadwal.data.jam} WIB</p>
                               </div>        
                           </div>
                       </div>
