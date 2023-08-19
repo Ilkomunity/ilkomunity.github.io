@@ -8,6 +8,6 @@ Ilkomunity is a platform to integrate community events from Computer Science Dep
 
 ### Need Fixes (Minor)
 
-[] Favicon
+- [ ] Favicon
 
 ### to-be-assigned
