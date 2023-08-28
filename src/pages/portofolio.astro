@@ -1,18 +1,118 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/portofolio.scss";
+import porto_image from '../assets/icons/hero-figma.svg'
+
+const porto_container = [
+  {
+    sectionID: "CTF-write-up",
+    header: "CTF Write Up",
+    paragraph:
+      "Dive into our comprehensive write-ups, documenting our journey and insights from various capture the flag competitions.",
+  },
+  {
+    sectionID: "daming-notebook",
+    header: "Daming Notebook",
+    paragraph:
+      "Delve into data stories. From insights to trends, explore the journey of data through our interactive notebooks.",
+  },
+  {
+    sectionID: "game-dev",
+    header: "Game Dev",
+    paragraph:
+      "Immerse yourself in captivating gaming experiences brought to life through our creative game development endeavors.",
+  },
+  {
+    sectionID: "hall-of-algorithm",
+    header: "Hall Of Algorithm",
+    paragraph:
+      "Discover elegant solutions that power modern tech. Uncover the magic of algorithms reshaping our digital world.",
+  },
+  {
+    sectionID: "mobile-dev",
+    header: "Mobile Dev",
+    paragraph:
+      "Crafting mobile experiences. We blend creativity and code to build seamless, pocket-sized solutions for today's challenges.",
+  },
+  {
+    sectionID: "uiux-design",
+    header: "UI/UX Design",
+    paragraph:
+      "Experience seamless user interfaces and intuitive user experiences that elevate digital interactions",
+  },
+  {
+    sectionID: "web-dev",
+    header: "Web Dev",
+    paragraph:
+      "Browse through our web development projects, where we craft stunning websites that make a lasting impression.",
+  },
+];
+
+const porto_card = [
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "writeup",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "writeup",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "writeup",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "writeup",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "writeup",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "writeup",
+    date: "Nov 2022",
+    link: "#",
+  },
+];
 ---
 
 <Layout>
-  <section id="porto-hero-container">
-    <h1>Portfolio</h1>
-    <p>
-      Dive into our portfolio and witness the stunning work our community
-      members have produced.
-    </p>
+  <section id="porto-hero-container" class="d-flex justify-content-center">
+    <div class="d-flex flex-column align-items-center">
+      <h1 class="display-1 fw-bold">Portfolio</h1>
+      <p class="fs-5 text-center">
+        Dive into our portfolio and witness the stunning work our community
+        members have produced.
+      </p>
+    </div>
   </section>
 
   <section id="porto-item-container">
-    <div id="item-filter">
+    <div id="item-link">
       <div id="item">
         <p>CTF Write Up</p>
       </div>
@@ -35,351 +135,40 @@ import Layout from "../layouts/Layout.astro";
         <p>Web Dev</p>
       </div>
     </div>
-
-    <section id="CTF-write-up">
-      <!-- Header -->
-      <div id="porto-header">
-        <h2>CTF Write Up</h2>
-        <p>
-          Dive into our comprehensive write-ups, documenting our journey and
-          insights from various capture the flag competitions.
-        </p>
-        <div id="porto-button">
-          <a class="showToast">View More</a>
-        </div>
-      </div>
-      <!-- Card Container -->
-      <div id="porto-card-container">
-        <div id="porto-card" class="col-11 col-md-3">
-          <div
-            class="card1 custom-rounded box border-1- card1-bg-image mx-2 mx-md-3 mx-lg-4 position-relative"
-            style="cursor: pointer;"
-          >
-            <div class="card1-body text-center">
-              <div class="img-container">
-                <img
-                  src="/ShowcaseProducts.svg"
-                  class="custom-rounded box border-1- card1-bg-image img-fluid"
-                  style="cursor: pointer;"
-                />
-              </div>
-              <h1
-                class="pb-1 fw-bold"
-                style="text-align: left; color: white; margin-left: 16px;"
-              >
-                CarePal
-              </h1>
-              <h5
-                class="pb-1"
-                style="text-align: left; color: rgba(255, 255, 255, 0.9); font-size: 16px; margin-bottom: 31px; margin-left: 16px;"
-              >
-                by dhikarfi
-              </h5>
-              <div class="frame-container">
-                <div class="frame">
-                  <p class="caption-left">UI/UX Design</p>
+    {
+      porto_container.map((porto, id) => {
+        return (
+          <section id="porto-container">
+            <section id={porto.sectionID}>
+              <div class="d-flex justify-content-around align-items-center">
+                <div id="porto-header">
+                  <h2>{porto.header}</h2>
+                  <p>{porto.paragraph}</p>
                 </div>
-                <p class="caption-right">24 Nov 2022</p>
-              </div>
-              <div
-                class="container"
-                style="display: flex; justify-content: center;"
-              >
-                <button class="showToast my-buttonp"> See Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="porto-card" class="col-11 col-md-3">
-          <div
-            class="card1 custom-rounded box border-1- card1-bg-image mx-2 mx-md-3 mx-lg-4 position-relative"
-            style="cursor: pointer;"
-          >
-            <div class="card1-body text-center">
-              <div class="img-container">
-                <img
-                  src="/ShowcaseProducts.svg"
-                  class="custom-rounded box border-1- card1-bg-image img-fluid"
-                  style="cursor: pointer;"
-                />
-              </div>
-              <h1
-                class="pb-1 fw-bold"
-                style="text-align: left; color: white; margin-left: 16px;"
-              >
-                CarePal
-              </h1>
-              <h5
-                class="pb-1"
-                style="text-align: left; color: rgba(255, 255, 255, 0.9); font-size: 16px; margin-bottom: 31px; margin-left: 16px;"
-              >
-                by dhikarfi
-              </h5>
-              <div class="frame-container">
-                <div class="frame">
-                  <p class="caption-left">UI/UX Design</p>
+                <div id="porto-button">
+                  <a class="showToast py-4 px-5">View All</a>
                 </div>
-                <p class="caption-right">24 Nov 2022</p>
               </div>
-              <div
-                class="container"
-                style="display: flex; justify-content: center;"
-              >
-                <button class="showToast my-buttonp"> See Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="porto-card" class="col-11 col-md-3">
-          <div
-            class="card1 custom-rounded box border-1- card1-bg-image mx-2 mx-md-3 mx-lg-4 position-relative"
-            style="cursor: pointer;"
-          >
-            <div class="card1-body text-center">
-              <div class="img-container">
-                <img
-                  src="/ShowcaseProducts.svg"
-                  class="custom-rounded box border-1- card1-bg-image img-fluid"
-                  style="cursor: pointer;"
-                />
-              </div>
-              <h1
-                class="pb-1 fw-bold"
-                style="text-align: left; color: white; margin-left: 16px;"
-              >
-                CarePal
-              </h1>
-              <h5
-                class="pb-1"
-                style="text-align: left; color: rgba(255, 255, 255, 0.9); font-size: 16px; margin-bottom: 31px; margin-left: 16px;"
-              >
-                by dhikarfi
-              </h5>
-              <div class="frame-container">
-                <div class="frame">
-                  <p class="caption-left">UI/UX Design</p>
-                </div>
-                <p class="caption-right">24 Nov 2022</p>
-              </div>
-              <div
-                class="container"
-                style="display: flex; justify-content: center;"
-              >
-                <button class="showToast my-buttonp"> See Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="porto-card" class="col-11 col-md-3">
-          <div
-            class="card1 custom-rounded box border-1- card1-bg-image mx-2 mx-md-3 mx-lg-4 position-relative"
-            style="cursor: pointer;"
-          >
-            <div class="card1-body text-center">
-              <div class="img-container">
-                <img
-                  src="/ShowcaseProducts.svg"
-                  class="custom-rounded box border-1- card1-bg-image img-fluid"
-                  style="cursor: pointer;"
-                />
-              </div>
-              <h1
-                class="pb-1 fw-bold"
-                style="text-align: left; color: white; margin-left: 16px;"
-              >
-                CarePal
-              </h1>
-              <h5
-                class="pb-1"
-                style="text-align: left; color: rgba(255, 255, 255, 0.9); font-size: 16px; margin-bottom: 31px; margin-left: 16px;"
-              >
-                by dhikarfi
-              </h5>
-              <div class="frame-container">
-                <div class="frame">
-                  <p class="caption-left">UI/UX Design</p>
-                </div>
-                <p class="caption-right">24 Nov 2022</p>
-              </div>
-              <div
-                class="container"
-                style="display: flex; justify-content: center;"
-              >
-                <button class="showToast my-buttonp"> See Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="porto-card" class="col-11 col-md-3">
-          <div
-            class="card1 custom-rounded box border-1- card1-bg-image mx-2 mx-md-3 mx-lg-4 position-relative"
-            style="cursor: pointer;"
-          >
-            <div class="card1-body text-center">
-              <div class="img-container">
-                <img
-                  src="/ShowcaseProducts.svg"
-                  class="custom-rounded box border-1- card1-bg-image img-fluid"
-                  style="cursor: pointer;"
-                />
-              </div>
-              <h1
-                class="pb-1 fw-bold"
-                style="text-align: left; color: white; margin-left: 16px;"
-              >
-                CarePal
-              </h1>
-              <h5
-                class="pb-1"
-                style="text-align: left; color: rgba(255, 255, 255, 0.9); font-size: 16px; margin-bottom: 31px; margin-left: 16px;"
-              >
-                by dhikarfi
-              </h5>
-              <div class="frame-container">
-                <div class="frame">
-                  <p class="caption-left">UI/UX Design</p>
-                </div>
-                <p class="caption-right">24 Nov 2022</p>
-              </div>
-              <div
-                class="container"
-                style="display: flex; justify-content: center;"
-              >
-                <button class="showToast my-buttonp"> See Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="porto-card" class="col-11 col-md-3">
-          <div
-            class="card1 custom-rounded box border-1- card1-bg-image mx-2 mx-md-3 mx-lg-4 position-relative"
-            style="cursor: pointer;"
-          >
-            <div class="card1-body text-center">
-              <div class="img-container">
-                <img
-                  src="/ShowcaseProducts.svg"
-                  class="custom-rounded box border-1- card1-bg-image img-fluid"
-                  style="cursor: pointer;"
-                />
-              </div>
-              <h1
-                class="pb-1 fw-bold"
-                style="text-align: left; color: white; margin-left: 16px;"
-              >
-                CarePal
-              </h1>
-              <h5
-                class="pb-1"
-                style="text-align: left; color: rgba(255, 255, 255, 0.9); font-size: 16px; margin-bottom: 31px; margin-left: 16px;"
-              >
-                by dhikarfi
-              </h5>
-              <div class="frame-container">
-                <div class="frame">
-                  <p class="caption-left">UI/UX Design</p>
-                </div>
-                <p class="caption-right">24 Nov 2022</p>
-              </div>
-              <div
-                class="container"
-                style="display: flex; justify-content: center;"
-              >
-                <button class="showToast my-buttonp"> See Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="game-dev">
-      <!-- Header -->
-      <div id="porto-header">
-        <h2>Game Dev</h2>
-        <p>
-          Immerse yourself in captivating gaming experiences brought to life
-          through our creative game development endeavors.
-        </p>
-        <div id="porto-button">
-          <a class="showToast">View More</a>
-        </div>
-      </div>
-      <!-- Card Container -->
-      <div id="porto-card-container">
-        <!-- content -->
-      </div>
-    </section>
-
-    <section id="hall-of-algorithm">
-      <!-- Header -->
-      <div id="porto-header">
-        <h2>Hall Of Algorithm</h2>
-        <p>
-          Discover elegant solutions that power modern tech. Uncover the magic
-          of algorithms reshaping our digital world.
-        </p>
-        <div id="porto-button">
-          <a class="showToast">View More</a>
-        </div>
-      </div>
-      <!-- Card Container -->
-      <div id="porto-card-container">
-        <!-- content -->
-      </div>
-    </section>
-
-    <section id="mobile-dev">
-      <!-- Header -->
-      <div id="porto-header">
-        <h2>Mobile Dev</h2>
-        <p>
-          Crafting mobile experiences. We blend creativity and code to build
-          seamless, pocket-sized solutions for today's challenges.
-        </p>
-        <div id="porto-button">
-          <a class="showToast">View More</a>
-        </div>
-      </div>
-      <!-- Card Container -->
-      <div id="porto-card-container">
-        <!-- content -->
-      </div>
-    </section>
-
-    <section id="uiux-design">
-      <!-- Header -->
-      <div id="porto-header">
-        <h2>UI/UX Design</h2>
-        <p>
-          Experience seamless user interfaces and intuitive user experiences
-          that elevate digital interactions
-        </p>
-        <div id="porto-button">
-          <a class="showToast">View More</a>
-        </div>
-      </div>
-      <!-- Card Container -->
-      <div id="porto-card-container">
-        <!-- content -->
-      </div>
-    </section>
-
-    <section id="web-dev">
-        <!-- Header -->
-        <div id="porto-header">
-          <h2>Web Dev</h2>
-          <p>
-            Browse through our web development projects, where we craft stunning websites that make a lasting impression.
-          </p>
-          <div id="porto-button">
-            <a class="showToast">View More</a>
-          </div>
-        </div>
-        <!-- Card Container -->
-        <div id="porto-card-container">
-          <!-- content -->
-        </div>
-      </section>
+              <div id="porto-card-container" class="py-5">
+                {porto_card.map((porto, id) => {
+                  return (
+                    <div id="porto-card-container">
+                      <div id="porto-card">
+                        <img src={porto.image}>
+                        <h2>{porto.title}</h2>
+                        <h2>{porto.author}</h2>
+                        <h2>{porto.date}</h2>
+                        <h2>{porto.category}</h2>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          </section>
+        );
+      })
+    }
   </section>
 </Layout>
