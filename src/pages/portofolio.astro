@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/portofolio.scss";
-import porto_image from '../assets/icons/hero-figma.svg'
+import porto_image from "../assets/images/porto-placeholder.png";
 
 const porto_container = [
   {
@@ -53,7 +53,7 @@ const porto_card = [
     image: porto_image,
     title: "Carepal",
     author: "dhikarfi",
-    category: "writeup",
+    category: "Internal Project",
     date: "Nov 2022",
     link: "#",
   },
@@ -61,7 +61,7 @@ const porto_card = [
     image: porto_image,
     title: "Carepal",
     author: "dhikarfi",
-    category: "writeup",
+    category: "Internal Project",
     date: "Nov 2022",
     link: "#",
   },
@@ -69,7 +69,7 @@ const porto_card = [
     image: porto_image,
     title: "Carepal",
     author: "dhikarfi",
-    category: "writeup",
+    category: "Internal Project",
     date: "Nov 2022",
     link: "#",
   },
@@ -77,7 +77,7 @@ const porto_card = [
     image: porto_image,
     title: "Carepal",
     author: "dhikarfi",
-    category: "writeup",
+    category: "Internal Project",
     date: "Nov 2022",
     link: "#",
   },
@@ -85,7 +85,7 @@ const porto_card = [
     image: porto_image,
     title: "Carepal",
     author: "dhikarfi",
-    category: "writeup",
+    category: "Internal Project",
     date: "Nov 2022",
     link: "#",
   },
@@ -93,7 +93,7 @@ const porto_card = [
     image: porto_image,
     title: "Carepal",
     author: "dhikarfi",
-    category: "writeup",
+    category: "Internal Project",
     date: "Nov 2022",
     link: "#",
   },
@@ -101,65 +101,99 @@ const porto_card = [
 ---
 
 <Layout>
-  <section id="porto-hero-container" class="d-flex justify-content-center">
+  <section
+    id="porto-hero-container"
+    class="d-flex justify-content-center py-10"
+  >
     <div class="d-flex flex-column align-items-center">
-      <h1 class="display-1 fw-bold">Portfolio</h1>
-      <p class="fs-5 text-center">
+      <h1 class="text-light display-1 fw-bold">Portfolio</h1>
+      <p class="px-4-md text-light fs-5 text-center">
         Dive into our portfolio and witness the stunning work our community
         members have produced.
       </p>
+      <br />
     </div>
   </section>
-
+  
+  
   <section id="porto-item-container">
-    <div id="item-link">
-      <div id="item">
-        <p>CTF Write Up</p>
-      </div>
-      <div id="item">
-        <p>Daming Notebook</p>
-      </div>
-      <div id="item">
-        <p>Game Dev</p>
-      </div>
-      <div id="item">
-        <p>Hall Of Algorithms</p>
-      </div>
-      <div id="item">
-        <p>Mobile Dev</p>
-      </div>
-      <div id="item">
-        <p>UI/UX Design</p>
-      </div>
-      <div id="item">
-        <p>Web Dev</p>
+    <div id="item-link-container" class="d-md-flex justify-content-md-center px-4-md">
+      <div id="item-link" class="d-md-flex flex-md-wrap justify-content-md-center column-gap-md-2">
+        <div id="item">
+          <a href="#CTF-write-up">
+            <p>CTF Write Up</p>
+          </a>
+        </div>
+        <div id="item">
+          <a href="#daming-notebook">
+            <p>Daming Notebook</p>
+          </a>
+        </div>
+        <div id="item">
+          <a href="#game-dev">
+            <p>Game Dev</p>
+          </a>
+        </div>
+        <div id="item">
+          <a href="#hall-of-algorithm">
+            <p>Hall Of Algorithms</p>
+          </a>
+        </div>
+        <div id="item">
+          <a href="#mobile-dev">
+            <p>Mobile Dev</p>
+          </a>
+        </div>
+        <div id="item">
+          <a href="#uiux-design">
+            <p>UI/UX Design</p>
+          </a>
+        </div>
+        <div id="item">
+          <a href="#web-dev">
+            <p>Web Dev</p>
+          </a>
+        </div>
       </div>
     </div>
     {
       porto_container.map((porto, id) => {
         return (
           <section id="porto-container">
-            <section id={porto.sectionID}>
-              <div class="d-flex justify-content-around align-items-center">
+            <section id={porto.sectionID} >
+              <div class="d-flex justify-content-between justify-content-md-around align-items-center">
                 <div id="porto-header">
-                  <h2>{porto.header}</h2>
-                  <p>{porto.paragraph}</p>
+                  <h2 class="fs-4 fw-bold">{porto.header}</h2>
+                  <p class="fw-normal">{porto.paragraph}</p>
                 </div>
-                <div id="porto-button">
-                  <a class="showToast py-4 px-5">View All</a>
+                <div id="porto-button" style="cursor: pointer;">
+                  <a class="showToast fw-bold py-4 px-5">View All</a>
                 </div>
               </div>
 
-              <div id="porto-card-container" class="py-5">
-                {porto_card.map((porto, id) => {
+              <div id="porto-card-wrapper" class="py-5 d-md-flex flex-md-wrap justify-content-md-center
+              gap-md-4">
+                {
+                  porto_card.map((porto, id) => {
                   return (
                     <div id="porto-card-container">
-                      <div id="porto-card">
-                        <img src={porto.image}>
-                        <h2>{porto.title}</h2>
-                        <h2>{porto.author}</h2>
-                        <h2>{porto.date}</h2>
-                        <h2>{porto.category}</h2>
+                      <div id="porto-card" class="d-flex flex-column">
+                        <img src={porto.image} />
+                        <h2 class="fw-bold mt-2 fs-4">{porto.title}</h2>
+                        <p class="opacity-75">by {porto.author}</p>
+                        <div class="d-flex justify-content-between mt-4 mb-3">
+                          <p
+                            class="p-2 fs-porto-custom fw-bold align-self-center"
+                            style="border-radius: 1.5rem;
+                                  background: var(--aa-300, #E70FEB);"
+                          >
+                            {porto.category}
+                          </p>
+                          <p class="p-2 fs-6 fw-bold">{porto.date}</p>
+                        </div>
+                        <button class="showToast fw-bold fs-5">
+                          See Project
+                        </button>
                       </div>
                     </div>
                   );

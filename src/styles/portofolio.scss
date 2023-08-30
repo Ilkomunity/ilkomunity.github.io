@@ -1,81 +1,213 @@
-#porto-hero-container div p {
-    max-width: 40rem;
-    width: 100%;
+#porto-hero-container {
+    background:
+        linear-gradient(0deg, rgba(31, 0, 32, 0.80) 0%, rgba(31, 0, 32, 0.80) 100%),
+        url('../assets/images/porto-hero-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: hard-light;
 }
 
-#porto-item-container{}
+@media screen and (min-width: 768px){
+    #porto-card {
+        padding: 1rem;
+        width: 18rem;
+        color: white;
+        border-radius: 1rem 7.5rem 1rem 1rem;
+        background: var(--aa-400, #A20BA5);
+    }
 
-#porto-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-    max-width: 10rem;
-    width: 100%;
-    height: 3rem;
-    border-radius: 2.5rem 1rem;
-    background: var(--aa-400, #A20BA5);
+    #porto-card img {
+        border-radius: 1rem 6.25rem 1rem 1rem;
+    }
+
+    #porto-card button {
+        align-self: center;
+        border-radius: 3rem;
+        background: var(--aa-300, #E70FEB);
+        box-shadow: 0px 5px 15px 0px rgba(254, 114, 93, 0.30);
+        border: none;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+
+        color: white;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        transition: 0.5s;
+    }
+
+    #porto-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 10rem;
+        width: 100%;
+        height: 3rem;
+        border-radius: 2.5rem 1rem;
+        background: var(--aa-400, #A20BA5);
+        transition: .5s;
+    }
+
+    #porto-button:hover {
+        transition: .5s;
+        background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+
+    }
+
+    #porto-button a {
+        transition: .5s;
+        text-decoration: none;
+        color: white;
+    }
+
+    #porto-card button:hover {
+        transition: ease-in .5s;
+        background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+    }
+
+    #porto-header {
+        max-width: 25rem;
+        width: 100%;
+    }
 }
 
-#porto-button a {
-    text-decoration: none;
-    color: white;
-}
 
-#item-link {
-    position: fixed;
-    top: 15%;
-    left: 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 16.6rem;
-    border-radius: 1.5rem;
-    padding: 2.5rem 1.25rem;
-    background: var(--aa-400, #A20BA5);
-}
+@media screen and (min-width:992px) {
+    #porto-hero-container {
+        height: 100vh;
+        background:
+            linear-gradient(0deg, rgba(31, 0, 32, 0.80) 0%, rgba(31, 0, 32, 0.80) 100%),
+            url('../assets/images/porto-hero-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        mix-blend-mode: hard-light;
+    }
 
-#item {
-    border: 1px solid white;
-    border-radius: 2.375rem;
-    // padding: 1rem 1.5rem !important;
+    #porto-hero-container div p {
+        max-width: 40rem;
+        width: 100%;
+    }
 
-}
+    #porto-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 10rem;
+        width: 100%;
+        height: 3rem;
+        border-radius: 2.5rem 1rem;
+        background: var(--aa-400, #A20BA5);
+        transition: .5s;
+    }
 
-#item p {
-    padding: 1rem 1.5rem !important;
-    border-radius: 2.375rem;
-    margin: 0 !important;
-    color: white;
-    transition: .3s;
-}
+    #porto-button:hover {
+        transition: .5s;
+        background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
 
-#item:hover,
-#item p:hover {
-    transition: .3s;
-    color: black;
-    background: white;
-}
+    }
 
-#porto-header {
-    max-width: 30rem;
-    width: 100%;
-}
+    #porto-button a {
+        transition: .5s;
+        text-decoration: none;
+        color: white;
+    }
 
-#porto-container{
-    max-width: 60rem;
-    width: 100%;
-}
+    #item-link {
+        position: fixed;
+        top: 15%;
+        left: 2%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 16.6rem;
+        border-radius: 1.5rem;
+        padding: 2.5rem 1.25rem;
+        background: var(--aa-400, #A20BA5);
+        transform: translateY(-5rem);
+    }
 
-#porto-card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
+    #item {
+        border: 1px solid white;
+        border-radius: 2.375rem;
+        // padding: 1rem 1.5rem !important;
 
-#porto-card{
-    width: 20rem;
-    border-radius: 1rem 7.5rem 1rem 1rem;
-    background: var(--aa-400, #A20BA5);
+    }
+
+    #item a {
+        text-decoration: none;
+    }
+
+    #item p {
+        padding: 1rem 1.5rem !important;
+        border-radius: 2.375rem;
+        margin: 0 !important;
+        color: white;
+        transition: .3s;
+    }
+
+    #item:hover,
+    #item p:hover {
+        transition: .3s;
+        color: black;
+        background: white;
+    }
+
+    #porto-header {
+        max-width: 30rem;
+        width: 100%;
+    }
+
+    #porto-container {
+        max-width: 63rem;
+        width: 100%;
+        transform: translateY(-20rem);
+    }
+
+    #porto-item-container {
+        padding: 0 0 0 23rem;
+    }
+
+    #porto-card-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    #porto-card {
+        padding: 1rem;
+        width: 20rem;
+        color: white;
+        border-radius: 1rem 7.5rem 1rem 1rem;
+        background: var(--aa-400, #A20BA5);
+    }
+
+    #porto-card img {
+        border-radius: 1rem 6.25rem 1rem 1rem;
+    }
+
+
+    #porto-card button {
+        align-self: center;
+        border-radius: 3rem;
+        background: var(--aa-300, #E70FEB);
+        box-shadow: 0px 5px 15px 0px rgba(254, 114, 93, 0.30);
+        border: none;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+
+        color: white;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        transition: 0.5s;
+    }
+
+    #porto-card button:hover {
+        transition: ease-in .5s;
+        background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+    }
+
 }

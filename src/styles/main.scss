@@ -34,7 +34,8 @@ $spacers: (
   6: $spacer * 4,
   7: $spacer * 5,
   8: $spacer * 6.5,
-  9: $spacer * 7
+  9: $spacer * 7,
+  10: $spacer * 10
 );
 
 $display-font-sizes: (
@@ -51,6 +52,16 @@ $position-values: (
   50: 50%,
   100: 100%,
   "toast-top": 15%
+);
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  porto-custom: .75rem
 );
 
 $utilities: () !default;
@@ -95,6 +106,16 @@ $utilities: map-merge((
       inherit: inherit
     )
   ),
+  "opacity": (
+  property: opacity,
+  values: (
+    0: 0,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1,
+  )
+),
 ), $utilities);
 
 $custom-grid-breakpoints: (
