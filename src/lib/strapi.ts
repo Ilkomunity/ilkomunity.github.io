@@ -47,12 +47,16 @@ export default async function fetchApi<T>({
     data = data[0];
   }
   
-  //if endpoint has ?populate=image
-  //add imageurl to attributes
-  if (endpoint.includes('populate=image')) {
+  //if endpoint has ?populate=
+  //add imageurl to attributes according to "populate" value
+  if (endpoint.includes('populate=')) {
+    
+    const params_string = endpoint.slice(endpoint.indexOf("?") + 1);
+    const params = new URLSearchParams(params_string);
+
     data = data.map((item) => {
-    if (item.attributes.image) {
-      item.attributes.imageurl = `${import.meta.env.STRAPI_URL}${item.attributes.image.data.attributes.url}`;
+    if (item.attributes[params.get('populate')]) {
+      item.attributes.imageurl = `${import.meta.env.STRAPI_URL}${item.attributes[params.get('populate')].data.attributes.url}`;
     }
     return item;
     });
