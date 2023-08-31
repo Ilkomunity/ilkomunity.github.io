@@ -1,7 +1,12 @@
 ---
-import { getCollection } from "astro:content";
+import fetchApi from "../lib/strapi";
+import type Event from "../interfaces/event";
 import EventCard from "./EventCard.astro";
-const events = await getCollection("events");
+
+const events = await fetchApi<Event[]>({
+  endpoint: 'events?populate=poster',
+  wrappedByKey: 'data',
+});
 
 const today = new Date();
 const formattedToday = today.toISOString().split('T')[0];
@@ -33,26 +38,24 @@ const formattedToday = today.toISOString().split('T')[0];
       {
         events.length !== 0 &&
           events
-            .filter((project) => project.data.isHighlighted)
+            .filter((project) => project.attributes.isHighlighted)
             .slice(0, 4)
             .map((event) => {
-              const formattedEventDate = event.data.eventDate.toISOString().split('T')[0];
-              const isUpcoming = (formattedEventDate >= formattedToday);
+              const isUpcoming = (event.attributes.date >= formattedToday);
 
               // Truncate description and add ellipses
               const truncatedDescription =
-                event.data.description.length > 70
-                  ? event.data.description.slice(0, 70) + '...'
-                  : event.data.description;
+                event.attributes.description.length > 70
+                  ? event.attributes.description.slice(0, 70) + '...'
+                  : event.attributes.description;
 
               return (
                 <EventCard
-                  title={event.data.title}
+                  title={event.attributes.name}
                   description={truncatedDescription}
-                  eventDate={event.data.eventDate}
+                  eventDate={event.attributes.date}
                   isUpcoming={isUpcoming}
-                  image={event.data.image}
-                  slug={event.slug}
+                  image={event.attributes.imageurl}
                 />
               );
             })
