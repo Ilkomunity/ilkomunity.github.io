@@ -2,13 +2,12 @@
 type Props = {
   title: string;
   description: string;
-  eventDate: Date;
+  eventDate: string;
   isUpcoming: boolean;
   image: string;
-  slug: string;
 };
 
-const { title, description, eventDate, isUpcoming, image, slug } = Astro.props;
+const { title, description, eventDate, isUpcoming, image } = Astro.props;
 ---
 
 <div class="col-12 col-md-6 col-lg-3 d-flex">
