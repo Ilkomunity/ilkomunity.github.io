@@ -10,5 +10,6 @@ export default interface Communities {
         time: string,
         location: string,
         imageurl: string;
+        logourl: string;
     };
 }

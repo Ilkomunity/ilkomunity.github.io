@@ -8,6 +8,6 @@ export default interface Event {
         updatedAt: string;
         publishedAt: string;
         isHighlighted: boolean;
-        imageurl: string;
+        posterurl: string;
     };
 }
