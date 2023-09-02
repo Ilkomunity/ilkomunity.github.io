@@ -1,7 +1,7 @@
 #porto {
     background-image: url("../assets/icons/home-bg.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
@@ -54,6 +54,10 @@
     transform: translateY(-20rem);
 }
 
+#dynamic-porto-item-container {
+    transform: translateY(-20rem);
+}
+
 #porto-card button {
     padding: 0.5rem 0;
 }
@@ -77,6 +81,11 @@
 
 @media screen and (max-width: 320px) {
     #porto-item-container {
+        transform: translateY(-14rem);
+    }
+
+
+    #dynamic-porto-item-container {
         transform: translateY(-14rem);
     }
 }
@@ -335,6 +344,13 @@
         padding: 0 1rem 0 1rem;
     }
 
+
+    #dynamic-porto-item-container{
+        gap: 3rem;
+        transform: translateY(-20rem);
+        padding: 0 1rem 0 1rem;
+    }
+
     #porto-card-wrapper {
         display: flex;
         justify-content: center;
@@ -430,11 +446,16 @@
         padding: 0;
     }
 
+    #dynamic-porto-item-container {
+        transform: translateY(-20rem);
+        padding: 0;
+    }
+
     #desktop-nav-container {
         width: 16rem;
     }
 
-    #desktop p{
+    #desktop p {
         text-align: left;
     }
 }
