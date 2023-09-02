@@ -6,14 +6,15 @@
 }
 
 #porto-hero-container {
-    background:
-        linear-gradient(0deg, rgba(31, 0, 32, 0.80) 0%, rgba(31, 0, 32, 0.80) 100%),
-        url('../assets/images/porto-hero-desktop.jpg');
+    // background:
+    //     linear-gradient(0deg, rgba(31, 0, 32, 0.80) 0%, rgba(31, 0, 32, 0.80) 100%),
+    //     url('../assets/images/porto-hero-desktop.jpg');
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.1) 80%,
+            rgba(255, 255, 255, 1) 100%),
+        url(../assets/images/porto-hero-desktop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-origin: border-box;
-    background-clip: padding-box;
-    mix-blend-mode: hard-light;
     height: 120vh;
 }
 
@@ -72,7 +73,7 @@
 
 @media screen and (max-width: 320px) {
     #porto-item-container {
-        transform: translateY(-15rem);
+        transform: translateY(-14rem);
     }
 }
 
@@ -284,16 +285,6 @@
 
 
 @media screen and (min-width:992px) {
-    #porto-hero-container {
-        height: 100vh;
-        background:
-            linear-gradient(0deg, rgba(31, 0, 32, 0.80) 0%, rgba(31, 0, 32, 0.80) 100%),
-            url('../assets/images/porto-hero-desktop.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        mix-blend-mode: hard-light;
-    }
-
     #porto-hero-container div p {
         max-width: 40rem;
         width: 100%;
