@@ -1,6 +1,11 @@
 ---
-import {getCollection } from 'astro:content';
-const komun = await getCollection('communities');
+import fetchApi from "../lib/strapi";
+import type Communities from "../interfaces/communities";
+
+const communities = await fetchApi<Communities[]>({
+  endpoint: 'communities?populate=logo',
+  wrappedByKey: 'data',
+});
 ---
 
 <div class="text-center">
@@ -17,7 +22,7 @@ const komun = await getCollection('communities');
 
 <div class="row g-5 mb-5 mx-0 mx-md-2 mx-lg-4 px-0 px-md-4 px-lg-4">
   {
-    komun.map(list => (
+    communities.map(list => (
       <div class="col-6 col-md-6 col-lg-3">
         <div
           class="showToast card custom-rounded box border border-0 card-bg-image mx-2 mx-md-3 mx-lg-4"
@@ -25,14 +30,14 @@ const komun = await getCollection('communities');
         >
           <div class="card-body d-flex justify-content-center">
             <img
-              src={list.data.logo}
+              src={list.attributes.logourl}
               class="card-img-top pt-5"
               alt="..."
               style="max-height: 145px; max-width: 145px;"
             />
           </div>
           <div class="card-body">
-            <h5 class="fw-bold fs-3 card-title text-center pb-4 pb-md-5 pb-lg-5">{list.data.singkatan}</h5>
+            <h5 class="fw-bold fs-3 card-title text-center pb-4 pb-md-5 pb-lg-5">{list.attributes.abbr}</h5>
           </div>
         </div>
       </div>

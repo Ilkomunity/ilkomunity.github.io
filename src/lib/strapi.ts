@@ -47,20 +47,28 @@ export default async function fetchApi<T>({
     data = data[0];
   }
   
-  //if endpoint has ?populate=
-  //add imageurl to attributes according to "populate" value
   if (endpoint.includes('populate=')) {
-    
-    const params_string = endpoint.slice(endpoint.indexOf("?") + 1);
-    const params = new URLSearchParams(params_string);
-
-    data = data.map((item) => {
-    if (item.attributes[params.get('populate')]) {
-      item.attributes.imageurl = `${import.meta.env.STRAPI_URL}${item.attributes[params.get('populate')].data.attributes.url}`;
+    const paramsString = endpoint.slice(endpoint.indexOf("?") + 1);
+    const params = new URLSearchParams(paramsString);
+    const populateParam = params.get('populate');
+    if (populateParam) {
+      const isMultiple = populateParam.includes(',');
+      data = data.map((item) => {
+        const itemAttributes = item.attributes;
+        if (isMultiple) {
+          populateParam.split(',').forEach((param) => {
+            if (itemAttributes[param]) {
+              itemAttributes[`${param}url`] = `${import.meta.env.STRAPI_URL}${itemAttributes[param].data.attributes.url}`;
+            }
+          });
+        } else {
+          if (itemAttributes[populateParam]) {
+            itemAttributes[`${populateParam}url`] = `${import.meta.env.STRAPI_URL}${itemAttributes[populateParam].data.attributes.url}`;
+          }
+        }
+        return item;
+      });
     }
-    return item;
-    });
   }
-
   return data as T;
 }
