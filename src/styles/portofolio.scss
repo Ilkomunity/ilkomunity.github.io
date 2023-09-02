@@ -1,7 +1,7 @@
 #porto {
     background-image: url("../assets/icons/home-bg.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
@@ -47,6 +47,10 @@
 }
 
 #porto-item-container {
+    background-image: url('../assets//icons/porto-bg.svg');
+    background-position-y: 20%;
+    background-repeat: no-repeat;
+    background-size: contain;
     transform: translateY(-20rem);
 }
 
@@ -428,5 +432,9 @@
 
     #desktop-nav-container {
         width: 16rem;
+    }
+
+    #desktop p{
+        text-align: left;
     }
 }
