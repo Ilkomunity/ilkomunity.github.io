@@ -213,7 +213,10 @@ const porto_card = [
             return (
               <container>
                 <section id="porto-container">
-                  <section id={porto.sectionID} class={`${index === 0 ? "pt-2" : "pt-4"}`}>
+                  <section
+                    id={porto.sectionID}
+                    class={`${index === 0 ? "pt-2" : "pt-4"}`}
+                  >
                     <div
                       id="porto-wrapper"
                       class="d-flex flex-column flex-md-row justify-content-between justify-content-md-around justify-content-lg-between align-items-md-center my-4"
@@ -226,7 +229,9 @@ const porto_card = [
                         <p class="fw-normal">{porto.paragraph}</p>
                       </div>
                       <div id="porto-button" style="cursor: pointer;">
-                        <a class="showToast fw-bold py-4 px-5">View All</a>
+                        <a href="/dynamic" class="showToast fw-bold py-4 px-5">
+                          View All
+                        </a>
                       </div>
                     </div>
 
@@ -255,8 +260,8 @@ const porto_card = [
                                 </p>
                                 <p class="p-2 fs-6 fw-bold">{porto.date}</p>
                               </div>
-                              <button class="showToast fw-bold fs-5">
-                                See Project
+                              <button class="fw-bold fs-5">
+                                <a class="showToast fw-bold fs-5">See Project</a>
                               </button>
                             </div>
                           </div>
