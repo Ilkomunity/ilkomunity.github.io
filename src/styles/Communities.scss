@@ -1,4 +1,14 @@
 .communities-hero {
-    background: url(../assets/images/communities-pages-hero.png);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 80%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+    url(../assets/images/communities-pages-hero.png);
     background-size: cover;
+    height: 45rem;
+}
+
+.communities-information {
+    transform: translateY(-9rem);
 }
