@@ -28,12 +28,12 @@ const communities = await fetchApi<Communities[]>({
                       </div>
                       <div class="col" style="height: 34.5rem; background-image: url(/oval-base-weeklymeeting.svg);">
                           <div class="container mx-1 mx-md-3">
-                              <div class="d-flex align-items-start flex-column" style="height: 34.5rem;">
+                              <div class="d-flex align-items-start flex-column pe-1" style="height: 34.5rem;">
                                   <div class="mb-auto mt-5">
                                       <img src={jadwal.attributes.logourl} alt="jadwallogo" class="img-atas">
                                       <h5 class="fw-bold fs-1 mt-4">{jadwal.attributes.name}</h5>
                                   </div>
-                                  <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{jadwal.attributes.location} <br> {jadwal.attributes.day}, {jadwal.attributes.time} WIB</p>
+                                  <p class="jadwal-meet mt-auto mb-1 mb-md-3 mb-lg-5 fw-semibold me-4">{jadwal.attributes.location} <br> {jadwal.attributes.day.charAt(0).toUpperCase()}{jadwal.attributes.day.slice(1)}, {jadwal.attributes.time.substring(0,5)} WIB</p>
                               </div>        
                           </div>
                       </div>
