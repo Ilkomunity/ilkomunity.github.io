@@ -12,3 +12,41 @@
 .communities-information {
     transform: translateY(-9rem);
 }
+
+.logo-card {
+    position: relative;
+    overflow: hidden; /* Menambahkan overflow: hidden agar transisi terlihat lebih mulus */
+    transition: background-color 0.3s ease; /* Menambahkan transisi warna latar belakang */
+}
+
+.logo-card:hover {
+    background-color: #EDA20F;
+}
+
+.logo-text {
+    white-space: nowrap;
+    transition: opacity 0.3s ease, visibility 0.1s ease;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+.logo-card img {
+    width: 70px;
+    padding: 10px 0 10px 0;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-card:hover img {
+    transform: translateX(-10px); /* Menggeser gambar ke kiri saat di-hover */
+}
+
+.logo-card:hover .logo-text {
+    opacity: 1;
+    visibility: visible;
+}

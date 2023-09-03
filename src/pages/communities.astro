@@ -35,7 +35,7 @@ import "../styles/Communities.scss"
             </div>
             <div class="benefit col-10 col-md-7 col-lg-4" style="">
                 <h2 class="ms-5 px-3 py-1 d-inline-flex text-white" style="transform: translateY(2rem);border-radius: 15px 50px 15px 15px; background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); width: fit-content;">Benefit</h2>
-                <div class="benefit-inside border" style="height: 15rem;  display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2.5rem 9.375rem 2.5rem 2.5rem; background-color: white;">
+                <div class="benefit-inside border" style="height: 15rem;  display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2.5rem 9.375rem 2.5rem 2.5rem; background-color: white; font-size: larger;">
                     <ul>
                         <li>Knowledge about Design Thinking</li>
                         <li>Improve skills in how to use Figma</li>
@@ -46,7 +46,7 @@ import "../styles/Communities.scss"
             </div>
         </div>
         <div class="dokumentasi mt-5">
-            <h2 class="text-center mb-5 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Lens on Our Community</h2>
+            <h2 class="text-center mb-5 fs-3 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Lens on Our Community</h2>
             <div class="dokumentasi-foto text-center mb-5 d-flex flex-wrap" style="gap: 1rem; justify-content: center;">
                 <img src={agriux1} alt="agriux1" class="col-8 col-md-4 col-lg-3">
                 <img src={agriux2} alt="agriux2" class="col-8 col-md-4 col-lg-3">
@@ -61,31 +61,86 @@ import "../styles/Communities.scss"
             </div>
         </div>
         <div class="explore">
-            <h2 class="text-center mb-5 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore different communities</h2>
+            <h2 class="text-center mt-5 mb-5 fs-3 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore different communities</h2>
             <div class="explore-logo d-flex flex-wrap mx-5" style="justify-content: center; gap: 2rem;">
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="CSI">
                     <img src="../../public/logo-csi.svg" alt="logo-csi">
                 </div>
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="Agribot">
                     <img src="../../public/logo-agribot.svg" alt="logo-agribot">
                 </div>
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="CP">
                     <img src="../../public/logo-cp.svg" alt="logo-cp">  
                 </div>
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="IWDC">
                     <img src="../../public/logo-iwdc.svg" alt="logo-iwdc">
                 </div>
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="MAD">
                     <img src="../../public/logo-mad.svg" alt="logo-mad">
                 </div>
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="GARY">
                     <img src="../../public/logo-gary.svg" alt="logo-gary">
                 </div>
-                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;">
+                <div class="logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="Daming">
                     <img src="../../public/logo-daming.svg" alt="logo-daming">
                 </div>
             </div>
         </div>
     </div>
     </div>
+
+    <script>
+        const logoCards = document.querySelectorAll('.logo-card');
+
+logoCards.forEach((logoCard) => {
+    let logoText;
+
+    logoCard.addEventListener('mouseover', function (e) {
+        // Periksa apakah event berasal dari elemen .logo-text
+        if (e.target.classList.contains('logo-text')) {
+            return;
+        }
+
+        const textContent = this.getAttribute('data-text');
+        if (!logoText) {
+            logoText = document.createElement('span');
+            logoText.classList.add('logo-text');
+            logoText.textContent = textContent;
+            this.appendChild(logoText);
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    logoText.style.opacity = '1';
+                }, 10);
+            });
+        }
+    });
+
+    logoCard.addEventListener('mouseout', function (e) {
+        // Periksa apakah event berasal dari elemen .logo-text
+        if (e.target.classList.contains('logo-text')) {
+            return;
+        }
+
+        if (logoText) {
+            logoText.style.opacity = '0';
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    this.removeChild(logoText);
+                    logoText = null;
+                }, 150);
+            });
+        }
+    });
+
+    // Menghindari pemanggilan berulang saat mengarahkan kursor ke tulisan itu sendiri
+    logoCard.addEventListener('mouseover', function (e) {
+        if (e.target === logoText) {
+            e.stopPropagation();
+        }
+    });
+});
+
+
+
+    </script>
 </Layout>
