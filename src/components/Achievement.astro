@@ -33,7 +33,7 @@ achievements.sort((a, b) => new Date(b.attributes.date).getTime() - new Date(a.a
           .map((achievement) => (
           <div class="slider-card">
             <div class="d-flex justify-content-center align-items-center mb-4">
-              <img src={achievement.attributes.imageurl} alt="" />
+              <img src={achievement.attributes.imageurl} style="object-fit: cover; max-height: 200px;" alt="" />
             </div>
             <h5 class="mb-0 text-center">
               <b>{achievement.attributes.award} <br /> {achievement.attributes.subcompetition}</b>
