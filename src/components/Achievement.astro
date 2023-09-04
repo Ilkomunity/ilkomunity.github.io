@@ -1,8 +1,13 @@
 ---
-import { getCollection } from "astro:content";
+import fetchApi from "../lib/strapi";
+import type Achievement from "../interfaces/achievement";
 
-const achievements = await getCollection("achievements");
-achievements.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+const achievements = await fetchApi<Achievement[]>({
+  endpoint: 'achievements?populate=image',
+  wrappedByKey: 'data',
+});
+
+achievements.sort((a, b) => new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime());
 ---
 
 <div class="text-center">
@@ -28,13 +33,13 @@ achievements.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.ge
           .map((achievement) => (
           <div class="slider-card">
             <div class="d-flex justify-content-center align-items-center mb-4">
-              <img src={`/${achievement.data.imageSrc}`} alt="" />
+              <img src={achievement.attributes.imageurl} style="object-fit: cover; max-height: 200px;" alt="" />
             </div>
             <h5 class="mb-0 text-center">
-              <b>{achievement.data.award} <br /> {achievement.data.competition}</b>
+              <b>{achievement.attributes.award} <br /> {achievement.attributes.subcompetition}</b>
             </h5>
-            <p class="text-center fw-medium fs-4 pt-4" style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;" >{achievement.data.team}</p>
-            <p class="text-center fs-5 fw-semibold pb-4">{achievement.data.event}</p>
+            <p class="text-center fw-medium fs-4 pt-4" style="background: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;" >{achievement.attributes.name}</p>
+            <p class="text-center fs-5 fw-semibold pb-4">{achievement.attributes.competition}</p>
           </div>
           ))
         }
