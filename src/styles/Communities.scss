@@ -13,6 +13,17 @@
     transform: translateY(-9rem);
 }
 
+.dokumentasi-foto img {
+    height: 216px;
+    width: 360px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.explore-logo a {
+    text-decoration: none;
+}
+
 .logo-card {
     position: relative;
     overflow: hidden; /* Menambahkan overflow: hidden agar transisi terlihat lebih mulus */
