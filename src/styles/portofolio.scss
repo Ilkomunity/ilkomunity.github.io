@@ -1,6 +1,13 @@
 #porto {
     background-image: url("../assets/icons/home-bg.svg");
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#dynamic-porto {
+    background-image: url("../assets/icons/home-bg.svg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
