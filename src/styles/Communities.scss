@@ -13,6 +13,29 @@
     transform: translateY(-9rem);
 }
 
+.information-topside {
+    position: relative;
+    z-index: 10;
+}
+
+.information-inside {
+    position: relative;
+}
+
+.information-inside::before {
+    content: "";
+    position: absolute;
+    inset: -5px; /* control the spread */
+    transform: translate(-2px, 1px, 8px); /* control the offsets */
+    z-index: -1; 
+    border-radius: inherit;
+    opacity: 0.5;
+    background: var(--Grad-A, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+    filter: blur(5px);
+}
+
+
+
 .dokumentasi-foto img {
     height: 216px;
     width: 360px;
