@@ -62,38 +62,6 @@ $customGutter: 100px;
   border-radius: inherit;
 }
 
-/* Style Desktop */
-@media screen and (min-width: 1024px) {
-  .desktop-content {
-    display: block;
-  }
-  .tablet-content, .mobile-content {
-    display: none;
-  }
-}
-
-/* Style Tab */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-content {
-    display: block;
-  }
-  .desktop-content, .mobile-content {
-    display: none;
-  }
-}
-
-/* Style Mobile */
-@media screen and (max-width: 767px) {
-  .mobile-content {
-    display: block;
-  }
-  .desktop-content, .tablet-content {
-    display: none;
-  }
-}
-
-
-
   $primary: #0F55A8;
 
   $custom-colors: (
