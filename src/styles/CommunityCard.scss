@@ -69,12 +69,12 @@ $customGutter: 100px;
   border-radius: inherit;
 }
 
-.card {
+.card-hover {
   transition: box-shadow 0.3s ease;
   transition: transform 0.3s ease;
 }
 
-.card:hover {
+.card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
 }

@@ -59,148 +59,18 @@ $border-width: 10px;
   }
 }
 
-
-
-.content-wrapper {
-  margin-bottom: 126px;
-
-  @media screen and (max-width: $tablet-width) {
-    margin-bottom: 100px;
-  }
-
-  @media screen and (max-width: $mobile-width) {
-    margin-bottom: 80px;
-  }
+.card-userreview {
+  height: 200px; /* You can adjust the height to your desired size */
+  object-fit: cover; /* This ensures the image covers the entire space without distortion */
 }
 
-.carousel-wrapper {
-  display: flex;
-  flex-direction: row;
-  // max-width: 1440px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-
-  @media screen and (max-width: 1200px) {
-    gap: 1.5%;
-  }
-
-  @media screen and (max-width: $tablet-width) {
-    gap: 1rem;
-  }
-
-  @media screen and (max-width: $mobile-width) {
-    gap: 1.25rem;
-  }
-  
-
-
-  .user-custom-box {
-    border: #ffffff00 5px solid;
-    background: linear-gradient(white, white) padding-box,
-      $grad-c border-box; 
-    display: flex;
-    flex-direction: column;
-    border-radius: 70px 20px 40px 20px;
-    align-items: center;
-    justify-content: center;
-    gap: 0.94rem;
-    text-align: center;
-  
-  
-    .author-pic {
-      width: 185px;
-      height: 175px;
-      object-fit: cover;
-      border-radius: 65px 15px 0px 0px;
-    }
-
-    @media screen and (max-width: 1200px) {
-      .author-pic {
-        width: 166px;
-      }
-      gap: 0.8rem
-    }
-
-    @media screen and (max-width: $tablet-width) {
-      .author-pic {
-        width: 166px;
-      }
-    }
-  
-    .author-name {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    .author-job {
-      font-weight: 600;
-      font-size: 0.75rem;
-      margin-bottom: 1.25rem;
-    }
-  }
+.card-text-font{
+  font-size: 12px;
 }
 
-#carouselDesktop {
-  .carousel-indicators {
-    bottom: -50px;
-  }
-  .carousel-indicators [data-bs-target] {
-    width: 80px;
-    height: 8px;
-    border-radius: 5px;;
-    background-image: $grad-a;
-    border-top: none;
-    border-bottom: none;
-  }
-  .carousel-control-prev {
-    left: -110px;
-  }
-  .carousel-control-next {
-    right: -110px;
-  }
+.card-user-border{
+  border-radius: 200px;
 }
 
-#carouselTablet {
-  .carousel-indicators {
-    bottom: -50px;
-    
-  }
-  .carousel-indicators [data-bs-target] {
-    width: 40px;
-    height: 8px;
-    border-radius: 5px;;
-    background-image: $grad-a;
-    border-top: none;
-    border-bottom: none;
-  }
-  .carousel-control-prev {
-    left: -60px;
-  }
-  .carousel-control-next {
-    right: -60px;
-  }
-}
-#carouselMobile {
-  .carousel-indicators {
-    bottom: -60px;
-    
-  }
-  .carousel-indicators [data-bs-target] {
-    width: 40px;
-    height: 8px;
-    border-radius: 5px;;
-    background-image: $grad-a;
-    border-top: none;
-    border-bottom: none;
-  }
-  .carousel-control-prev {
-    left: -20px;
-    // visibility: hidden;
-  }
-  .carousel-control-next {
-    right: -20px;
-  }
-}
 
 
