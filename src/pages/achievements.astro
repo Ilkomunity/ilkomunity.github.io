@@ -1,0 +1,334 @@
+---
+import dropdown_icon from '../assets/icons/achievement-drop-down.svg';
+import '../styles/achivements-pages.scss';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="filter-container">
+    <div class="filter-label">Filter by:</div>
+      <div class="filter-select">
+        <select id="filter-year">
+          <option value="default" hidden></option>
+          <option value="default">Default</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+      
+        <select id="filter-community">
+          <option value="default" hidden></option>
+          <option value="default">Default</option>
+          <option value="AgriBot">AgriBot</option>
+          <option value="AgriUX">AgriUX</option>
+          <option value="CP">CP</option>
+          <option value="CSI">CSI</option>
+          <option value="Daming">Daming</option>
+          <option value="GARY">GARY</option>
+          <option value="IWDC">IWDC</option>
+          <option value="MAD">MAD</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="card-achievements-container">
+    <div class="container-achievements">
+      <div class="card-achievements" data-year="2020" data-community="AgriBot">
+        <div class="card-achievements-before">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png');"></div>
+          <div class="card-achievements-title">2nd winner</div>
+          <div class="card-achievements-text-2">Nama Tim/Solo <img src={dropdown_icon} class="center"></div>
+          <div class="card-achievements-text-3">Kategori Lomba</div>
+        </div>
+        <div class="card-achievements-after">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png'); filter: blur(2px); background-color: lightgray; background-size: cover; background-repeat: no-repeat;"></div>
+            <div class="cover-member">  
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Aljay</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Amm diketu</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-achievements">
+      <div class="card-achievements" data-year="2022" data-community="AgriUX">
+        <div class="card-achievements-before">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png');"></div>
+          <div class="card-achievements-title">2nd winner</div>
+          <div class="card-achievements-text-2">Nama Tim/Solo <img src={dropdown_icon} class="center"></div>
+          <div class="card-achievements-text-3">Kategori Lomba</div>
+        </div>
+        <div class="card-achievements-after">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png'); filter: blur(2px); background-color: lightgray; background-size: cover; background-repeat: no-repeat;"></div>
+            <div class="cover-member">  
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Aljay</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Amm diketu</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-achievements">
+      <div class="card-achievements" data-year="2023" data-community="IWDC">
+        <div class="card-achievements-before">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png');"></div>
+          <div class="card-achievements-title">2nd winner</div>
+          <div class="card-achievements-text-2">Nama Tim/Solo <img src={dropdown_icon} class="center"></div>
+          <div class="card-achievements-text-3">Kategori Lomba</div>
+        </div>
+        <div class="card-achievements-after">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png'); filter: blur(2px); background-color: lightgray; background-size: cover; background-repeat: no-repeat;"></div>
+            <div class="cover-member">  
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Aljay</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Amm diketu</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-achievements">
+      <div class="card-achievements" data-year="2021" data-community="MAD">
+        <div class="card-achievements-before">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png');"></div>
+          <div class="card-achievements-title">2nd winner</div>
+          <div class="card-achievements-text-2">Nama Tim/Solo <img src={dropdown_icon} class="center"></div>
+          <div class="card-achievements-text-3">Kategori Lomba</div>
+        </div>
+        <div class="card-achievements-after">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png'); filter: blur(2px); background-color: lightgray; background-size: cover; background-repeat: no-repeat;"></div>
+            <div class="cover-member">  
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Aljay</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Amm diketu</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-achievements">
+      <div class="card-achievements" data-year="2020" data-community="AgriBot">
+        <div class="card-achievements-before">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png');"></div>
+          <div class="card-achievements-title">2nd winner</div>
+          <div class="card-achievements-text-2">Nama Tim/Solo <img src={dropdown_icon} class="center"></div>
+          <div class="card-achievements-text-3">Kategori Lomba</div>
+        </div>
+        <div class="card-achievements-after">
+          <div class="card-achievements-image" style="background-image: url('achievement-1.png'); filter: blur(2px); background-color: lightgray; background-size: cover; background-repeat: no-repeat;"></div>
+            <div class="cover-member">  
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Aljay</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Amm diketu</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Kotop</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+              <div class="member">
+                <div class="card-achievements-member">Made Althaaf Naufal Gusendra</div>
+                <a href="#" class="button">LinkedIn</a>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+</Layout>
+
+
+<script>
+const filterYear = document.getElementById("filter-year");
+const filterCommunity = document.getElementById("filter-community");
+const cardContainer = document.querySelector(".card-achievements-container");
+
+filterYear.options[0].textContent = "Tahun";
+
+filterCommunity.options[0].textContent = "Komunitas";
+
+
+function centerOptionText(selectElement) {
+  const options = selectElement.options;
+  for (let i = 0; i < options.length; i++) {
+    const option = options[i];
+    option.style.textAlign = 'center'; 
+    option.style.padding = '5px 0';
+    option.style.lineHeight = '1.5';
+  }
+}
+
+centerOptionText(filterYear);
+centerOptionText(filterCommunity);
+
+filterYear.addEventListener("change", filterAndSortCards);
+filterCommunity.addEventListener("change", filterAndSortCards);
+
+function filterAndSortCards() {
+  const selectedYear = filterYear.value;
+  const selectedCommunity = filterCommunity.value;
+
+  const cards = Array.from(cardContainer.querySelectorAll(".container-achievements"));
+
+  cards.forEach((card) => {
+    const cardYear = card.querySelector(".card-achievements").getAttribute("data-year");
+    const cardCommunity = card.querySelector(".card-achievements").getAttribute("data-community");
+
+    const yearMatch = selectedYear === "default" || selectedYear === cardYear;
+    const communityMatch = selectedCommunity === "default" || selectedCommunity === cardCommunity;
+
+    if (yearMatch && communityMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  cards.sort((a, b) => {
+    const orderA = parseInt(a.querySelector(".card-achievements").getAttribute("data-order"), 10);
+    const orderB = parseInt(b.querySelector(".card-achievements").getAttribute("data-order"), 10);
+    return orderA - orderB;
+  });
+
+  cards.forEach((card) => {
+    cardContainer.appendChild(card);
+  });
+}
+
+filterAndSortCards();
+
+
+</script>
