@@ -14,7 +14,7 @@
 }
 
 .showcase-card:hover {
-  transform: translateY(150px);
+  transform: translateY(-150px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
   background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
   height: auto;
