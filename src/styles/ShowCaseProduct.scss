@@ -2,7 +2,7 @@
 .showcase-card-background {
   border-radius: 24px 120px 24px 24px;
   background-color: purple;
-  padding: 4.65rem;
+  padding: 0 4.65rem 4.65rem 4.65rem;
   height: 450px;
   margin-bottom: 50px;
 }
@@ -10,11 +10,13 @@
 .showcase-card{
   border-radius: 16px 120px 16px 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  margin-bottom: -76px;
+  margin-bottom: -125px;
+  margin-top: 100px;
+  top: -50px;
 }
 
 .showcase-card:hover {
-  transform: translateY(-150px);
+  transform: translateY(-100px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
   background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
   height: auto;
