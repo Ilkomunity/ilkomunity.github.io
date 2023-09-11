@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/portofolio.scss";
+import porto_image from "../assets/images/porto-placeholder.png";
+
+
+
+const porto_card = [
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  },
+  {
+    image: porto_image,
+    title: "Carepal",
+    author: "dhikarfi",
+    category: "Internal Project",
+    date: "Nov 2022",
+    link: "#",
+  }
+];
+---
+
+<Layout>
+  <section id="dynamic-porto">
+    <section
+      id="porto-hero-container"
+      class="d-flex justify-content-center pt-10"
+    >
+      <div class="d-flex flex-column align-items-center">
+        <h1 class="text-light display-1 fw-bold">CTF Write Up</h1>
+        <p class="px-4-md text-light fs-5 text-center">
+          Dive into our comprehensive write-ups, documenting our journey and insights from various capture the flag competitions.
+        </p>
+      </div>
+
+      <div id="porto-blur"></div>
+    </section>
+
+    <section
+      id="dynamic-porto-item-container"
+      class="d-flex flex-wrap justify-content-lg-evenly px-lg-4 column-gap-lg-2 gap-4 justify-content-center"
+    >
+      {porto_card.map((porto, id) => {
+        return (
+          <div
+            id="porto-card-container"
+            class="d-flexjustify-content-center d-md-block"
+          >
+            <div id="porto-card" class="d-flex flex-column">
+              <img src={porto.image} />
+              <h2 class="fw-bold mt-2 fs-4">{porto.title}</h2>
+              <p class="opacity-75">by {porto.author}</p>
+              <div class="d-flex justify-content-between mt-4 mb-3">
+                <p
+                  class="p-2 fs-porto-custom fw-bold align-self-center"
+                  style="border-radius: 1.5rem;
+                    background: var(--aa-300, #E70FEB);"
+                >
+                  {porto.category}
+                </p>
+                <p class="p-2 fs-6 fw-bold">{porto.date}</p>
+              </div>
+              <button class="showToast fw-bold fs-5">
+                See Project
+              </button>
+            </div>
+          </div>
+        );
+      })}
+    </section>
+  </section>
+</Layout>
