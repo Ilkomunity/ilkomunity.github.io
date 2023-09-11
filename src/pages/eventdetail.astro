@@ -14,83 +14,96 @@ import doc_9 from "/documentation-saung-desain-9.png";
 ---
 
 <Layout>
-  <section id="hero-container" class="d-flex">
-    <div
-      id="hero-title"
-      class="text-white d-flex flex-column align-items-center"
-    >
-      <img src={poster} class="poster" alt="..." />
-      <h1 class="py-3 display-1 fw-semibold">Saung Desain</h1>
-      <p class="fs-5 text-center">
-        Saung Desain merupakan acara workshop tentang UI/UX dengan membawakan
-        tema yang sedang hangat diperbicangnkan di dunia UI/UX. Saung Design
-        sudah terlaksana selama 4 tahun. Pada tahun ini Saung Design akan
-        membawakan topik “Tu eres el mejor portero del mundo”, yang akan
-        dibawakan oleh alumni dari Agriux, yaitu NgabBiyyu. Beliau adalah
-        seorang UI/UX Designer di Samsung Indonesia
-      </p>
-    </div>
-  </section>
+  <section id="event-detail" class="">
+    <section id="hero-container" class="d-flex">
+      <div
+        id="hero-title"
+        class="text-white d-flex flex-column align-items-center"
+      >
+      <div class="top-border">
+        <img src={poster} class="position-relative" alt="..." />
+      </div>
+        <h1 class="py-3 display-1 fw-semibold">Saung Desain</h1>
+        <p class="fs-5 text-center">
+          Saung Desain merupakan acara workshop tentang UI/UX dengan membawakan
+          tema yang sedang hangat diperbicangnkan di dunia UI/UX. Saung Design
+          sudah terlaksana selama 4 tahun. Pada tahun ini Saung Design akan
+          membawakan topik “Tu eres el mejor portero del mundo”, yang akan
+          dibawakan oleh alumni dari Agriux, yaitu NgabBiyyu. Beliau adalah
+          seorang UI/UX Designer di Samsung Indonesia
+        </p>
+      </div>
+    </section>
 
-  <section id="poster-container">
-    <div
-      class="d-flex flex-column flex-lg-row text-center justify-content-center align-items-center"
-    >
-      <img src={poster} class="poster mb-5 mb-lg-0 text-center" alt="..." />
-      <div class="d-flex flex-column gap-5 justify-content-center align-items-center">
-        <div
-          class="custom-card-1 fs-3 fw-semibold py-4 mb-md-4 text-center position-relative"
-        >
-          <p class="position-absolute top-0 end-0 px-4 py-2 text-white date">
-            Date
-          </p>
-          <p class="pt-sm-2 pt-0">Will be announced soon</p>
+    <section id="poster-container" class="mt-5 mt-lg-7">
+      <div
+        class="d-flex flex-column flex-lg-row text-center justify-content-center align-items-center"
+      >
+        <div class="bottom-border">
+          <img
+            src={poster}
+            class="poster position-relative mb-5 mb-lg-0 text-center"
+            alt="..."
+          />
         </div>
-
         <div
-          class="custom-card-2 fs-3 fw-semibold text-center py-1 py-lg-2 mb-md-4 position-relative"
+          id="poster-column" class="d-flex flex-column gap-5 justify-content-center align-items-center"
         >
-          <p class="position-absolute top-0 start-0 px-4 pt-2 text-white htm">
-            HTM
-          </p>
-          <div class="d-flex justify-content-around pt-4">
-            <p class="text-decoration-underline py-1 py-lg-2">Free</p>
-            <p class="daftar text-white px-5 py-1 py-lg-2">Daftar</p>
+          <div
+            class="custom-card-1 fs-3 fw-semibold py-4 mb-md-4 text-center position-relative"
+          >
+            <p class="position-absolute top-0 end-0 px-4 py-2 text-white date">
+              Date
+            </p>
+            <p class="pt-2">Will be announced soon</p>
+          </div>
+
+          <div
+            class="custom-card-2 fs-3 fw-semibold text-center py-1 py-lg-2 mb-md-4 position-relative"
+          >
+            <p class="position-absolute top-0 start-0 px-4 pt-2 text-white htm">
+              HTM
+            </p>
+            <div class="d-flex justify-content-around pt-4">
+              <p class="text-decoration-underline py-1 py-lg-2">Free</p>
+              <p class="daftar text-white px-5 py-1 py-lg-2">Daftar</p>
+            </div>
+          </div>
+
+          <div
+            class="custom-card-1 fs-3 fw-semibold py-4 text-center position-relative"
+          >
+            <p
+              class="position-absolute top-0 start-50 px-3 py-2 text-white contact-person"
+            >
+              Contact Person
+            </p>
+            <p class="pt-2">
+              Raka Irzan - <span class="text-decoration-underline"
+                >0812xxxxxxx</span
+              >
+            </p>
           </div>
         </div>
-
-        <div
-          class="custom-card-1 fs-3 fw-semibold py-4 text-center position-relative"
-        >
-          <p
-            class="position-absolute top-0 start-50 px-3 py-2 text-white contact-person"
-          >
-            Contact Person
-          </p>
-          <p class="pt-1 pt-sm-2">
-            Raka Irzan - <span class="text-decoration-underline"
-              >0812xxxxxxx</span>
-          </p>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="documentation-container" class="mx-lg-5 mx-2">
-    <h1 class="text-center fw-bold">Documentation of Saung Desain 2022</h1>
-    <div
-      id="documentation-images"
-      class="d-flex my-5 justify-content-center flex-wrap gap-4 text-center"
-    >
-      <img src={doc_1} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_2} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_3} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_4} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_5} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_6} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_7} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_8} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-      <img src={doc_9} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
-    </div>
+    <section id="documentation-container" class="mx-lg-5 mx-2 pb-5">
+      <h1 class="text-center fw-bold">Documentation of Saung Desain 2022</h1>
+      <div
+        id="documentation-images"
+        class="d-flex mt-5 justify-content-center flex-wrap gap-4 text-center"
+      >
+        <img src={doc_1} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_2} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_3} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_4} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_5} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_6} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_7} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_8} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+        <img src={doc_9} alt="" class="col-8 col-md-4 col-lg-4 my-2 my-lg-1" />
+      </div>
+    </section>
   </section>
 </Layout>
