@@ -29,9 +29,24 @@ import "../styles/Communities.scss"
             <div class="jadwal-meet col-10 col-md-7 col-lg-4" style="">
                 <h2 class="information-topside ms-5 px-4 py-1 d-inline-flex text-white" style="transform: translateY(2rem); border-radius: 15px 50px 15px 15px; background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); width: fit-content;">Jadwal meet</h2>
                 <div class="information-inside text-center border" style="height: 15rem; display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2.5rem 9.375rem 2.5rem 2.5rem; background-color: white">
-                    <h2>Setiap Rabu</h2>
-                    <h2>18.30-20.00</h2>
-                    <h2>RKU 2.01</h2>
+                    <h2 style="font-weight: bold;">Setiap Rabu</h2>
+                    <h2 style="font-weight: bold;">18.30-20.00</h2>
+                    <h2 style="font-weight: bold; display: flex; gap: 0.5rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="34" viewBox="0 0 29 34" fill="none">
+                            <path d="M23.5156 24.0239C21.8173 25.7618 18.0107 29.6573 15.9281 31.7885C15.1435 32.5915 13.8566 32.5916 13.072 31.7887C11.0236 29.6925 7.29864 25.8805 5.48439 24.0239C0.505204 18.9284 0.505204 10.667 5.48439 5.57159C10.4636 0.476136 18.5364 0.476136 23.5156 5.57159C28.4948 10.667 28.4948 18.9284 23.5156 24.0239Z" stroke="url(#paint0_linear_1998_8637)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.2813 14.7977C19.2813 17.5 17.1406 19.6906 14.5 19.6906C11.8594 19.6906 9.71875 17.5 9.71875 14.7977C9.71875 12.0955 11.8594 9.90483 14.5 9.90483C17.1406 9.90483 19.2813 12.0955 19.2813 14.7977Z" stroke="url(#paint1_linear_1998_8637)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                              <linearGradient id="paint0_linear_1998_8637" x1="1.75" y1="17.5" x2="27.25" y2="17.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0F18ED"/>
+                                <stop offset="1" stop-color="#E70FEB"/>
+                              </linearGradient>
+                              <linearGradient id="paint1_linear_1998_8637" x1="1.75" y1="17.5" x2="27.25" y2="17.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0F18ED"/>
+                                <stop offset="1" stop-color="#E70FEB"/>
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                        RKU 2.01</h2>
                 </div>
             </div>
             <div class="benefit col-10 col-md-7 col-lg-4" style="">
@@ -59,32 +74,32 @@ import "../styles/Communities.scss"
                 <img src={agriux8} alt="agriux8" class="col-8 col-md-4 col-lg-3">
             </div>
             <div class="dokumentasi-contactperson text-center">
-                <p class="text-b-b300 fw-bold">Contact person: 089513348202 (Raka)</p>
-                <p class="text-b-b300 fw-bold" style="display: flex; gap: 1rem; justify-content: center;"><i class="fa-brands fa-instagram" style="font-size: 25px;"></i> <i class="fa-brands fa-linkedin" style="font-size: 25px;"></i> <i class="fa-brands fa-youtube" style="font-size: 25px;"></i></p>
+                <a href="#" class="text-b-b300 fw-bold" style="text-decoration: none;">Contact person: 089513348202 (Raka)</a>
+                <p class="text-b-b300 fw-bold mt-2" style="display: flex; gap: 1rem; justify-content: center;"><a href="#" style="color: #EDA20F;"><i class="fa-brands fa-instagram" style="font-size: 25px;"></i></a><a href="#" style="color: #EDA20F;"><i class="fa-brands fa-linkedin" style="font-size: 25px;"></i></a><a href="#" style="color: #EDA20F;"><i class="fa-brands fa-youtube" style="font-size: 25px;"></i></a></p>
             </div>
         </div>
         <div class="explore">
             <h2 class="text-center mt-5 mb-5 fs-3 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore different communities</h2>
             <div class="explore-logo d-flex flex-wrap mx-5" style="justify-content: center; gap: 2rem;">
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="CSI">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="CSI">
                     <img src="../../public/logo-csi.svg" alt="logo-csi">
                 </a>
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="Agribot">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="Agribot">
                     <img src="../../public/logo-agribot.svg" alt="logo-agribot">
                 </a>
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="CP">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="CP">
                     <img src="../../public/logo-cp.svg" alt="logo-cp">  
                 </a>
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="IWDC">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="IWDC">
                     <img src="../../public/logo-iwdc.svg" alt="logo-iwdc">
                 </a>
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="MAD">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="MAD">
                     <img src="../../public/logo-mad.svg" alt="logo-mad">
                 </a>
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="GARY">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="GARY">
                     <img src="../../public/logo-gary.svg" alt="logo-gary">
                 </a>
-                <a class="showToast logo-card col-8 col-md-6 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="Daming">
+                <a class="showToast logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" style="border-radius: 35px;" data-text="Daming">
                     <img src="../../public/logo-daming.svg" alt="logo-daming">
                 </a>
             </div>
