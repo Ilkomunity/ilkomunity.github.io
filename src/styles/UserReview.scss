@@ -59,18 +59,14 @@ $border-width: 10px;
   }
 }
 
-.card-userreview {
-  height: 200px; /* You can adjust the height to your desired size */
-  object-fit: cover; /* This ensures the image covers the entire space without distortion */
+.card-image-review{
+  width: 185.057px;
+height: 195px;
+object-fit: cover;
+
 }
 
-.card-text-font{
-  font-size: 12px;
+.card-user-review{
+  border-radius: 80px 20px 40px 20px;
 }
-
-.card-user-border{
-  border-radius: 200px;
-}
-
-
 

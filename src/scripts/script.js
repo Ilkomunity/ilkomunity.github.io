@@ -28,12 +28,13 @@ $(document).ready(function(){
     $(".owl-carousel-showcase").owlCarousel({
         loop:true,
         margin:0,
-        nav:false,
+        nav:true,
         dots:false, 
         autoplay:false,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
         slideBy: 3,
+        mouseDrag: false,
         navText: [
             "<i class='fa fa-angle-left'></i>",
             "<i class='fa fa-angle-right'></i>"
@@ -51,4 +52,30 @@ $(document).ready(function(){
             }
         }
     });
+        $(".owl-carousel-review").owlCarousel({
+            loop:true,
+            margin:0,
+            nav:true,
+            dots:false, 
+            autoplay:false,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            slideBy: 5,
+            mouseDrag: false,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            responsive:{
+                0:{
+                    items:2,
+                },
+                768:{
+                    items:3
+                },
+                1024:{
+                    items:5
+                }
+            }
+        });
 });
