@@ -27,10 +27,10 @@ $(document).ready(function(){
     });
     $(".owl-carousel-showcase").owlCarousel({
         loop:true,
-        margin:10,
+        margin:0,
         nav:false,
         dots:false, 
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
         slideBy: 3,

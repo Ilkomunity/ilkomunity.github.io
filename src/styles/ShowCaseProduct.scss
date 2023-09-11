@@ -1,21 +1,42 @@
-.showcase-card{
-  max-width: 300px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-  border-top-left-radius: 16px;
-  border-top-right-radius: 120px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  width: auto;
-  overflow: hidden;
-  position: relative;
-
-}
 
 .showcase-card-background {
   border-radius: 24px 120px 24px 24px;
   background-color: purple;
   padding: 4.65rem;
-
+  height: 450px;
+  margin-bottom: 50px;
 }
 
+.showcase-card{
+  border-radius: 16px 120px 16px 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  margin-bottom: -76px;
+}
+
+.showcase-card:hover {
+  transform: translateY(150px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096);
+  background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+  height: auto;
+  margin-bottom: -100px;
+  position: absolute;
+}
+
+.card-img-top{
+  padding: 20px 20px 20px 20px;
+  height: 220px;
+  border-radius: 36px 120px 36px 36px;
+}
+
+.card-text-opacity{
+  opacity: 0.7;
+}
+
+.circle-card{
+  background-color: #8D098F;
+  border-radius: 20px;
+}
+
+.project-button{
+  border-radius: 20px;
+}
