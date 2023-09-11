@@ -1,0 +1,206 @@
+#hero-container {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 80%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url(../assets/images/event-detail-hero.png);
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 950px;
+}
+
+#hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+#hero-title {
+  padding-top: 8rem;
+}
+
+#hero-title img {
+  width: 200px;
+  height: 242px;
+  border-radius: 25px 60px;
+  border: 5px solid var(--Grad-C, #bed4ff);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+#poster-container {
+  margin: 6rem 12rem 5rem;
+}
+
+#poster-container > div {
+  margin: 0 5rem;
+  gap: 5rem;
+}
+
+#poster-container div img {
+  width: 425.707px;
+  height: 506px;
+  border-radius: 75.749px 181.796px;
+  border: 12px solid var(--Grad-C, #bed4ff);
+  box-shadow: 0px 6.05988px 6.05988px 0px rgba(0, 0, 0, 0.25);
+}
+
+#documentation-container > h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #0f18ed 0%, #e70feb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#documentation-images img {
+  width: 360px;
+  height: 216px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.daftar {
+  border-radius: 10px 20px;
+  background: var(--Grad-B, linear-gradient(90deg, #ede40f 0%, #eda20f 100%));
+}
+
+.custom-card-1 {
+  border-radius: 40px 10px;
+  border: 10px solid var(--Grad-C, #bed4ff);
+  background: #fff;
+  width: 402px;
+  height: 120px;
+}
+
+.custom-card-2 {
+  border-radius: 10px 40px;
+  border: 10px solid var(--Grad-C, #bed4ff);
+  background: #fff;
+  width: 402px;
+}
+
+.custom-card-1 .date {
+  border-radius: 50px 15px 15px 15px;
+  background: var(--Grad-A, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  transform: translate(-20px, -40px);
+}
+
+.custom-card-2 .htm {
+  border-radius: 15px 50px 15px 15px;
+  background: var(--Grad-A, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  transform: translate(calc(10% + 10px), -30px);
+}
+
+.custom-card-1 .contact-person {
+  border-radius: 50px 15px 15px 15px;
+  background: var(--Grad-A, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+  transform: translate(-50%, -35px);
+  width: 70%;
+}
+
+// .poster {
+//   z-index: 0;
+// }
+
+// .poster::before {
+//   content: "";
+//   z-index: -1;
+//   position: absolute;
+//   top: -4px;
+//   left: -4px;
+//   background: var(
+//     --grad-c,
+//     linear-gradient(
+//       180deg,
+//       #bed4ffcc,
+//       #f6beffcc,
+//       #d4cbffc8,
+//       #faa0f6cc,
+//       #d0acfecc
+//     )
+//   );
+//   width: calc(100% + 8px);
+//   height: calc(100% + 8px);
+//   border-radius: inherit;
+// }
+
+// .poster::after {
+//   content: "";
+//   z-index: -1;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background: inherit;
+//   border-radius: inherit;
+// }
+
+#hero-title p {
+  width: 50%;
+}
+
+@media (max-width: 576px) {
+
+  #hero-title > p {
+    font-size: 1rem !important;
+  }
+
+  #poster-container {
+    margin: 6rem 2rem 5rem;
+  }
+
+  #poster-container > div {
+    margin: 0 2rem;
+    gap: 5rem;
+  }
+
+  #poster-container div img {
+    width: 325.707px;
+    height: 406px;
+    border-radius: 75.749px 181.796px;
+    border: 12px solid var(--Grad-C, #bed4ff);
+    box-shadow: 0px 6.05988px 6.05988px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .custom-card-1 {
+    border-radius: 40px 10px;
+    border: 10px solid var(--Grad-C, #bed4ff);
+    background: #fff;
+    width: 322px;
+    height: 100px;
+  }
+  
+  .custom-card-2 {
+    border-radius: 10px 40px;
+    border: 10px solid var(--Grad-C, #bed4ff);
+    background: #fff;
+    width: 322px;
+  }
+
+  .custom-card-1 .contact-person {
+    border-radius: 50px 15px 15px 15px;
+    background: var(--Grad-A, linear-gradient(90deg, #0f18ed 0%, #e70feb 100%));
+    transform: translate(-50%, -35px);
+    width: 80%;
+  }
+
+  #documentation-container > h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #0f18ed 0%, #e70feb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-title p {
+    width: 75%;
+  }
+}
+
