@@ -1,5 +1,11 @@
 ---
+import fetchApi from "../lib/strapi";
+import type Communities from "../interfaces/communities";
 
+const communities = await fetchApi<Communities[]>({
+    endpoint: 'communities?populate=logo,documentations',
+    wrappedByKey: 'data',
+});
 ---
 <nav class="navbar navbar-expand-lg bg-a-a50 px-4">
     <div class="container-fluid mx-3">
@@ -26,15 +32,11 @@
                   Communities
                 </a>
                 <ul class="dropdown-menu bg-a-a50">
-                  <li>
-                    <a class="showToast dropdown-item text-neutral-n80" href="#">AgriUX</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">CSI</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">Agribot</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">CP</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">IWDC</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">Gary</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">MAD</a></li>
-                  <li><a class="showToast dropdown-item text-neutral-n80" href="#">Daming</a></li>
+                  {
+                    communities.map((community) => (
+                      <li><a class="dropdown-item text-neutral-n80" href={`/${community.attributes.abbr}`}>{community.attributes.abbr}</a></li>
+                    ))
+                  }
                 </ul>
               </li>
               <li class="nav-item disabled">
