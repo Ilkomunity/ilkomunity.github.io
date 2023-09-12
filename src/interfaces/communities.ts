@@ -11,5 +11,11 @@ export default interface Communities {
         location: string,
         imageurl: string;
         logourl: string;
+        description: string;
+        benefits: object;
+        contact_name: string;
+        contact_number: string;
+        documentationsurl: object;
+        social_media: object;
     };
 }
