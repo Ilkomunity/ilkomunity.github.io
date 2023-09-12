@@ -2,15 +2,28 @@
 .showcase-card-background {
   border-radius: 24px 120px 24px 24px;
   background-color: purple;
-  padding: 0 4.65rem 4.65rem 4.65rem;
+  padding: 0rem 4.65rem 0rem 4.65rem;
   height: 450px;
   margin-bottom: 50px;
+  overflow: hidden;
+  background-image: url("EllipseL.svg"), url("EllipseR.svg");
+  background-position: 0% 100%, 100% 0%;
+  background-size: auto, auto;
+  background-repeat: no-repeat, no-repeat;
+  position: relative;
+}
+
+.owl-carousel-showcase{
+  overflow: hidden;
+}
+
+.owl-carousel-showcase:hover{
+  overflow: visible;
 }
 
 .showcase-card{
   border-radius: 16px 120px 16px 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  margin-bottom: -125px;
   margin-top: 100px;
   top: -50px;
 }

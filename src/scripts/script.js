@@ -36,9 +36,10 @@ $(document).ready(function(){
         slideBy: 3,
         mouseDrag: false,
         navText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
+            "<img src='showcase-products-arrow-left.svg'>",
+            "<img src='showcase-products-arrow-right.svg'>"
         ],
+        
         responsive:{
             0:{
                 items:1,
@@ -63,15 +64,16 @@ $(document).ready(function(){
             slideBy: 5,
             mouseDrag: false,
             navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
+                "<img src='arrow-left.svg'>",
+                "<img src='arrow-right.svg'>"
             ],
             responsive:{
                 0:{
                     items:2,
                 },
                 768:{
-                    items:3
+                    items:3,
+                    margin: 5
                 },
                 1024:{
                     items:5
