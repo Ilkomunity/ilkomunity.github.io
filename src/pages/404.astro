@@ -1,0 +1,38 @@
+---
+import "../styles/404.scss";
+import Layout from "../layouts/Layout.astro";
+import err from "../assets/icons/404.svg";
+---
+
+<Layout>
+    <section>
+        <div>
+            <div id="err-bg" class="position-absolute z-1" style="top: 22%;">
+                <h2>ERROR ERROR ERROR ERROR ERROR ERROR ERROR</h2>
+                <h2 style="transform: translateY(-20px);">
+                    ERROR ERROR ERROR ERROR ERROR ERROR ERROR
+                </h2>
+                <h2 style="transform: translateY(-40px);">
+                    ERROR ERROR ERROR ERROR ERROR ERROR ERROR
+                </h2>
+            </div>
+        </div>
+        <div
+            id="container"
+            class="position-relative z-3 pt-9 pb-10 d-flex flex-column align-items-center justify-content-center gap-6"
+        >
+            <div id="err-main" class="d-flex justify-content-center">
+                <img src={err}>
+            </div>
+            <div id="err-desc" class="d-flex gap-1">
+                <h2 class="fw-bolder">You’re lost, Ilkomerz</h2>
+                <span class="h2">😔</span>
+            </div>
+            <div id="err-anchor">
+                <a href="/" class="text-decoration-none">
+                    <p class="fw-bolder fs-5">Back to Homepage</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
