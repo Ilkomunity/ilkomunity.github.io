@@ -86,6 +86,13 @@
     z-index: -1;
 }
 
+#porto-card img {
+    border-radius: 1rem 6.25rem 1rem 1rem;
+    height: 12rem;
+    object-fit: cover;
+}
+
+
 @media screen and (max-width: 320px) {
     #porto-item-container {
         transform: translateY(-14rem);
@@ -101,14 +108,10 @@
 
     #porto-card {
         padding: 1rem;
-        width: 90%;
+        // width: 90%;
         color: white;
         border-radius: 1rem 7.5rem 1rem 1rem;
         background: var(--aa-400, #A20BA5);
-    }
-
-    #porto-card img {
-        border-radius: 1rem 6.25rem 1rem 1rem;
     }
 
     #porto-card button {
@@ -174,9 +177,6 @@
         background: var(--aa-400, #A20BA5);
     }
 
-    #porto-card img {
-        border-radius: 1rem 6.25rem 1rem 1rem;
-    }
 
     #porto-card button {
         align-self: center;
@@ -242,9 +242,6 @@
         background: var(--aa-400, #A20BA5);
     }
 
-    #porto-card img {
-        border-radius: 1rem 6.25rem 1rem 1rem;
-    }
 
     #porto-card button {
         align-self: center;
@@ -352,7 +349,7 @@
     }
 
 
-    #dynamic-porto-item-container{
+    #dynamic-porto-item-container {
         gap: 3rem;
         transform: translateY(-20rem);
         padding: 0 1rem 0 1rem;
@@ -373,9 +370,6 @@
         background: var(--aa-400, #A20BA5);
     }
 
-    #porto-card img {
-        border-radius: 1rem 6.25rem 1rem 1rem;
-    }
 
 
     #porto-card button {

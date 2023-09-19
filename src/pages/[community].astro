@@ -3,6 +3,7 @@ import fetchApi from "../lib/strapi";
 import type Communities from "../interfaces/communities";
 import Layout from "../layouts/Layout.astro";
 import "../styles/Communities.scss"
+import Navbar from "../components/Navbar.astro";
 
 
 export async function getStaticPaths() {
@@ -27,6 +28,7 @@ const communities = await fetchApi<Communities[]>({
 });
 ---
 <Layout>
+    <Navbar communitiesnav="active" />
     <div class="background-image">
         <div class="communities-hero pb-3">
             <div class="col-10 col-lg-9 mx-auto">

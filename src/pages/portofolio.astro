@@ -1,11 +1,19 @@
 ---
+import fetchApi from "../lib/strapi";
+import type Portofolio from "../interfaces/portofolio";
 import Layout from "../layouts/Layout.astro";
 import "../styles/portofolio.scss";
-import porto_image from "../assets/images/porto-placeholder.png";
+import Navbar from "../components/Navbar.astro";
+
+const portofolios = await fetchApi<Portofolio[]>({
+  endpoint: 'portofolios?populate=thumbnail',
+  wrappedByKey: 'data',
+});
+
 
 const porto_container = [
   {
-    sectionID: "CTF-write-up",
+    sectionID: "ctf-write-up",
     header: "CTF Write Up",
     paragraph:
       "Dive into our comprehensive write-ups, documenting our journey and insights from various capture the flag competitions.",
@@ -47,60 +55,11 @@ const porto_container = [
       "Browse through our web development projects, where we craft stunning websites that make a lasting impression.",
   },
 ];
-
-const porto_card = [
-  {
-    image: porto_image,
-    title: "Carepal",
-    author: "dhikarfi",
-    category: "Internal Project",
-    date: "Nov 2022",
-    link: "#",
-  },
-  {
-    image: porto_image,
-    title: "Carepal",
-    author: "dhikarfi",
-    category: "Internal Project",
-    date: "Nov 2022",
-    link: "#",
-  },
-  {
-    image: porto_image,
-    title: "Carepal",
-    author: "dhikarfi",
-    category: "Internal Project",
-    date: "Nov 2022",
-    link: "#",
-  },
-  {
-    image: porto_image,
-    title: "Carepal",
-    author: "dhikarfi",
-    category: "Internal Project",
-    date: "Nov 2022",
-    link: "#",
-  },
-  {
-    image: porto_image,
-    title: "Carepal",
-    author: "dhikarfi",
-    category: "Internal Project",
-    date: "Nov 2022",
-    link: "#",
-  },
-  {
-    image: porto_image,
-    title: "Carepal",
-    author: "dhikarfi",
-    category: "Internal Project",
-    date: "Nov 2022",
-    link: "#",
-  },
-];
+const categoryCounts = {};
 ---
 
 <Layout>
+  <Navbar portfolio="active" />
   <section id="porto">
     <section
       id="porto-hero-container"
@@ -121,41 +80,17 @@ const porto_card = [
             id="item-link"
             class="d-lg-none d-flex flex-wrap justify-content-center column-gap-2 row-gap-2 row-gap-md-4"
           >
-            <div id="item">
-              <a href="#CTF-write-up">
-                <p class="fw-bold">CTF Write Up</p>
-              </a>
-            </div>
-            <div id="item">
-              <a href="#daming-notebook">
-                <p class="fw-bold">Daming Notebook</p>
-              </a>
-            </div>
-            <div id="item">
-              <a href="#game-dev">
-                <p class="fw-bold">Game Dev</p>
-              </a>
-            </div>
-            <div id="item">
-              <a href="#hall-of-algorithm">
-                <p class="fw-bold">Hall Of Algorithms</p>
-              </a>
-            </div>
-            <div id="item">
-              <a href="#mobile-dev">
-                <p class="fw-bold">Mobile Dev</p>
-              </a>
-            </div>
-            <div id="item">
-              <a href="#uiux-design">
-                <p class="fw-bold">UI/UX Design</p>
-              </a>
-            </div>
-            <div id="item">
-              <a href="#web-dev">
-                <p class="fw-bold">Web Dev</p>
-              </a>
-            </div>
+            {
+              porto_container.map((porto) => {
+                return (
+                  <div id="item">
+                    <a href={`#${porto.sectionID}`}>
+                      <p class="fw-bold">{porto.header}</p>
+                    </a>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>
@@ -170,41 +105,17 @@ const porto_card = [
       <!-- Desktop item container -->
       <div id="desktop-nav-container" class="d-none mb-5">
         <div id="desktop-nav">
-          <div id="desktop">
-            <a href="#CTF-write-up" class="text-decoration-none">
-              <p style="cursor: pointer;">CTF Write Up</p>
-            </a>
-          </div>
-          <div id="desktop">
-            <a href="#daming-notebook" class="text-decoration-none">
-              <p style="cursor: pointer;">Daming Notebook</p>
-            </a>
-          </div>
-          <div id="desktop">
-            <a href="#game-dev" class="text-decoration-none">
-              <p style="cursor: pointer;">Game Dev</p>
-            </a>
-          </div>
-          <div id="desktop">
-            <a href="#hall-of-algorithm" class="text-decoration-none">
-              <p style="cursor: pointer;">Hall of algorithms</p>
-            </a>
-          </div>
-          <div id="desktop">
-            <a href="#mobile-dev" class="text-decoration-none">
-              <p style="cursor: pointer;">Mobile Dev</p>
-            </a>
-          </div>
-          <div id="desktop">
-            <a href="#uiux-design" class="text-decoration-none">
-              <p style="cursor: pointer;">UI/UX Design</p>
-            </a>
-          </div>
-          <div id="desktop">
-            <a href="#web-dev" class="text-decoration-none">
-              <p style="cursor: pointer;">Web Dev</p>
-            </a>
-          </div>
+          {
+            porto_container.map((porto) => {
+              return (
+              <div id="desktop">
+                <a href={`#${porto.sectionID}`} class="text-decoration-none">
+                  <p style="cursor: pointer;">{porto.header}</p>
+                </a>
+              </div>
+              )
+            })
+          }
         </div>
       </div>
       <div>
@@ -229,7 +140,7 @@ const porto_card = [
                         <p class="fw-normal">{porto.paragraph}</p>
                       </div>
                       <div id="porto-button" style="cursor: pointer;">
-                        <a href="/dynamic" class="fw-bold py-4 px-5">
+                        <a class="fw-bold py-4 px-5" href={`portofolio/${porto.sectionID}`}>
                           View All
                         </a>
                       </div>
@@ -240,32 +151,40 @@ const porto_card = [
                       class="py-5 d-flex flex-wrap justify-content-center row-gap-4
                 gap-md-6 gap-lg-4"
                     >
-                      {porto_card.map((porto, id) => {
-                        return (
-                          <div
-                            id="porto-card-container"
-                            class="d-flex justify-content-center d-md-block"
-                          >
-                            <div id="porto-card" class="d-flex flex-column">
-                              <img src={porto.image} />
-                              <h2 class="fw-bold mt-2 fs-4">{porto.title}</h2>
-                              <p class="opacity-75">by {porto.author}</p>
-                              <div class="d-flex justify-content-between mt-4 mb-3">
-                                <p
-                                  class="p-2 fs-porto-custom fw-bold align-self-center"
-                                  style="border-radius: 1.5rem;
-                                    background: var(--aa-300, #E70FEB);"
-                                >
-                                  {porto.category}
-                                </p>
-                                <p class="p-2 fs-6 fw-bold">{porto.date}</p>
+                      {portofolios.map((portofolio, id) => {
+                        if (portofolio.attributes.category !== porto.header) {
+                          return;
+                        } else if (categoryCounts[portofolio.attributes.category] >= 6) {
+                          return;
+                        } else {
+                          categoryCounts[portofolio.attributes.category] = (categoryCounts[portofolio.attributes.category] || 0) + 1;
+                          return (
+                            <div
+                              id="porto-card-container"
+                              class="d-flex justify-content-center d-md-block"
+                            >
+                              <div id="porto-card" class="d-flex flex-column">
+                                <img src={portofolio.attributes.thumbnailurl} />
+                                <h2 class="fw-bold mt-2 fs-4 text-truncate">{portofolio.attributes.title}</h2>
+                                <p class="opacity-75">by {portofolio.attributes.author}</p>
+                                <div class="d-flex justify-content-between mt-4 mb-3">
+                                  <p
+                                    class="p-2 fs-porto-custom fw-bold align-self-center"
+                                    style="border-radius: 1.5rem;
+                                      background: var(--aa-300, #E70FEB);"
+                                  >
+                                    {portofolio.attributes.category}
+                                  </p>
+                                  <p class="p-2 fs-6 fw-bold">{portofolio.attributes.date}</p>
+                                </div>
+                                <button class="fw-bold fs-5">
+                                  <a class="fw-bold fs-5" href={portofolio.attributes.link} target="_blank">
+                                    See Project</a>
+                                </button>
                               </div>
-                              <button class="fw-bold fs-5">
-                                <a class="showToast fw-bold fs-5">See Project</a>
-                              </button>
                             </div>
-                          </div>
-                        );
+                          );
+                        }
                       })}
                     </div>
                   </section>
