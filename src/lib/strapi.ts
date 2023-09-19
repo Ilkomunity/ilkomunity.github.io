@@ -74,5 +74,12 @@ export default async function fetchApi<T>({
       });
     }
   }
+  if (endpoint.includes('portofolios')) {
+    data.map((item) => {
+      const dateStr = item.attributes.date;
+      const date = new Date(dateStr);
+      item.attributes.date = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+    });
+  }
   return data as T;
 }
