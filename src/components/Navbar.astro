@@ -6,8 +6,18 @@ const communities = await fetchApi<Communities[]>({
     endpoint: 'communities?populate=logo,documentations',
     wrappedByKey: 'data',
 });
+
+type Props = {
+    home: string;
+    communitiesnav: string;
+    achievement: string;
+    event: string;
+    portfolio: string;
+};
+
+const { home, communitiesnav, achievement, event, portfolio } = Astro.props;
 ---
-<nav class="navbar navbar-expand-lg bg-a-a50 px-4">
+<nav class="navbar sticky-top navbar-expand-lg bg-a-a50 px-4">
     <div class="container-fluid mx-3">
        <!-- Replace the text with a custom SVG icon -->
         <a class="navbar-brand" href="#">
@@ -25,12 +35,22 @@ const communities = await fetchApi<Communities[]>({
           <div class="offcanvas-body justify-content-end">
             <ul class="navbar-nav d-flex" style="height: 100%;">
               <li class="nav-item">
-                <a class="nav-link active fw-semibold text-primary-p300 text-lg-b300" aria-current="page" href="#">Home</a>
+                {
+                  home ? (
+                  <a class="nav-link fw-semibold text-primary-p300" aria-current="page" href="/">Home</a>
+                  ) : (
+                    <a class="nav-link fw-semibold text-neutral-n80" aria-current="page" href="/">Home</a>
+                  )
+                }
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle fw-medium text-neutral-n80" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Communities
-                </a>
+                {
+                  communitiesnav ? (
+                  <a  class="nav-link dropdown-toggle fw-medium text-primary-p300" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Communities</a>
+                  ) : (
+                  <a  class="nav-link dropdown-toggle fw-medium text-neutral-n80" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Communities</a>
+                  )
+                }
                 <ul class="dropdown-menu bg-a-a50">
                   {
                     communities.map((community) => (
@@ -39,14 +59,20 @@ const communities = await fetchApi<Communities[]>({
                   }
                 </ul>
               </li>
-              <li class="nav-item disabled">
+              <li class="nav-item">
                 <a class="showToast nav-link fw-medium text-neutral-n80" href="#">Achievement</a>
               </li>
-              <li class="nav-item disabled">
+              <li class="nav-item">
                 <a class="showToast nav-link fw-medium text-neutral-n80" href="#">Event</a>
               </li>
-              <li class="nav-item disabled">
-                <a class="showToast nav-link fw-medium text-neutral-n80" href="#">Portfolio</a>
+              <li class="nav-item">
+                {
+                  portfolio ? (
+                  <a class="nav-link fw-semibold text-primary-p300" aria-current="page" href="/portofolio">Portofolio</a>
+                  ) : (
+                    <a class="nav-link fw-semibold text-neutral-n80" aria-current="page" href="/portofolio">Portofolio</a>
+                  )
+                }
               </li>
               <li class="extra-text text-center mt-auto">
                 <a class="nav-link fw-medium text-neutral-n80" href="#">© 2023 Ilkomunity. All rights reserved.</a>
