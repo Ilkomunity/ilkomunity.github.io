@@ -66,8 +66,33 @@ object-fit: cover;
 
 }
 
+.card-user-review{
+  width: 13rem;
+  border-radius: 80px 20px 40px 20px;
+  border: #ffffff00 7px solid;
+  background: linear-gradient(white, white) padding-box,
+      linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%) border-box;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-user-review:hover {
+    border: #ffffff00 7px solid;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%) border-box;
+  }
+
+  @media (max-width: 768px) { /* Medium screen breakpoint */
+    .card-user-review {
+        width: 90% !important; /* Apply the width of 100% on medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) { /* Medium screen breakpoint */
+    .card-user-review {
+        width: 80% !important; /* Apply the width of 100% on medium screens */
+    }
+  }
+
 .user-card-size{
  font-size: smaller;
 }
-
-

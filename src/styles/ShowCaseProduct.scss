@@ -37,6 +37,18 @@
   position: absolute;
 }
 
+@media (max-width: 768px) { /* Medium screen breakpoint */
+  .showcase-card {
+      width: 100% !important; /* Apply the width of 100% on medium screens */
+  }
+}
+
+@media (max-width: 576px) { /* Medium screen breakpoint */
+  .showcase-card {
+      width: 100% !important; /* Apply the width of 100% on medium screens */
+  }
+}
+
 .card-image{
   padding: 20px 20px 20px 20px;
   height: 220px;

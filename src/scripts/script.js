@@ -36,8 +36,8 @@ $(document).ready(function(){
         slideBy: 3,
         mouseDrag: false,
         navText: [
-            "<img src='showcase-products-arrow-left.svg'>",
-            "<img src='showcase-products-arrow-right.svg'>"
+            "<div class='showcase-arrow'> <img src='showcase-products-arrow-left.svg'>",
+            "<div class='showcase-arrow'> <img src='showcase-products-arrow-right.svg'>"
         ],
         
         responsive:{
@@ -45,7 +45,8 @@ $(document).ready(function(){
                 items:1,
             },
             768:{
-                items:2
+                items:2,
+                margin: 30
             },
             1024:{
                 items:3,
@@ -73,7 +74,7 @@ $(document).ready(function(){
                 },
                 768:{
                     items:3,
-                    margin: 5
+                    margin: 0
                 },
                 1024:{
                     items:5
