@@ -13,9 +13,9 @@
   position: relative;
 }
 
-.owl-carousel-showcase{
+/* .owl-carousel-showcase{
   overflow: hidden;
-}
+} */
 
 .owl-carousel-showcase:hover{
   overflow: visible;
@@ -66,4 +66,39 @@
 
 .project-button{
   border-radius: 20px;
+}
+
+/* .owl-stage-outer {
+  margin-left: 4%;
+} */
+
+
+.showcase-arrow-left {
+  margin-left: -3.5rem;
+  margin-top: -4rem;
+}
+
+.showcase-arrow-right {
+  margin-right: 2.5rem;
+  margin-top: -4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .showcase-arrow-left {
+    margin-left: -4.5rem;
+  }
+
+  .showcase-arrow-right {
+    margin-right: -4.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .showcase-arrow-left {
+    margin-left: -5rem;
+  }
+
+  .showcase-arrow-right {
+    margin-right: -5rem;
+  }
 }

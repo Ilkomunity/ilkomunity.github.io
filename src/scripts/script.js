@@ -36,8 +36,8 @@ $(document).ready(function () {
     slideBy: 3,
     mouseDrag: false,
     navText: [
-      "<div class='showcase-arrow'> <img src='showcase-products-arrow-left.svg'>",
-      "<div class='showcase-arrow'> <img src='showcase-products-arrow-right.svg'>",
+      "<div class='showcase-arrow-left'> <img src='showcase-products-arrow-left.svg'>",
+      "<div class='showcase-arrow-right'> <img src='showcase-products-arrow-right.svg'>",
     ],
 
     responsive: {
