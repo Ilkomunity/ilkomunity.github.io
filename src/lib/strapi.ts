@@ -58,7 +58,11 @@ export default async function fetchApi<T>({
         if (isMultiple) {
           populateParam.split(',').forEach((param) => {
             if (itemAttributes[param]) {
-              itemAttributes[`${param}url`] = `${import.meta.env.STRAPI_URL}${itemAttributes[param].data.attributes.url}`;
+              if (Array.isArray(itemAttributes[param].data)) {
+                itemAttributes[`${param}url`] = itemAttributes[param].data.map((data) => `${import.meta.env.STRAPI_URL}${data.attributes.url}`);
+              } else {
+                itemAttributes[`${param}url`] = `${import.meta.env.STRAPI_URL}${itemAttributes[param].data.attributes.url}`;
+              }
             }
           });
         } else {
@@ -69,6 +73,13 @@ export default async function fetchApi<T>({
         return item;
       });
     }
+  }
+  if (endpoint.includes('portofolios')) {
+    data.map((item) => {
+      const dateStr = item.attributes.date;
+      const date = new Date(dateStr);
+      item.attributes.date = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+    });
   }
   return data as T;
 }

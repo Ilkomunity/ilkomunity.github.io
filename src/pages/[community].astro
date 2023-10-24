@@ -1,0 +1,178 @@
+---
+import fetchApi from "../lib/strapi";
+import type Communities from "../interfaces/communities";
+import Layout from "../layouts/Layout.astro";
+import "../styles/Communities.scss"
+import Navbar from "../components/Navbar.astro";
+
+
+export async function getStaticPaths() {
+    const communities = await fetchApi<Communities[]>({
+        endpoint: 'communities?populate=logo,documentations',
+        wrappedByKey: 'data',
+    });
+    
+    return communities.map((community) => ({
+        params: { community: community.attributes.abbr },
+        props: community,
+    }));
+}
+
+type Props = Communities
+
+const community = Astro.props;
+
+const communities = await fetchApi<Communities[]>({
+    endpoint: 'communities?populate=logo,documentations',
+    wrappedByKey: 'data',
+});
+---
+<Layout>
+    <Navbar communitiesnav="active" />
+    <div class="background-image">
+        <div class="communities-hero pb-3">
+            <div class="col-10 col-lg-9 mx-auto">
+                <div class="text-center pt-5 mb-5">
+                    <img src={community.attributes.logourl} alt="logo-agriux" style="width: 15rem;">
+                    <h1 class="mt-3 mb-3" style="color: white; font-weight: 700; font-size: 60px;">{community.attributes.abbr}</h1>
+                    <p style="color: white;">{community.attributes.description}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="communities-information">
+            <div class="" style="gap: 5rem; display: flex; flex-wrap: wrap; justify-content: center;">
+                <div class="jadwal-meet col-10 col-md-7 col-lg-4 mt-5" style="">
+                    <h2 class="fw-bold information-topside ms-5 px-4 py-1 d-inline-flex text-white" style="transform: translateY(2rem); border-radius: 15px 50px 15px 15px; background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); width: fit-content;">Jadwal Meet</h2>
+                    <div class="information-inside text-center border" style="height: 15rem; display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2.5rem 9.375rem 2.5rem 2.5rem; background-color: white">
+                        <h2 class="fw-bold">Setiap {community.attributes.day.charAt(0).toUpperCase()}{community.attributes.day.slice(1)}</h2>
+                        <h2 class="fw-bold">{community.attributes.time.substring(0,5)} WIB</h2>
+                        <h2 class="fw-bold" style="display: flex; gap: 0.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="34" viewBox="0 0 29 34" fill="none">
+                                <path d="M23.5156 24.0239C21.8173 25.7618 18.0107 29.6573 15.9281 31.7885C15.1435 32.5915 13.8566 32.5916 13.072 31.7887C11.0236 29.6925 7.29864 25.8805 5.48439 24.0239C0.505204 18.9284 0.505204 10.667 5.48439 5.57159C10.4636 0.476136 18.5364 0.476136 23.5156 5.57159C28.4948 10.667 28.4948 18.9284 23.5156 24.0239Z" stroke="url(#paint0_linear_1998_8637)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.2813 14.7977C19.2813 17.5 17.1406 19.6906 14.5 19.6906C11.8594 19.6906 9.71875 17.5 9.71875 14.7977C9.71875 12.0955 11.8594 9.90483 14.5 9.90483C17.1406 9.90483 19.2813 12.0955 19.2813 14.7977Z" stroke="url(#paint1_linear_1998_8637)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_1998_8637" x1="1.75" y1="17.5" x2="27.25" y2="17.5" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0F18ED"/>
+                                    <stop offset="1" stop-color="#E70FEB"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1998_8637" x1="1.75" y1="17.5" x2="27.25" y2="17.5" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0F18ED"/>
+                                    <stop offset="1" stop-color="#E70FEB"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            RKU 2.01</h2>
+                    </div>
+                </div>
+
+                <div class="benefit col-10 col-md-7 col-lg-4" style="">
+                    <h2 class="fw-bold information-topside ms-5 px-4 py-1 d-inline-flex text-white" style="transform: translateY(2rem);border-radius: 15px 50px 15px 15px; background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); width: fit-content;">Benefit</h2>
+                    <div class="information-inside benefit-inside border ps-3 pt-4 pe-5" style="height: 15rem;  display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2.5rem 9.375rem 2.5rem 2.5rem; background-color: white; font-size: large;">
+                        <ul>
+                            {community.attributes.benefits
+                                .map((benefit) => (
+                                    <li>{benefit}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dokumentasi mt-5">
+                <h2 class="text-center mb-5 fs-3 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Lens on Our Community</h2>
+                <div class="dokumentasi-foto text-center mb-5 d-flex flex-wrap" style="gap: 1rem; justify-content: center;">
+                    {
+                        community.attributes.documentationsurl
+                        .map((documentation) => (
+                            <img src={documentation} class="col-8 col-md-4 col-lg-3">
+                        ))
+                    }
+                </div>
+                <div class="dokumentasi-contactperson text-center">
+                    <p class="text-b-b300 fw-bold" style="text-decoration: none;">Contact person: {community.attributes.contact_number} ({community.attributes.contact_name})</p>
+                    <p class="text-b-b300 fw-bold mt-2" style="display: flex; gap: 1rem; justify-content: center;">
+                        {
+                            Object.keys(community.attributes.social_media)
+                            .map((social) => (
+                                <a href={community.attributes.social_media[social]} style="color: #EDA20F;"><i class={`fa-brands fa-${social}`} style="font-size: 25px;"></i></a>
+                            ))
+                        }
+                    </p>
+                </div>
+            </div>
+
+            <div class="explore">
+                <h2 class="text-center mt-5 mb-5 fs-3 fw-bold" style="background: var(--grad-a, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore different communities</h2>
+                <div class="explore-logo d-flex flex-wrap mx-5" style="justify-content: center; gap: 2rem;">
+                    {
+                        communities.map(list => {
+                            if (list.attributes.abbr != community.attributes.abbr) {
+                                return (
+                                <a class="logo-card col-8 col-md-5 col-lg-3 text-center border border-3 border-b-b300 py-3" href={`/${list.attributes.abbr}`} style="border-radius: 35px;" data-text={list.attributes.abbr}>
+                                    <img src={list.attributes.logourl} alt={list.attributes.abbr}>
+                                </a>
+                                )
+                            }
+                        })
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const logoCards = document.querySelectorAll('.logo-card');
+
+logoCards.forEach((logoCard) => {
+    let logoText;
+
+    logoCard.addEventListener('mouseover', function (e) {
+        // Periksa apakah event berasal dari elemen .logo-text
+        if (e.target.classList.contains('logo-text')) {
+            return;
+        }
+
+        const textContent = this.getAttribute('data-text');
+        if (!logoText) {
+            logoText = document.createElement('span');
+            logoText.classList.add('logo-text');
+            logoText.textContent = textContent;
+            this.appendChild(logoText);
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    logoText.style.opacity = '1';
+                }, 10);
+            });
+        }
+    });
+
+    logoCard.addEventListener('mouseout', function (e) {
+        // Periksa apakah event berasal dari elemen .logo-text
+        if (e.target.classList.contains('logo-text')) {
+            return;
+        }
+
+        if (logoText) {
+            logoText.style.opacity = '0';
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    this.removeChild(logoText);
+                    logoText = null;
+                }, 150);
+            });
+        }
+    });
+
+    // Menghindari pemanggilan berulang saat mengarahkan kursor ke tulisan itu sendiri
+    logoCard.addEventListener('mouseover', function (e) {
+        if (e.target === logoText) {
+            e.stopPropagation();
+        }
+    });
+});
+
+
+
+    </script>
+</Layout>

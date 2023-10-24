@@ -1,0 +1,110 @@
+.communities-hero {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 80%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+    url(../assets/images/communities-pages-hero.png);
+    background-size: cover;
+    height: 45rem;
+}
+
+.communities-information {
+    transform: translateY(-9rem);
+}
+
+.information-topside {
+    position: relative;
+    z-index: 10;
+}
+
+.information-inside {
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .information-inside {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+    .information-inside {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1150px) {
+    .information-inside {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:1151px) {
+    .information-inside {
+        font-size: 1.3rem;
+    }
+}
+
+.information-inside::before {
+    content: "";
+    position: absolute;
+    inset: -5px; /* control the spread */
+    transform: translate(-2px, 1px, 8px); /* control the offsets */
+    z-index: -1; 
+    border-radius: inherit;
+    opacity: 0.5;
+    background: var(--Grad-A, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+    filter: blur(5px);
+}
+
+
+
+.dokumentasi-foto img {
+    height: 216px;
+    width: 360px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.explore-logo a {
+    text-decoration: none;
+}
+
+.logo-card {
+    position: relative;
+    overflow: hidden; /* Menambahkan overflow: hidden agar transisi terlihat lebih mulus */
+    transition: background-color 0.3s ease; /* Menambahkan transisi warna latar belakang */
+}
+
+.logo-card:hover {
+    background-color: #EDA20F;
+}
+
+.logo-text {
+    white-space: nowrap;
+    transition: opacity 0.3s ease, visibility 0.1s ease;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+.logo-card img {
+    width: 70px;
+    padding: 10px 0 10px 0;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-card:hover img {
+    transform: translateX(-10px);
+}
+
+.logo-card:hover .logo-text {
+    opacity: 1;
+    visibility: visible;
+}

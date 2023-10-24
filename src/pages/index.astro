@@ -8,12 +8,15 @@ import UserReview from "../components/UserReview.astro";
 import WeeklyMeeting from "../components/WeeklyMeeting.astro";
 import WhyUs from "../components/WhyUs.astro";
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 import '../styles/owl.carousel.min.css';
 import '../styles/styles.css';
 ---
 
 <Layout>
     <div class="background-image">
+        <Navbar home="active" />
+
         <Hero />
     
         <WhyUs />

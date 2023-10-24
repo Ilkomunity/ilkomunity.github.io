@@ -1,0 +1,199 @@
+---
+import fetchApi from "../lib/strapi";
+import type Portofolio from "../interfaces/portofolio";
+import Layout from "../layouts/Layout.astro";
+import "../styles/portofolio.scss";
+import Navbar from "../components/Navbar.astro";
+
+const portofolios = await fetchApi<Portofolio[]>({
+  endpoint: 'portofolios?populate=thumbnail',
+  wrappedByKey: 'data',
+});
+
+
+const porto_container = [
+  {
+    sectionID: "ctf-write-up",
+    header: "CTF Write Up",
+    paragraph:
+      "Dive into our comprehensive write-ups, documenting our journey and insights from various capture the flag competitions.",
+  },
+  {
+    sectionID: "daming-notebook",
+    header: "Daming Notebook",
+    paragraph:
+      "Delve into data stories. From insights to trends, explore the journey of data through our interactive notebooks.",
+  },
+  {
+    sectionID: "game-dev",
+    header: "Game Dev",
+    paragraph:
+      "Immerse yourself in captivating gaming experiences brought to life through our creative game development endeavors.",
+  },
+  {
+    sectionID: "hall-of-algorithm",
+    header: "Hall Of Algorithm",
+    paragraph:
+      "Discover elegant solutions that power modern tech. Uncover the magic of algorithms reshaping our digital world.",
+  },
+  {
+    sectionID: "mobile-dev",
+    header: "Mobile Dev",
+    paragraph:
+      "Crafting mobile experiences. We blend creativity and code to build seamless, pocket-sized solutions for today's challenges.",
+  },
+  {
+    sectionID: "uiux-design",
+    header: "UI/UX Design",
+    paragraph:
+      "Experience seamless user interfaces and intuitive user experiences that elevate digital interactions",
+  },
+  {
+    sectionID: "web-dev",
+    header: "Web Dev",
+    paragraph:
+      "Browse through our web development projects, where we craft stunning websites that make a lasting impression.",
+  },
+];
+const categoryCounts = {};
+---
+
+<Layout>
+  <Navbar portfolio="active" />
+  <section id="porto">
+    <section
+      id="porto-hero-container"
+      class="d-flex justify-content-center pt-10"
+    >
+      <div class="d-flex flex-column align-items-center">
+        <h1 class="text-light display-1 fw-bold">Portfolio</h1>
+        <p class="px-4-md text-light fs-5 text-center">
+          Dive into our portfolio and witness the stunning work our community
+          members have produced.
+        </p>
+        <!-- mobile item container -->
+        <div
+          id="item-link-container"
+          class="d-md-flex justify-content-md-center px-4"
+        >
+          <div
+            id="item-link"
+            class="d-lg-none d-flex flex-wrap justify-content-center column-gap-2 row-gap-2 row-gap-md-4"
+          >
+            {
+              porto_container.map((porto) => {
+                return (
+                  <div id="item">
+                    <a href={`#${porto.sectionID}`}>
+                      <p class="fw-bold">{porto.header}</p>
+                    </a>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+      </div>
+
+      <div id="porto-blur"></div>
+    </section>
+
+    <section
+      id="porto-item-container"
+      class="d-lg-flex justify-content-xl-evenly px-lg-4"
+    >
+      <!-- Desktop item container -->
+      <div id="desktop-nav-container" class="d-none mb-5">
+        <div id="desktop-nav">
+          {
+            porto_container.map((porto) => {
+              return (
+              <div id="desktop">
+                <a href={`#${porto.sectionID}`} class="text-decoration-none">
+                  <p style="cursor: pointer;">{porto.header}</p>
+                </a>
+              </div>
+              )
+            })
+          }
+        </div>
+      </div>
+      <div>
+        {
+          porto_container.map((porto, index) => {
+            return (
+              <container>
+                <section id="porto-container">
+                  <section
+                    id={porto.sectionID}
+                    class={`${index === 0 ? "pt-2" : "pt-4"}`}
+                  >
+                    <div
+                      id="porto-wrapper"
+                      class="d-flex flex-column flex-md-row justify-content-between justify-content-md-around justify-content-lg-between align-items-md-center my-4"
+                    >
+                      <div
+                        id="porto-header"
+                        class={`${index === 0 ? "first-child" : ""}`}
+                      >
+                        <h2 class="fs-4 fw-bold">{porto.header}</h2>
+                        <p class="fw-normal">{porto.paragraph}</p>
+                      </div>
+                      <div id="porto-button" style="cursor: pointer;">
+                        <a class="fw-bold py-4 px-5" href={`portofolio/${porto.sectionID}`}>
+                          View All
+                        </a>
+                      </div>
+                    </div>
+
+                    <div
+                      id="porto-card-wrapper"
+                      class="py-5 d-flex flex-wrap justify-content-center row-gap-4
+                gap-md-6 gap-lg-4"
+                    >
+                      {portofolios.map((portofolio, id) => {
+                        if (portofolio.attributes.category !== porto.header) {
+                          return;
+                        } else if (categoryCounts[portofolio.attributes.category] >= 6) {
+                          return;
+                        } else {
+                          categoryCounts[portofolio.attributes.category] = (categoryCounts[portofolio.attributes.category] || 0) + 1;
+                          return (
+                            <div
+                              id="porto-card-container"
+                              class="d-flex justify-content-center d-md-block"
+                            >
+                              <div id="porto-card" class="d-flex flex-column">
+                                <img src={portofolio.attributes.thumbnailurl} />
+                                <h2 class="fw-bold mt-2 fs-4 text-truncate">{portofolio.attributes.title}</h2>
+                                <p class="opacity-75">by {portofolio.attributes.author}</p>
+                                <div class="d-flex justify-content-between mt-4 mb-3">
+                                  <p
+                                    class="p-2 fs-porto-custom fw-bold align-self-center"
+                                    style="border-radius: 1.5rem;
+                                      background: var(--aa-300, #E70FEB);"
+                                  >
+                                    {portofolio.attributes.category}
+                                  </p>
+                                  <p class="p-2 fs-6 fw-bold">{portofolio.attributes.date}</p>
+                                </div>
+                                <button class="fw-bold fs-5">
+                                  <a class="fw-bold fs-5" href={portofolio.attributes.link} target="_blank">
+                                    See Project</a>
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        }
+                      })}
+                    </div>
+                  </section>
+                </section>
+              </container>
+            );
+          })
+        }
+      </div>
+    </section>
+  </section>
+</Layout>
