@@ -1,0 +1,236 @@
+.card-achievements-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin: 0 auto;
+  align-items: center;
+}
+
+
+
+.card-achievements-before {
+    width: 293.998px;
+    height: 321.077px;
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 120px 24px 24px 8px;
+    border: 10px solid var(--Grad-C, #BED4FF);
+    background: #FFF;
+    margin: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.card-achievements-after {
+    width: 293.998px;
+    height: 321.077px;
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 120px 24px 24px 8px;
+    border: 10px solid var(--Grad-C, #BED4FF);
+    background: #FFF;
+    margin: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.card-achievements-title {
+    color: var(--cool-gray-90, #21272A);
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.card-achievements-text-2 {
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: var(--Grad-A, linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+}
+
+.card-achievements-text-3 {
+    align-self: stretch;
+    color: var(--cool-gray-90, #21272A);
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.cover-member {
+    justify-content: space-between;
+    align-items: center;
+    overflow: scroll;   
+}
+
+.member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.card-achievements-member {
+    color: #000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 18ch; 
+}
+
+.button {
+    display: flex;
+    width: 53.924px;
+    height: 15.717px;
+    padding: 3.317px 6.634px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13.268px;
+    background: var(--primary-p-200, #383FF0);
+    gap: 6.634px;
+    color: #fff;
+    text-decoration: none;
+    font-family: Plus Jakarta Sans;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card-achievements-image {
+    display: flex;
+    height: 170.21px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.737px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 110px 12px 0px 0px;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.container-achievements {
+  width: 350px;
+  height: 400px;
+  perspective: 800px;
+  display: contents;
+  justify-content: center;
+}
+
+.container-achievements:hover > .card-achievements {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card-achievements {
+  height: 100%;
+  transition: transform 1500ms;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.filter-container {
+    display: flex;
+    gap: 10px;
+    padding-left: 37px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+  
+.filter-label {
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+#filter-year, #filter-community{
+    display: flex;
+    margin: 0 auto;
+    width: 160px;
+    height: auto;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 168, 255, 0.7);
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+  
+.filter-label {
+  margin-right: 10px;
+}
+  
+.filter-select {
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  text-align-last: center;
+}
+
+.filter-text {
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.filter-select select {
+    text-align-last: center;
+    -webkit-text-align-last: center;
+    -moz-text-align-last: center;
+    -ms-text-align-last: center;
+  }
+  
