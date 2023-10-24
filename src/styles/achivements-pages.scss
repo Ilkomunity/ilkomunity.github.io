@@ -3,6 +3,7 @@
     justify-content: center; 
     flex-wrap: wrap;
     margin: 0 auto;
+  align-items: center;
 }
 
 
@@ -11,7 +12,6 @@
     width: 293.998px;
     height: 321.077px;
     margin: 10px;
-    padding-bottom: 0px;
     flex-direction: column;
     border-radius: 120px 24px 24px 8px;
     border: 10px solid var(--Grad-C, #BED4FF);
@@ -26,7 +26,6 @@
     width: 293.998px;
     height: 321.077px;
     margin: 10px;
-    padding-bottom: 0px;
     flex-direction: column;
     border-radius: 120px 24px 24px 8px;
     border: 10px solid var(--Grad-C, #BED4FF);
@@ -37,7 +36,6 @@
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    
 }
 
 
@@ -150,6 +148,8 @@
   width: 350px;
   height: 400px;
   perspective: 800px;
+  display: contents;
+  justify-content: center;
 }
 
 .container-achievements:hover > .card-achievements {
@@ -159,29 +159,11 @@
 
 .card-achievements {
   height: 100%;
-  width: 100%;
-  position: relative;
   transition: transform 1500ms;
-  
+  display: flex;
+  justify-content: center;
   transform-style: preserve-3d;
 }
-
-@media screen and (max-width: 768px) {
-    .card-container-achievements {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .card-container-achievements {
-        justify-content: center;
-    }
-    .card-achievements {
-        width: 100%; 
-    }
-}
-
-/* ---------------- */
 
 .filter-container {
     display: flex;
@@ -192,7 +174,7 @@
     height: auto;
     align-items: center;
     flex-wrap: wrap;
-  }
+}
   
   
 .filter-label {
@@ -235,6 +217,7 @@
   gap: 10px;
   text-align: center;
   flex-wrap: wrap;
+  text-align-last: center;
 }
 
 .filter-text {
@@ -243,3 +226,11 @@
     align-items: center;
     align-content: center;
 }
+
+.filter-select select {
+    text-align-last: center;
+    -webkit-text-align-last: center;
+    -moz-text-align-last: center;
+    -ms-text-align-last: center;
+  }
+  
